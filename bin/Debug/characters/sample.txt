@@ -1,0 +1,19 @@
+John Doe
+wizard
+1
+LN
+12
+10
+10
+0
+False
+Human
+14
+1
+12
+12
+12
+16
+160
+11
+1

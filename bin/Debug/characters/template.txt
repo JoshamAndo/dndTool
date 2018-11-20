@@ -1,0 +1,29 @@
+; key features
+; name,class, lvl, alignment, xp
+John Doe
+fighter
+1
+LN
+0
+; health
+; max, current, temp
+10
+10
+0
+; inspiration
+False
+; race
+Human
+;base stats:
+; STR,DEX,CON,INT,WIZ,CHA
+12
+12
+12
+12
+12
+16
+; wealth:
+; gold, silver, copper
+10
+10
+10

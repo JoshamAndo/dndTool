@@ -1,0 +1,11 @@
+c:\users\josh_\source\repos\DesktopApp1\DesktopApp1\bin\Debug\DesktopApp1.exe.config
+c:\users\josh_\source\repos\DesktopApp1\DesktopApp1\bin\Debug\DesktopApp1.exe
+c:\users\josh_\source\repos\DesktopApp1\DesktopApp1\bin\Debug\DesktopApp1.pdb
+c:\users\josh_\source\repos\DesktopApp1\DesktopApp1\obj\Debug\DesktopApp1.Form1.resources
+c:\users\josh_\source\repos\DesktopApp1\DesktopApp1\obj\Debug\DesktopApp1.Properties.Resources.resources
+c:\users\josh_\source\repos\DesktopApp1\DesktopApp1\obj\Debug\DesktopApp1.csproj.GenerateResource.cache
+c:\users\josh_\source\repos\DesktopApp1\DesktopApp1\obj\Debug\DesktopApp1.csproj.CoreCompileInputs.cache
+c:\users\josh_\source\repos\DesktopApp1\DesktopApp1\obj\Debug\DesktopApp1.exe
+c:\users\josh_\source\repos\DesktopApp1\DesktopApp1\obj\Debug\DesktopApp1.pdb
+c:\users\josh_\source\repos\DesktopApp1\DesktopApp1\obj\Debug\DesktopApp1.csprojAssemblyReference.cache
+C:\Users\josh_\source\repos\DesktopApp1\DesktopApp1\obj\Debug\DesktopApp1.Form2.resources
