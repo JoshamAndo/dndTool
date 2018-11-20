@@ -52,6 +52,8 @@ namespace DesktopApp1
             this.label23 = new System.Windows.Forms.Label();
             this.saveButton = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.HitDice = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
             this.characterHPTemp = new System.Windows.Forms.NumericUpDown();
             this.characterHPCurrent = new System.Windows.Forms.NumericUpDown();
             this.characterHPMax = new System.Windows.Forms.NumericUpDown();
@@ -183,8 +185,6 @@ namespace DesktopApp1
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.label21 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label32 = new System.Windows.Forms.Label();
-            this.HitDice = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox10.SuspendLayout();
@@ -281,7 +281,7 @@ namespace DesktopApp1
             this.SpellAttack.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SpellAttack.Location = new System.Drawing.Point(103, 58);
             this.SpellAttack.Name = "SpellAttack";
-            this.SpellAttack.Size = new System.Drawing.Size(34, 29);
+            this.SpellAttack.Size = new System.Drawing.Size(42, 29);
             this.SpellAttack.TabIndex = 14;
             this.SpellAttack.Text = "12";
             // 
@@ -300,7 +300,7 @@ namespace DesktopApp1
             this.spellSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.spellSave.Location = new System.Drawing.Point(103, 19);
             this.spellSave.Name = "spellSave";
-            this.spellSave.Size = new System.Drawing.Size(34, 29);
+            this.spellSave.Size = new System.Drawing.Size(42, 29);
             this.spellSave.TabIndex = 12;
             this.spellSave.Text = "12";
             // 
@@ -528,6 +528,22 @@ namespace DesktopApp1
             this.groupBox7.TabIndex = 97;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Health / AC / Speed";
+            // 
+            // HitDice
+            // 
+            this.HitDice.Location = new System.Drawing.Point(80, 154);
+            this.HitDice.Name = "HitDice";
+            this.HitDice.Size = new System.Drawing.Size(63, 20);
+            this.HitDice.TabIndex = 81;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(24, 158);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(45, 13);
+            this.label32.TabIndex = 101;
+            this.label32.Text = "Hit Dice";
             // 
             // characterHPTemp
             // 
@@ -1927,22 +1943,6 @@ namespace DesktopApp1
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(24, 158);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(45, 13);
-            this.label32.TabIndex = 101;
-            this.label32.Text = "Hit Dice";
-            // 
-            // HitDice
-            // 
-            this.HitDice.Location = new System.Drawing.Point(80, 154);
-            this.HitDice.Name = "HitDice";
-            this.HitDice.Size = new System.Drawing.Size(63, 20);
-            this.HitDice.TabIndex = 81;
             // 
             // Form1
             // 

@@ -37,6 +37,8 @@ namespace DesktopApp1
         static int wizMod;
         static int chaMod;
         static int passiveWisdom;
+        static int spellSaveDC;
+        static int spellAttack;
 
         //skills
 
@@ -112,6 +114,8 @@ namespace DesktopApp1
 
             passiveWisdom = 10 + conMod;
 
+            spellSaveDC = 8 + proficentBonus + intMod;
+            spellAttack = proficentBonus + intMod;
         }
 
         string signedIntToString(int integer)
@@ -151,6 +155,9 @@ namespace DesktopApp1
             WizModifier.Text = signedIntToString(wizMod);
             ChaModifier.Text = signedIntToString(chaMod);
             PassiveWiz.Text = signedIntToString(passiveWisdom);
+
+            SpellAttack.Text = signedIntToString(spellAttack);
+            spellSave.Text = signedIntToString(spellSaveDC);
         }
 
         // gets the form data and sets the character infomation to form data
