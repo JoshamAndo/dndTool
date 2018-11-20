@@ -185,6 +185,12 @@ namespace DesktopApp1
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.label21 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.CastingInt = new System.Windows.Forms.RadioButton();
+            this.CastingWis = new System.Windows.Forms.RadioButton();
+            this.CastingCha = new System.Windows.Forms.RadioButton();
+            this.Weapons = new System.Windows.Forms.GroupBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox10.SuspendLayout();
@@ -239,6 +245,7 @@ namespace DesktopApp1
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.Weapons);
             this.tabPage1.Controls.Add(this.groupBox10);
             this.tabPage1.Controls.Add(this.groupBox9);
             this.tabPage1.Controls.Add(this.saveButton);
@@ -255,6 +262,11 @@ namespace DesktopApp1
             // 
             // groupBox10
             // 
+            this.groupBox10.Controls.Add(this.CastingCha);
+            this.groupBox10.Controls.Add(this.CastingWis);
+            this.groupBox10.Controls.Add(this.CastingInt);
+            this.groupBox10.Controls.Add(this.label34);
+            this.groupBox10.Controls.Add(this.label33);
             this.groupBox10.Controls.Add(this.label31);
             this.groupBox10.Controls.Add(this.SpellAttack);
             this.groupBox10.Controls.Add(this.label27);
@@ -270,7 +282,7 @@ namespace DesktopApp1
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(11, 65);
+            this.label31.Location = new System.Drawing.Point(15, 94);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(88, 13);
             this.label31.TabIndex = 15;
@@ -279,7 +291,7 @@ namespace DesktopApp1
             // SpellAttack
             // 
             this.SpellAttack.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SpellAttack.Location = new System.Drawing.Point(103, 58);
+            this.SpellAttack.Location = new System.Drawing.Point(107, 87);
             this.SpellAttack.Name = "SpellAttack";
             this.SpellAttack.Size = new System.Drawing.Size(42, 29);
             this.SpellAttack.TabIndex = 14;
@@ -289,7 +301,7 @@ namespace DesktopApp1
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(11, 26);
+            this.label27.Location = new System.Drawing.Point(15, 55);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(76, 13);
             this.label27.TabIndex = 13;
@@ -298,7 +310,7 @@ namespace DesktopApp1
             // spellSave
             // 
             this.spellSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.spellSave.Location = new System.Drawing.Point(103, 19);
+            this.spellSave.Location = new System.Drawing.Point(107, 48);
             this.spellSave.Name = "spellSave";
             this.spellSave.Size = new System.Drawing.Size(42, 29);
             this.spellSave.TabIndex = 12;
@@ -1944,6 +1956,65 @@ namespace DesktopApp1
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(15, 22);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(71, 13);
+            this.label33.TabIndex = 16;
+            this.label33.Text = "Casting ability";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(104, 11);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(63, 13);
+            this.label34.TabIndex = 104;
+            this.label34.Text = "int, wis, cha";
+            // 
+            // CastingInt
+            // 
+            this.CastingInt.AutoSize = true;
+            this.CastingInt.Location = new System.Drawing.Point(107, 28);
+            this.CastingInt.Name = "CastingInt";
+            this.CastingInt.Size = new System.Drawing.Size(14, 13);
+            this.CastingInt.TabIndex = 105;
+            this.CastingInt.TabStop = true;
+            this.CastingInt.UseVisualStyleBackColor = true;
+            // 
+            // CastingWis
+            // 
+            this.CastingWis.AutoSize = true;
+            this.CastingWis.Location = new System.Drawing.Point(127, 28);
+            this.CastingWis.Name = "CastingWis";
+            this.CastingWis.Size = new System.Drawing.Size(14, 13);
+            this.CastingWis.TabIndex = 106;
+            this.CastingWis.TabStop = true;
+            this.CastingWis.UseVisualStyleBackColor = true;
+            // 
+            // CastingCha
+            // 
+            this.CastingCha.AutoSize = true;
+            this.CastingCha.Location = new System.Drawing.Point(147, 28);
+            this.CastingCha.Name = "CastingCha";
+            this.CastingCha.Size = new System.Drawing.Size(14, 13);
+            this.CastingCha.TabIndex = 106;
+            this.CastingCha.TabStop = true;
+            this.CastingCha.UseVisualStyleBackColor = true;
+            // 
+            // Weapons
+            // 
+            this.Weapons.Location = new System.Drawing.Point(476, 391);
+            this.Weapons.Name = "Weapons";
+            this.Weapons.Size = new System.Drawing.Size(200, 100);
+            this.Weapons.TabIndex = 101;
+            this.Weapons.TabStop = false;
+            this.Weapons.Text = "Weapons/attacks";
+            // 
             // Form1
             // 
             this.AcceptButton = this.saveButton;
@@ -2165,6 +2236,12 @@ namespace DesktopApp1
         private System.Windows.Forms.TextBox SpellAttack;
         private System.Windows.Forms.TextBox HitDice;
         private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.RadioButton CastingCha;
+        private System.Windows.Forms.RadioButton CastingWis;
+        private System.Windows.Forms.RadioButton CastingInt;
+        private System.Windows.Forms.GroupBox Weapons;
     }
 }
 

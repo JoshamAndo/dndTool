@@ -37,6 +37,8 @@ namespace DesktopApp1
         static int wizMod;
         static int chaMod;
         static int passiveWisdom;
+        static string spellAbility;
+
         static int spellSaveDC;
         static int spellAttack;
 
@@ -79,6 +81,7 @@ namespace DesktopApp1
             gold = Int32.Parse(charVars[16]);
             silver = Int32.Parse(charVars[17]);
             copper = Int32.Parse(charVars[18]);
+            spellAbility = charVars[19];
         }
 
         // updates dependant variables not stored in file
@@ -105,6 +108,7 @@ namespace DesktopApp1
                 proficentBonus = 6;
             }
 
+            // this wierd math was required for negative modifiers to calculate correctly
             strMod = (int)Math.Floor((decimal)(STR - 10) / 2);
             dexMod = (int)Math.Floor((decimal)(DEX - 10) / 2);
             conMod = (int)Math.Floor((decimal)(CON - 10) / 2);
@@ -114,13 +118,27 @@ namespace DesktopApp1
 
             passiveWisdom = 10 + conMod;
 
-            spellSaveDC = 8 + proficentBonus + intMod;
-            spellAttack = proficentBonus + intMod;
+            int spellMod = 0;
+            if (spellAbility == "INT")
+            {
+                spellMod = intMod;
+            }
+            else if (spellAbility == "WIS")
+            {
+                spellMod = wizMod;
+            }
+            else
+            {
+                spellMod = chaMod;
+            }
+
+            spellSaveDC = 8 + proficentBonus + spellMod;
+            spellAttack = proficentBonus + spellMod;
         }
 
         string signedIntToString(int integer)
         {
-            return (integer < 0) ? integer.ToString() : "+" + integer.ToString();
+            return (integer <= 0) ? integer.ToString() : "+" + integer.ToString();
         }
 
         // sets forms data to character infomation (updates dependant vars)
@@ -156,6 +174,19 @@ namespace DesktopApp1
             ChaModifier.Text = signedIntToString(chaMod);
             PassiveWiz.Text = signedIntToString(passiveWisdom);
 
+            if (spellAbility == "INT")
+            {
+                CastingInt.Checked = true;
+            }
+            else if (spellAbility == "WIS")
+            {
+                CastingWis.Checked = true;
+            }
+            else
+            {
+                CastingCha.Checked = true;
+            }
+
             SpellAttack.Text = signedIntToString(spellAttack);
             spellSave.Text = signedIntToString(spellSaveDC);
         }
@@ -182,6 +213,19 @@ namespace DesktopApp1
             gold = (int)goldCount.Value;
             silver = (int)silverCount.Value;
             copper = (int)copperCount.Value;
+
+            if (CastingInt.Checked == true)
+            {
+                spellAbility = "INT";
+            }
+            else if (CastingWis.Checked == true)
+            {
+                spellAbility = "WIS";
+            }
+            else
+            {
+                spellAbility = "CHA";
+            }
         }
 
         // sets the file to the data
@@ -211,6 +255,7 @@ namespace DesktopApp1
                 file.WriteLine(gold);
                 file.WriteLine(silver);
                 file.WriteLine(copper);
+                file.WriteLine(spellAbility);
             }
 
         }
@@ -341,11 +386,13 @@ namespace DesktopApp1
             {
                 Form2 deathMessage = new Form2();
                 deathMessage.Show();
+                DeathSaveFails.Value = 0;
+                numericUpDown1.Value = 0;
             }
 
         }
 
-        // stabilisation (3 sucess death saves)
+        // stabilisation (3 success death saves)
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
             if (numericUpDown1.Value == 3)

@@ -27,3 +27,5 @@ Human
 10
 10
 10
+; spell casting ability
+INT
