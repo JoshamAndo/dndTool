@@ -53,10 +53,36 @@ namespace DesktopApp1
         static bool wisSavingthrow;
         static bool chaSavingthrow;
 
+        static string filepath = @".\characters\sample.txt";
+        void openFile()
+        {
+            openFileDialog1.InitialDirectory = Directory.GetCurrentDirectory() + @"\characters";
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                filepath = openFileDialog1.FileName;
+                getDataFromFile();
+                setFormData();
+            }
+                
+        }
+
+        void saveAsFile()
+        {
+            saveFileDialog1.ShowDialog();
+            getFormData();
+            if (saveFileDialog1.FileName != "")
+            {
+                filepath = saveFileDialog1.FileName;
+                setDataToFile();
+                setFormData();
+            }
+
+        }
+
         void getDataFromFile()
         {
             // read from (currently) sample file
-            System.IO.StreamReader file = new System.IO.StreamReader(@".\characters\sample.txt");
+            System.IO.StreamReader file = new System.IO.StreamReader(filepath);
             string line;
             List<string> charVars = new List<string>();
             while ((line = file.ReadLine()) != null)
@@ -281,9 +307,9 @@ namespace DesktopApp1
         void setDataToFile()
         {
             // empty file and add lines
-            File.WriteAllText(@".\characters\sample.txt", String.Empty);
+            File.WriteAllText(filepath, String.Empty);
             
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@".\characters\sample.txt", true))
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(filepath, true))
             {
                 file.WriteLine(charName);
                 file.WriteLine(charClass);
@@ -331,6 +357,13 @@ namespace DesktopApp1
 
         }
 
+        // onValue update form function
+        private void update(object sender, EventArgs e)
+        {
+            getFormData();
+            setFormData();
+        }
+
         // update file on closing
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -353,21 +386,6 @@ namespace DesktopApp1
             getDataFromFile();
             setFormData();
         }
-
-        // auto update function for the main stats tab
-        /*private void tabPage1_Click(object sender, EventArgs e)
-        {
-            getFormData();
-            setFormData();
-        }*/
-
-        // onValue update form function
-        private void update(object sender, EventArgs e)
-        {
-            getFormData();
-            setFormData();
-        }
-
 
         /// <summary>
         ///  Money section:
@@ -430,7 +448,7 @@ namespace DesktopApp1
         }
 
         /// <summary>
-        ///  Saving throws logic
+        ///  Death Saving throws logic
         /// </summary>
 
         // death condition
@@ -456,7 +474,6 @@ namespace DesktopApp1
                 numericUpDown1.Value = 0;
             }
         }
-
 
         /// <summary>
         ///  code for dice roll section of application below:
@@ -704,6 +721,16 @@ namespace DesktopApp1
         private void checkBox14_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Load_Click(object sender, EventArgs e)
+        {
+            openFile();
+        }
+
+        private void SaveAs_Click(object sender, EventArgs e)
+        {
+            saveAsFile();
         }
     }
 }

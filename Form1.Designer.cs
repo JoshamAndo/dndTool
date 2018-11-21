@@ -80,6 +80,19 @@ namespace DesktopApp1
             this.label12 = new System.Windows.Forms.Label();
             this.characterAC = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.chaSavingProf = new System.Windows.Forms.CheckBox();
+            this.CHASaving = new System.Windows.Forms.TextBox();
+            this.wisSavingProf = new System.Windows.Forms.CheckBox();
+            this.WISSaving = new System.Windows.Forms.TextBox();
+            this.intSavingProf = new System.Windows.Forms.CheckBox();
+            this.INTSaving = new System.Windows.Forms.TextBox();
+            this.dexSavingProf = new System.Windows.Forms.CheckBox();
+            this.DEXSaving = new System.Windows.Forms.TextBox();
+            this.conSavingProf = new System.Windows.Forms.CheckBox();
+            this.CONSaving = new System.Windows.Forms.TextBox();
+            this.strSavingProf = new System.Windows.Forms.CheckBox();
+            this.STRSaving = new System.Windows.Forms.TextBox();
             this.charInspiration = new System.Windows.Forms.CheckBox();
             this.checkBox18 = new System.Windows.Forms.CheckBox();
             this.checkBox17 = new System.Windows.Forms.CheckBox();
@@ -189,19 +202,10 @@ namespace DesktopApp1
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.label21 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.strSavingProf = new System.Windows.Forms.CheckBox();
-            this.STRSaving = new System.Windows.Forms.TextBox();
-            this.conSavingProf = new System.Windows.Forms.CheckBox();
-            this.CONSaving = new System.Windows.Forms.TextBox();
-            this.dexSavingProf = new System.Windows.Forms.CheckBox();
-            this.DEXSaving = new System.Windows.Forms.TextBox();
-            this.intSavingProf = new System.Windows.Forms.CheckBox();
-            this.INTSaving = new System.Windows.Forms.TextBox();
-            this.chaSavingProf = new System.Windows.Forms.CheckBox();
-            this.CHASaving = new System.Windows.Forms.TextBox();
-            this.wisSavingProf = new System.Windows.Forms.CheckBox();
-            this.WISSaving = new System.Windows.Forms.TextBox();
-            this.label35 = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.Load = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.SaveAs = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox10.SuspendLayout();
@@ -256,6 +260,8 @@ namespace DesktopApp1
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.SaveAs);
+            this.tabPage1.Controls.Add(this.Load);
             this.tabPage1.Controls.Add(this.Weapons);
             this.tabPage1.Controls.Add(this.groupBox10);
             this.tabPage1.Controls.Add(this.groupBox9);
@@ -584,7 +590,7 @@ namespace DesktopApp1
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(724, 624);
+            this.saveButton.Location = new System.Drawing.Point(562, 621);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(83, 23);
             this.saveButton.TabIndex = 98;
@@ -901,6 +907,123 @@ namespace DesktopApp1
             this.groupBox2.TabIndex = 71;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ability Scores / Skills";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(6, 461);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(78, 13);
+            this.label35.TabIndex = 111;
+            this.label35.Text = "Saving Throws";
+            // 
+            // chaSavingProf
+            // 
+            this.chaSavingProf.AutoSize = true;
+            this.chaSavingProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chaSavingProf.Location = new System.Drawing.Point(166, 506);
+            this.chaSavingProf.Name = "chaSavingProf";
+            this.chaSavingProf.Size = new System.Drawing.Size(41, 14);
+            this.chaSavingProf.TabIndex = 92;
+            this.chaSavingProf.Text = "CHA";
+            this.chaSavingProf.UseVisualStyleBackColor = true;
+            // 
+            // CHASaving
+            // 
+            this.CHASaving.Location = new System.Drawing.Point(212, 501);
+            this.CHASaving.Name = "CHASaving";
+            this.CHASaving.Size = new System.Drawing.Size(25, 20);
+            this.CHASaving.TabIndex = 91;
+            // 
+            // wisSavingProf
+            // 
+            this.wisSavingProf.AutoSize = true;
+            this.wisSavingProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wisSavingProf.Location = new System.Drawing.Point(166, 484);
+            this.wisSavingProf.Name = "wisSavingProf";
+            this.wisSavingProf.Size = new System.Drawing.Size(39, 14);
+            this.wisSavingProf.TabIndex = 90;
+            this.wisSavingProf.Text = "WIS";
+            this.wisSavingProf.UseVisualStyleBackColor = true;
+            // 
+            // WISSaving
+            // 
+            this.WISSaving.Location = new System.Drawing.Point(212, 479);
+            this.WISSaving.Name = "WISSaving";
+            this.WISSaving.Size = new System.Drawing.Size(25, 20);
+            this.WISSaving.TabIndex = 89;
+            // 
+            // intSavingProf
+            // 
+            this.intSavingProf.AutoSize = true;
+            this.intSavingProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.intSavingProf.Location = new System.Drawing.Point(86, 506);
+            this.intSavingProf.Name = "intSavingProf";
+            this.intSavingProf.Size = new System.Drawing.Size(37, 14);
+            this.intSavingProf.TabIndex = 88;
+            this.intSavingProf.Text = "INT";
+            this.intSavingProf.UseVisualStyleBackColor = true;
+            // 
+            // INTSaving
+            // 
+            this.INTSaving.Location = new System.Drawing.Point(134, 500);
+            this.INTSaving.Name = "INTSaving";
+            this.INTSaving.Size = new System.Drawing.Size(25, 20);
+            this.INTSaving.TabIndex = 87;
+            // 
+            // dexSavingProf
+            // 
+            this.dexSavingProf.AutoSize = true;
+            this.dexSavingProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dexSavingProf.Location = new System.Drawing.Point(6, 507);
+            this.dexSavingProf.Name = "dexSavingProf";
+            this.dexSavingProf.Size = new System.Drawing.Size(40, 14);
+            this.dexSavingProf.TabIndex = 86;
+            this.dexSavingProf.Text = "DEX";
+            this.dexSavingProf.UseVisualStyleBackColor = true;
+            // 
+            // DEXSaving
+            // 
+            this.DEXSaving.Location = new System.Drawing.Point(51, 502);
+            this.DEXSaving.Name = "DEXSaving";
+            this.DEXSaving.Size = new System.Drawing.Size(25, 20);
+            this.DEXSaving.TabIndex = 85;
+            // 
+            // conSavingProf
+            // 
+            this.conSavingProf.AutoSize = true;
+            this.conSavingProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conSavingProf.Location = new System.Drawing.Point(86, 484);
+            this.conSavingProf.Name = "conSavingProf";
+            this.conSavingProf.Size = new System.Drawing.Size(42, 14);
+            this.conSavingProf.TabIndex = 84;
+            this.conSavingProf.Text = "CON";
+            this.conSavingProf.UseVisualStyleBackColor = true;
+            // 
+            // CONSaving
+            // 
+            this.CONSaving.Location = new System.Drawing.Point(134, 478);
+            this.CONSaving.Name = "CONSaving";
+            this.CONSaving.Size = new System.Drawing.Size(25, 20);
+            this.CONSaving.TabIndex = 83;
+            // 
+            // strSavingProf
+            // 
+            this.strSavingProf.AutoSize = true;
+            this.strSavingProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.strSavingProf.Location = new System.Drawing.Point(6, 484);
+            this.strSavingProf.Name = "strSavingProf";
+            this.strSavingProf.Size = new System.Drawing.Size(40, 14);
+            this.strSavingProf.TabIndex = 82;
+            this.strSavingProf.Text = "STR";
+            this.strSavingProf.UseVisualStyleBackColor = true;
+            // 
+            // STRSaving
+            // 
+            this.STRSaving.Location = new System.Drawing.Point(51, 479);
+            this.STRSaving.Name = "STRSaving";
+            this.STRSaving.Size = new System.Drawing.Size(25, 20);
+            this.STRSaving.TabIndex = 81;
             // 
             // charInspiration
             // 
@@ -2026,122 +2149,35 @@ namespace DesktopApp1
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // strSavingProf
+            // openFileDialog1
             // 
-            this.strSavingProf.AutoSize = true;
-            this.strSavingProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.strSavingProf.Location = new System.Drawing.Point(6, 484);
-            this.strSavingProf.Name = "strSavingProf";
-            this.strSavingProf.Size = new System.Drawing.Size(40, 14);
-            this.strSavingProf.TabIndex = 82;
-            this.strSavingProf.Text = "STR";
-            this.strSavingProf.UseVisualStyleBackColor = true;
+            this.openFileDialog1.FileName = "sample.txt";
+            this.openFileDialog1.Filter = "Text files|*.txt";
             // 
-            // STRSaving
+            // Load
             // 
-            this.STRSaving.Location = new System.Drawing.Point(51, 479);
-            this.STRSaving.Name = "STRSaving";
-            this.STRSaving.Size = new System.Drawing.Size(25, 20);
-            this.STRSaving.TabIndex = 81;
+            this.Load.Location = new System.Drawing.Point(651, 621);
+            this.Load.Name = "Load";
+            this.Load.Size = new System.Drawing.Size(75, 23);
+            this.Load.TabIndex = 102;
+            this.Load.Text = "Load";
+            this.Load.UseVisualStyleBackColor = true;
+            this.Load.Click += new System.EventHandler(this.Load_Click);
             // 
-            // conSavingProf
+            // saveFileDialog1
             // 
-            this.conSavingProf.AutoSize = true;
-            this.conSavingProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conSavingProf.Location = new System.Drawing.Point(86, 484);
-            this.conSavingProf.Name = "conSavingProf";
-            this.conSavingProf.Size = new System.Drawing.Size(42, 14);
-            this.conSavingProf.TabIndex = 84;
-            this.conSavingProf.Text = "CON";
-            this.conSavingProf.UseVisualStyleBackColor = true;
+            this.saveFileDialog1.FileName = "character.txt";
+            this.saveFileDialog1.Filter = "Text files|*.txt";
             // 
-            // CONSaving
+            // SaveAs
             // 
-            this.CONSaving.Location = new System.Drawing.Point(134, 478);
-            this.CONSaving.Name = "CONSaving";
-            this.CONSaving.Size = new System.Drawing.Size(25, 20);
-            this.CONSaving.TabIndex = 83;
-            // 
-            // dexSavingProf
-            // 
-            this.dexSavingProf.AutoSize = true;
-            this.dexSavingProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dexSavingProf.Location = new System.Drawing.Point(6, 507);
-            this.dexSavingProf.Name = "dexSavingProf";
-            this.dexSavingProf.Size = new System.Drawing.Size(40, 14);
-            this.dexSavingProf.TabIndex = 86;
-            this.dexSavingProf.Text = "DEX";
-            this.dexSavingProf.UseVisualStyleBackColor = true;
-            // 
-            // DEXSaving
-            // 
-            this.DEXSaving.Location = new System.Drawing.Point(51, 502);
-            this.DEXSaving.Name = "DEXSaving";
-            this.DEXSaving.Size = new System.Drawing.Size(25, 20);
-            this.DEXSaving.TabIndex = 85;
-            // 
-            // intSavingProf
-            // 
-            this.intSavingProf.AutoSize = true;
-            this.intSavingProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.intSavingProf.Location = new System.Drawing.Point(86, 506);
-            this.intSavingProf.Name = "intSavingProf";
-            this.intSavingProf.Size = new System.Drawing.Size(37, 14);
-            this.intSavingProf.TabIndex = 88;
-            this.intSavingProf.Text = "INT";
-            this.intSavingProf.UseVisualStyleBackColor = true;
-            // 
-            // INTSaving
-            // 
-            this.INTSaving.Location = new System.Drawing.Point(134, 500);
-            this.INTSaving.Name = "INTSaving";
-            this.INTSaving.Size = new System.Drawing.Size(25, 20);
-            this.INTSaving.TabIndex = 87;
-            // 
-            // chaSavingProf
-            // 
-            this.chaSavingProf.AutoSize = true;
-            this.chaSavingProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chaSavingProf.Location = new System.Drawing.Point(166, 506);
-            this.chaSavingProf.Name = "chaSavingProf";
-            this.chaSavingProf.Size = new System.Drawing.Size(41, 14);
-            this.chaSavingProf.TabIndex = 92;
-            this.chaSavingProf.Text = "CHA";
-            this.chaSavingProf.UseVisualStyleBackColor = true;
-            // 
-            // CHASaving
-            // 
-            this.CHASaving.Location = new System.Drawing.Point(212, 501);
-            this.CHASaving.Name = "CHASaving";
-            this.CHASaving.Size = new System.Drawing.Size(25, 20);
-            this.CHASaving.TabIndex = 91;
-            // 
-            // wisSavingProf
-            // 
-            this.wisSavingProf.AutoSize = true;
-            this.wisSavingProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wisSavingProf.Location = new System.Drawing.Point(166, 484);
-            this.wisSavingProf.Name = "wisSavingProf";
-            this.wisSavingProf.Size = new System.Drawing.Size(39, 14);
-            this.wisSavingProf.TabIndex = 90;
-            this.wisSavingProf.Text = "WIS";
-            this.wisSavingProf.UseVisualStyleBackColor = true;
-            // 
-            // WISSaving
-            // 
-            this.WISSaving.Location = new System.Drawing.Point(212, 479);
-            this.WISSaving.Name = "WISSaving";
-            this.WISSaving.Size = new System.Drawing.Size(25, 20);
-            this.WISSaving.TabIndex = 89;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(6, 461);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(78, 13);
-            this.label35.TabIndex = 111;
-            this.label35.Text = "Saving Throws";
+            this.SaveAs.Location = new System.Drawing.Point(732, 621);
+            this.SaveAs.Name = "SaveAs";
+            this.SaveAs.Size = new System.Drawing.Size(75, 23);
+            this.SaveAs.TabIndex = 103;
+            this.SaveAs.Text = "Save As";
+            this.SaveAs.UseVisualStyleBackColor = true;
+            this.SaveAs.Click += new System.EventHandler(this.SaveAs_Click);
             // 
             // Form1
             // 
@@ -2155,7 +2191,7 @@ namespace DesktopApp1
             this.KeyPreview = true;
             this.Name = "Form1";
             this.ShowIcon = false;
-            this.Text = "D&D 5e Character Sheet";
+            this.Text = "D&D 5e Tools";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -2381,6 +2417,10 @@ namespace DesktopApp1
         private System.Windows.Forms.TextBox CONSaving;
         private System.Windows.Forms.CheckBox strSavingProf;
         private System.Windows.Forms.TextBox STRSaving;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button Load;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Button SaveAs;
     }
 }
 
