@@ -30,7 +30,13 @@ namespace DesktopApp1
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Weapons = new System.Windows.Forms.GroupBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.CastingCha = new System.Windows.Forms.RadioButton();
+            this.CastingWis = new System.Windows.Forms.RadioButton();
+            this.CastingInt = new System.Windows.Forms.RadioButton();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.SpellAttack = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
@@ -75,7 +81,6 @@ namespace DesktopApp1
             this.characterAC = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.charInspiration = new System.Windows.Forms.CheckBox();
-            this.checkBox19 = new System.Windows.Forms.CheckBox();
             this.checkBox18 = new System.Windows.Forms.CheckBox();
             this.checkBox17 = new System.Windows.Forms.CheckBox();
             this.checkBox16 = new System.Windows.Forms.CheckBox();
@@ -94,7 +99,6 @@ namespace DesktopApp1
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox33 = new System.Windows.Forms.TextBox();
             this.textBox34 = new System.Windows.Forms.TextBox();
             this.textBox35 = new System.Windows.Forms.TextBox();
             this.textBox25 = new System.Windows.Forms.TextBox();
@@ -185,12 +189,19 @@ namespace DesktopApp1
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.label21 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.CastingInt = new System.Windows.Forms.RadioButton();
-            this.CastingWis = new System.Windows.Forms.RadioButton();
-            this.CastingCha = new System.Windows.Forms.RadioButton();
-            this.Weapons = new System.Windows.Forms.GroupBox();
+            this.strSavingProf = new System.Windows.Forms.CheckBox();
+            this.STRSaving = new System.Windows.Forms.TextBox();
+            this.conSavingProf = new System.Windows.Forms.CheckBox();
+            this.CONSaving = new System.Windows.Forms.TextBox();
+            this.dexSavingProf = new System.Windows.Forms.CheckBox();
+            this.DEXSaving = new System.Windows.Forms.TextBox();
+            this.intSavingProf = new System.Windows.Forms.CheckBox();
+            this.INTSaving = new System.Windows.Forms.TextBox();
+            this.chaSavingProf = new System.Windows.Forms.CheckBox();
+            this.CHASaving = new System.Windows.Forms.TextBox();
+            this.wisSavingProf = new System.Windows.Forms.CheckBox();
+            this.WISSaving = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox10.SuspendLayout();
@@ -240,7 +251,7 @@ namespace DesktopApp1
             this.tabControl1.Location = new System.Drawing.Point(1, 1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(818, 630);
+            this.tabControl1.Size = new System.Drawing.Size(824, 676);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -255,10 +266,19 @@ namespace DesktopApp1
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(810, 604);
+            this.tabPage1.Size = new System.Drawing.Size(816, 650);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "MainStats";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // Weapons
+            // 
+            this.Weapons.Location = new System.Drawing.Point(471, 389);
+            this.Weapons.Name = "Weapons";
+            this.Weapons.Size = new System.Drawing.Size(200, 100);
+            this.Weapons.TabIndex = 101;
+            this.Weapons.TabStop = false;
+            this.Weapons.Text = "Weapons/equipment";
             // 
             // groupBox10
             // 
@@ -271,12 +291,62 @@ namespace DesktopApp1
             this.groupBox10.Controls.Add(this.SpellAttack);
             this.groupBox10.Controls.Add(this.label27);
             this.groupBox10.Controls.Add(this.spellSave);
-            this.groupBox10.Location = new System.Drawing.Point(476, 17);
+            this.groupBox10.Location = new System.Drawing.Point(471, 17);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(200, 345);
+            this.groupBox10.Size = new System.Drawing.Size(200, 366);
             this.groupBox10.TabIndex = 100;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Spellcasting";
+            // 
+            // CastingCha
+            // 
+            this.CastingCha.AutoSize = true;
+            this.CastingCha.Location = new System.Drawing.Point(147, 28);
+            this.CastingCha.Name = "CastingCha";
+            this.CastingCha.Size = new System.Drawing.Size(14, 13);
+            this.CastingCha.TabIndex = 106;
+            this.CastingCha.TabStop = true;
+            this.CastingCha.UseVisualStyleBackColor = true;
+            // 
+            // CastingWis
+            // 
+            this.CastingWis.AutoSize = true;
+            this.CastingWis.Location = new System.Drawing.Point(127, 28);
+            this.CastingWis.Name = "CastingWis";
+            this.CastingWis.Size = new System.Drawing.Size(14, 13);
+            this.CastingWis.TabIndex = 106;
+            this.CastingWis.TabStop = true;
+            this.CastingWis.UseVisualStyleBackColor = true;
+            // 
+            // CastingInt
+            // 
+            this.CastingInt.AutoSize = true;
+            this.CastingInt.Location = new System.Drawing.Point(107, 28);
+            this.CastingInt.Name = "CastingInt";
+            this.CastingInt.Size = new System.Drawing.Size(14, 13);
+            this.CastingInt.TabIndex = 105;
+            this.CastingInt.TabStop = true;
+            this.CastingInt.UseVisualStyleBackColor = true;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(104, 11);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(63, 13);
+            this.label34.TabIndex = 104;
+            this.label34.Text = "int, wis, cha";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(15, 22);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(71, 13);
+            this.label33.TabIndex = 16;
+            this.label33.Text = "Casting ability";
             // 
             // label31
             // 
@@ -332,7 +402,7 @@ namespace DesktopApp1
             this.groupBox9.Controls.Add(this.goldCount);
             this.groupBox9.Controls.Add(this.label24);
             this.groupBox9.Controls.Add(this.label23);
-            this.groupBox9.Location = new System.Drawing.Point(278, 391);
+            this.groupBox9.Location = new System.Drawing.Point(278, 417);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(176, 201);
             this.groupBox9.TabIndex = 99;
@@ -440,7 +510,7 @@ namespace DesktopApp1
             // 
             this.copperCount.Location = new System.Drawing.Point(68, 69);
             this.copperCount.Maximum = new decimal(new int[] {
-            10,
+            10000,
             0,
             0,
             0});
@@ -466,6 +536,11 @@ namespace DesktopApp1
             // silverCount
             // 
             this.silverCount.Location = new System.Drawing.Point(68, 43);
+            this.silverCount.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.silverCount.Minimum = new decimal(new int[] {
             1,
             0,
@@ -509,7 +584,7 @@ namespace DesktopApp1
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(721, 575);
+            this.saveButton.Location = new System.Drawing.Point(724, 624);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(83, 23);
             this.saveButton.TabIndex = 98;
@@ -534,16 +609,16 @@ namespace DesktopApp1
             this.groupBox7.Controls.Add(this.CharIniative);
             this.groupBox7.Controls.Add(this.label12);
             this.groupBox7.Controls.Add(this.characterAC);
-            this.groupBox7.Location = new System.Drawing.Point(278, 109);
+            this.groupBox7.Location = new System.Drawing.Point(278, 107);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(176, 276);
+            this.groupBox7.Size = new System.Drawing.Size(176, 301);
             this.groupBox7.TabIndex = 97;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Health / AC / Speed";
             // 
             // HitDice
             // 
-            this.HitDice.Location = new System.Drawing.Point(80, 154);
+            this.HitDice.Location = new System.Drawing.Point(81, 168);
             this.HitDice.Name = "HitDice";
             this.HitDice.Size = new System.Drawing.Size(63, 20);
             this.HitDice.TabIndex = 81;
@@ -551,7 +626,7 @@ namespace DesktopApp1
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(24, 158);
+            this.label32.Location = new System.Drawing.Point(25, 172);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(45, 13);
             this.label32.TabIndex = 101;
@@ -559,14 +634,14 @@ namespace DesktopApp1
             // 
             // characterHPTemp
             // 
-            this.characterHPTemp.Location = new System.Drawing.Point(80, 122);
+            this.characterHPTemp.Location = new System.Drawing.Point(81, 136);
             this.characterHPTemp.Name = "characterHPTemp";
             this.characterHPTemp.Size = new System.Drawing.Size(63, 20);
             this.characterHPTemp.TabIndex = 99;
             // 
             // characterHPCurrent
             // 
-            this.characterHPCurrent.Location = new System.Drawing.Point(80, 91);
+            this.characterHPCurrent.Location = new System.Drawing.Point(81, 105);
             this.characterHPCurrent.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -583,7 +658,7 @@ namespace DesktopApp1
             // 
             // characterHPMax
             // 
-            this.characterHPMax.Location = new System.Drawing.Point(80, 64);
+            this.characterHPMax.Location = new System.Drawing.Point(81, 78);
             this.characterHPMax.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -597,9 +672,9 @@ namespace DesktopApp1
             // 
             this.groupBox6.Controls.Add(this.groupBox5);
             this.groupBox6.Controls.Add(this.groupBox4);
-            this.groupBox6.Location = new System.Drawing.Point(16, 189);
+            this.groupBox6.Location = new System.Drawing.Point(12, 206);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(149, 81);
+            this.groupBox6.Size = new System.Drawing.Size(149, 89);
             this.groupBox6.TabIndex = 96;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Death Saves";
@@ -608,7 +683,7 @@ namespace DesktopApp1
             // 
             this.groupBox5.Controls.Add(this.DeathSaveFails);
             this.groupBox5.Controls.Add(this.label19);
-            this.groupBox5.Location = new System.Drawing.Point(8, 43);
+            this.groupBox5.Location = new System.Drawing.Point(8, 48);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(135, 32);
             this.groupBox5.TabIndex = 95;
@@ -642,7 +717,7 @@ namespace DesktopApp1
             this.groupBox4.Controls.Add(this.label18);
             this.groupBox4.Location = new System.Drawing.Point(6, 12);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(136, 31);
+            this.groupBox4.Size = new System.Drawing.Size(136, 34);
             this.groupBox4.TabIndex = 94;
             this.groupBox4.TabStop = false;
             // 
@@ -671,7 +746,7 @@ namespace DesktopApp1
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(21, 124);
+            this.label17.Location = new System.Drawing.Point(22, 138);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(48, 13);
             this.label17.TabIndex = 83;
@@ -680,7 +755,7 @@ namespace DesktopApp1
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(21, 94);
+            this.label16.Location = new System.Drawing.Point(22, 108);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(58, 13);
             this.label16.TabIndex = 81;
@@ -689,7 +764,7 @@ namespace DesktopApp1
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(21, 68);
+            this.label15.Location = new System.Drawing.Point(22, 82);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(44, 13);
             this.label15.TabIndex = 79;
@@ -748,8 +823,20 @@ namespace DesktopApp1
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label35);
+            this.groupBox2.Controls.Add(this.chaSavingProf);
+            this.groupBox2.Controls.Add(this.CHASaving);
+            this.groupBox2.Controls.Add(this.wisSavingProf);
+            this.groupBox2.Controls.Add(this.WISSaving);
+            this.groupBox2.Controls.Add(this.intSavingProf);
+            this.groupBox2.Controls.Add(this.INTSaving);
+            this.groupBox2.Controls.Add(this.dexSavingProf);
+            this.groupBox2.Controls.Add(this.DEXSaving);
+            this.groupBox2.Controls.Add(this.conSavingProf);
+            this.groupBox2.Controls.Add(this.CONSaving);
+            this.groupBox2.Controls.Add(this.strSavingProf);
+            this.groupBox2.Controls.Add(this.STRSaving);
             this.groupBox2.Controls.Add(this.charInspiration);
-            this.groupBox2.Controls.Add(this.checkBox19);
             this.groupBox2.Controls.Add(this.checkBox18);
             this.groupBox2.Controls.Add(this.checkBox17);
             this.groupBox2.Controls.Add(this.checkBox16);
@@ -768,7 +855,6 @@ namespace DesktopApp1
             this.groupBox2.Controls.Add(this.checkBox3);
             this.groupBox2.Controls.Add(this.checkBox2);
             this.groupBox2.Controls.Add(this.checkBox1);
-            this.groupBox2.Controls.Add(this.textBox33);
             this.groupBox2.Controls.Add(this.textBox34);
             this.groupBox2.Controls.Add(this.textBox35);
             this.groupBox2.Controls.Add(this.textBox25);
@@ -811,7 +897,7 @@ namespace DesktopApp1
             this.groupBox2.Controls.Add(this.strStat);
             this.groupBox2.Location = new System.Drawing.Point(12, 107);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(247, 485);
+            this.groupBox2.Size = new System.Drawing.Size(247, 538);
             this.groupBox2.TabIndex = 71;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ability Scores / Skills";
@@ -826,24 +912,14 @@ namespace DesktopApp1
             this.charInspiration.Text = "Inspiration";
             this.charInspiration.UseVisualStyleBackColor = true;
             // 
-            // checkBox19
-            // 
-            this.checkBox19.AutoSize = true;
-            this.checkBox19.Location = new System.Drawing.Point(111, 456);
-            this.checkBox19.Name = "checkBox19";
-            this.checkBox19.Size = new System.Drawing.Size(86, 17);
-            this.checkBox19.TabIndex = 72;
-            this.checkBox19.Text = "checkBox19";
-            this.checkBox19.UseVisualStyleBackColor = true;
-            // 
             // checkBox18
             // 
             this.checkBox18.AutoSize = true;
             this.checkBox18.Location = new System.Drawing.Point(111, 433);
             this.checkBox18.Name = "checkBox18";
-            this.checkBox18.Size = new System.Drawing.Size(86, 17);
+            this.checkBox18.Size = new System.Drawing.Size(64, 17);
             this.checkBox18.TabIndex = 80;
-            this.checkBox18.Text = "checkBox18";
+            this.checkBox18.Text = "Survival";
             this.checkBox18.UseVisualStyleBackColor = true;
             // 
             // checkBox17
@@ -851,9 +927,9 @@ namespace DesktopApp1
             this.checkBox17.AutoSize = true;
             this.checkBox17.Location = new System.Drawing.Point(111, 410);
             this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(86, 17);
+            this.checkBox17.Size = new System.Drawing.Size(59, 17);
             this.checkBox17.TabIndex = 79;
-            this.checkBox17.Text = "checkBox17";
+            this.checkBox17.Text = "Stealth";
             this.checkBox17.UseVisualStyleBackColor = true;
             // 
             // checkBox16
@@ -861,9 +937,9 @@ namespace DesktopApp1
             this.checkBox16.AutoSize = true;
             this.checkBox16.Location = new System.Drawing.Point(111, 385);
             this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(86, 17);
+            this.checkBox16.Size = new System.Drawing.Size(93, 17);
             this.checkBox16.TabIndex = 78;
-            this.checkBox16.Text = "checkBox16";
+            this.checkBox16.Text = "Slight of Hand";
             this.checkBox16.UseVisualStyleBackColor = true;
             // 
             // checkBox15
@@ -871,9 +947,9 @@ namespace DesktopApp1
             this.checkBox15.AutoSize = true;
             this.checkBox15.Location = new System.Drawing.Point(111, 361);
             this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(86, 17);
+            this.checkBox15.Size = new System.Drawing.Size(64, 17);
             this.checkBox15.TabIndex = 72;
-            this.checkBox15.Text = "checkBox15";
+            this.checkBox15.Text = "Religion";
             this.checkBox15.UseVisualStyleBackColor = true;
             // 
             // checkBox14
@@ -881,10 +957,11 @@ namespace DesktopApp1
             this.checkBox14.AutoSize = true;
             this.checkBox14.Location = new System.Drawing.Point(111, 335);
             this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(86, 17);
+            this.checkBox14.Size = new System.Drawing.Size(78, 17);
             this.checkBox14.TabIndex = 77;
-            this.checkBox14.Text = "checkBox14";
+            this.checkBox14.Text = "Persuasion";
             this.checkBox14.UseVisualStyleBackColor = true;
+            this.checkBox14.CheckedChanged += new System.EventHandler(this.checkBox14_CheckedChanged);
             // 
             // checkBox13
             // 
@@ -893,7 +970,7 @@ namespace DesktopApp1
             this.checkBox13.Name = "checkBox13";
             this.checkBox13.Size = new System.Drawing.Size(86, 17);
             this.checkBox13.TabIndex = 72;
-            this.checkBox13.Text = "checkBox13";
+            this.checkBox13.Text = "Performance";
             this.checkBox13.UseVisualStyleBackColor = true;
             // 
             // checkBox12
@@ -901,9 +978,9 @@ namespace DesktopApp1
             this.checkBox12.AutoSize = true;
             this.checkBox12.Location = new System.Drawing.Point(111, 284);
             this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(86, 17);
+            this.checkBox12.Size = new System.Drawing.Size(77, 17);
             this.checkBox12.TabIndex = 76;
-            this.checkBox12.Text = "checkBox12";
+            this.checkBox12.Text = "Perception";
             this.checkBox12.UseVisualStyleBackColor = true;
             // 
             // checkBox11
@@ -911,9 +988,9 @@ namespace DesktopApp1
             this.checkBox11.AutoSize = true;
             this.checkBox11.Location = new System.Drawing.Point(111, 262);
             this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(86, 17);
+            this.checkBox11.Size = new System.Drawing.Size(58, 17);
             this.checkBox11.TabIndex = 75;
-            this.checkBox11.Text = "checkBox11";
+            this.checkBox11.Text = "Nature";
             this.checkBox11.UseVisualStyleBackColor = true;
             // 
             // checkBox10
@@ -921,230 +998,223 @@ namespace DesktopApp1
             this.checkBox10.AutoSize = true;
             this.checkBox10.Location = new System.Drawing.Point(111, 239);
             this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(86, 17);
+            this.checkBox10.Size = new System.Drawing.Size(69, 17);
             this.checkBox10.TabIndex = 72;
-            this.checkBox10.Text = "checkBox10";
+            this.checkBox10.Text = "Medicine";
             this.checkBox10.UseVisualStyleBackColor = true;
             // 
             // checkBox9
             // 
             this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(117, 214);
+            this.checkBox9.Location = new System.Drawing.Point(111, 214);
             this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(80, 17);
+            this.checkBox9.Size = new System.Drawing.Size(86, 17);
             this.checkBox9.TabIndex = 72;
-            this.checkBox9.Text = "checkBox9";
+            this.checkBox9.Text = "Investigation";
             this.checkBox9.UseVisualStyleBackColor = true;
             // 
             // checkBox8
             // 
             this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(117, 181);
+            this.checkBox8.Location = new System.Drawing.Point(111, 181);
             this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(80, 17);
+            this.checkBox8.Size = new System.Drawing.Size(79, 17);
             this.checkBox8.TabIndex = 72;
-            this.checkBox8.Text = "checkBox8";
+            this.checkBox8.Text = "Intimidation";
             this.checkBox8.UseVisualStyleBackColor = true;
             // 
             // checkBox7
             // 
             this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(117, 158);
+            this.checkBox7.Location = new System.Drawing.Point(111, 158);
             this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(80, 17);
+            this.checkBox7.Size = new System.Drawing.Size(57, 17);
             this.checkBox7.TabIndex = 72;
-            this.checkBox7.Text = "checkBox7";
+            this.checkBox7.Text = "Insight";
             this.checkBox7.UseVisualStyleBackColor = true;
             // 
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(117, 134);
+            this.checkBox6.Location = new System.Drawing.Point(111, 134);
             this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(80, 17);
+            this.checkBox6.Size = new System.Drawing.Size(58, 17);
             this.checkBox6.TabIndex = 74;
-            this.checkBox6.Text = "checkBox6";
+            this.checkBox6.Text = "History";
             this.checkBox6.UseVisualStyleBackColor = true;
             // 
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(117, 107);
+            this.checkBox5.Location = new System.Drawing.Point(111, 107);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(80, 17);
+            this.checkBox5.Size = new System.Drawing.Size(75, 17);
             this.checkBox5.TabIndex = 72;
-            this.checkBox5.Text = "checkBox5";
+            this.checkBox5.Text = "Deception";
             this.checkBox5.UseVisualStyleBackColor = true;
             // 
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(117, 84);
+            this.checkBox4.Location = new System.Drawing.Point(111, 84);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(80, 17);
+            this.checkBox4.Size = new System.Drawing.Size(66, 17);
             this.checkBox4.TabIndex = 73;
-            this.checkBox4.Text = "checkBox4";
+            this.checkBox4.Text = "Athletics";
             this.checkBox4.UseVisualStyleBackColor = true;
             // 
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(117, 57);
+            this.checkBox3.Location = new System.Drawing.Point(111, 57);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(80, 17);
+            this.checkBox3.Size = new System.Drawing.Size(60, 17);
             this.checkBox3.TabIndex = 72;
-            this.checkBox3.Text = "checkBox3";
+            this.checkBox3.Text = "Arcana";
             this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(117, 34);
+            this.checkBox2.Location = new System.Drawing.Point(111, 34);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(80, 17);
+            this.checkBox2.Size = new System.Drawing.Size(100, 17);
             this.checkBox2.TabIndex = 72;
-            this.checkBox2.Text = "checkBox2";
+            this.checkBox2.Text = "Animal handling";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(117, 12);
+            this.checkBox1.Location = new System.Drawing.Point(111, 12);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
+            this.checkBox1.Size = new System.Drawing.Size(76, 17);
             this.checkBox1.TabIndex = 71;
-            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.Text = "Acrobatics";
             this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // textBox33
-            // 
-            this.textBox33.Location = new System.Drawing.Point(203, 456);
-            this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new System.Drawing.Size(25, 20);
-            this.textBox33.TabIndex = 70;
             // 
             // textBox34
             // 
-            this.textBox34.Location = new System.Drawing.Point(203, 432);
+            this.textBox34.Location = new System.Drawing.Point(212, 432);
             this.textBox34.Name = "textBox34";
             this.textBox34.Size = new System.Drawing.Size(25, 20);
             this.textBox34.TabIndex = 68;
             // 
             // textBox35
             // 
-            this.textBox35.Location = new System.Drawing.Point(203, 408);
+            this.textBox35.Location = new System.Drawing.Point(212, 408);
             this.textBox35.Name = "textBox35";
             this.textBox35.Size = new System.Drawing.Size(25, 20);
             this.textBox35.TabIndex = 66;
             // 
             // textBox25
             // 
-            this.textBox25.Location = new System.Drawing.Point(203, 382);
+            this.textBox25.Location = new System.Drawing.Point(212, 382);
             this.textBox25.Name = "textBox25";
             this.textBox25.Size = new System.Drawing.Size(25, 20);
             this.textBox25.TabIndex = 64;
             // 
             // textBox26
             // 
-            this.textBox26.Location = new System.Drawing.Point(203, 358);
+            this.textBox26.Location = new System.Drawing.Point(212, 358);
             this.textBox26.Name = "textBox26";
             this.textBox26.Size = new System.Drawing.Size(25, 20);
             this.textBox26.TabIndex = 62;
             // 
             // textBox27
             // 
-            this.textBox27.Location = new System.Drawing.Point(203, 334);
+            this.textBox27.Location = new System.Drawing.Point(212, 334);
             this.textBox27.Name = "textBox27";
             this.textBox27.Size = new System.Drawing.Size(25, 20);
             this.textBox27.TabIndex = 60;
             // 
             // textBox28
             // 
-            this.textBox28.Location = new System.Drawing.Point(203, 310);
+            this.textBox28.Location = new System.Drawing.Point(212, 310);
             this.textBox28.Name = "textBox28";
             this.textBox28.Size = new System.Drawing.Size(25, 20);
             this.textBox28.TabIndex = 58;
             // 
             // textBox29
             // 
-            this.textBox29.Location = new System.Drawing.Point(203, 284);
+            this.textBox29.Location = new System.Drawing.Point(212, 284);
             this.textBox29.Name = "textBox29";
             this.textBox29.Size = new System.Drawing.Size(25, 20);
             this.textBox29.TabIndex = 56;
             // 
             // textBox30
             // 
-            this.textBox30.Location = new System.Drawing.Point(203, 260);
+            this.textBox30.Location = new System.Drawing.Point(212, 260);
             this.textBox30.Name = "textBox30";
             this.textBox30.Size = new System.Drawing.Size(25, 20);
             this.textBox30.TabIndex = 54;
             // 
             // textBox31
             // 
-            this.textBox31.Location = new System.Drawing.Point(203, 236);
+            this.textBox31.Location = new System.Drawing.Point(212, 236);
             this.textBox31.Name = "textBox31";
             this.textBox31.Size = new System.Drawing.Size(25, 20);
             this.textBox31.TabIndex = 52;
             // 
             // textBox32
             // 
-            this.textBox32.Location = new System.Drawing.Point(203, 212);
+            this.textBox32.Location = new System.Drawing.Point(212, 212);
             this.textBox32.Name = "textBox32";
             this.textBox32.Size = new System.Drawing.Size(25, 20);
             this.textBox32.TabIndex = 50;
             // 
             // textBox21
             // 
-            this.textBox21.Location = new System.Drawing.Point(203, 180);
+            this.textBox21.Location = new System.Drawing.Point(212, 180);
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(25, 20);
             this.textBox21.TabIndex = 48;
             // 
             // textBox22
             // 
-            this.textBox22.Location = new System.Drawing.Point(203, 156);
+            this.textBox22.Location = new System.Drawing.Point(212, 156);
             this.textBox22.Name = "textBox22";
             this.textBox22.Size = new System.Drawing.Size(25, 20);
             this.textBox22.TabIndex = 46;
             // 
             // textBox23
             // 
-            this.textBox23.Location = new System.Drawing.Point(203, 132);
+            this.textBox23.Location = new System.Drawing.Point(212, 132);
             this.textBox23.Name = "textBox23";
             this.textBox23.Size = new System.Drawing.Size(25, 20);
             this.textBox23.TabIndex = 44;
             // 
             // textBox24
             // 
-            this.textBox24.Location = new System.Drawing.Point(203, 108);
+            this.textBox24.Location = new System.Drawing.Point(212, 108);
             this.textBox24.Name = "textBox24";
             this.textBox24.Size = new System.Drawing.Size(25, 20);
             this.textBox24.TabIndex = 42;
             // 
             // textBox19
             // 
-            this.textBox19.Location = new System.Drawing.Point(203, 82);
+            this.textBox19.Location = new System.Drawing.Point(212, 82);
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new System.Drawing.Size(25, 20);
             this.textBox19.TabIndex = 40;
             // 
             // textBox20
             // 
-            this.textBox20.Location = new System.Drawing.Point(203, 58);
+            this.textBox20.Location = new System.Drawing.Point(212, 58);
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new System.Drawing.Size(25, 20);
             this.textBox20.TabIndex = 38;
             // 
             // textBox18
             // 
-            this.textBox18.Location = new System.Drawing.Point(203, 34);
+            this.textBox18.Location = new System.Drawing.Point(212, 34);
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(25, 20);
             this.textBox18.TabIndex = 36;
             // 
             // textBox17
             // 
-            this.textBox17.Location = new System.Drawing.Point(203, 10);
+            this.textBox17.Location = new System.Drawing.Point(212, 10);
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(25, 20);
             this.textBox17.TabIndex = 34;
@@ -1476,16 +1546,16 @@ namespace DesktopApp1
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(810, 604);
+            this.tabPage2.Size = new System.Drawing.Size(816, 650);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Extra Notes";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(22, 18);
+            this.richTextBox1.Location = new System.Drawing.Point(7, 6);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(770, 565);
+            this.richTextBox1.Size = new System.Drawing.Size(788, 626);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
@@ -1500,7 +1570,7 @@ namespace DesktopApp1
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(810, 604);
+            this.tabPage3.Size = new System.Drawing.Size(816, 650);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "DiceRolls";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1523,7 +1593,7 @@ namespace DesktopApp1
             this.groupBox8.Controls.Add(this.nd8);
             this.groupBox8.Controls.Add(this.nd6);
             this.groupBox8.Controls.Add(this.nd4);
-            this.groupBox8.Location = new System.Drawing.Point(25, 332);
+            this.groupBox8.Location = new System.Drawing.Point(25, 376);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(421, 224);
             this.groupBox8.TabIndex = 13;
@@ -1879,13 +1949,13 @@ namespace DesktopApp1
             this.diceRoll_results.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.diceRoll_results.Location = new System.Drawing.Point(503, 106);
             this.diceRoll_results.Name = "diceRoll_results";
-            this.diceRoll_results.Size = new System.Drawing.Size(298, 434);
+            this.diceRoll_results.Size = new System.Drawing.Size(298, 494);
             this.diceRoll_results.TabIndex = 10;
             this.diceRoll_results.Text = "";
             // 
             // resetResults
             // 
-            this.resetResults.Location = new System.Drawing.Point(685, 555);
+            this.resetResults.Location = new System.Drawing.Point(685, 606);
             this.resetResults.Name = "resetResults";
             this.resetResults.Size = new System.Drawing.Size(116, 32);
             this.resetResults.TabIndex = 9;
@@ -1908,7 +1978,7 @@ namespace DesktopApp1
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(810, 604);
+            this.tabPage4.Size = new System.Drawing.Size(816, 650);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "GrimoreSite";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1920,7 +1990,7 @@ namespace DesktopApp1
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.ScriptErrorsSuppressed = true;
-            this.webBrowser1.Size = new System.Drawing.Size(804, 598);
+            this.webBrowser1.Size = new System.Drawing.Size(810, 644);
             this.webBrowser1.TabIndex = 0;
             this.webBrowser1.Url = new System.Uri("https://thebombzen.com/grimoire/", System.UriKind.Absolute);
             // 
@@ -1930,7 +2000,7 @@ namespace DesktopApp1
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(810, 604);
+            this.tabPage5.Size = new System.Drawing.Size(816, 650);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Matts mechanics™";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1948,7 +2018,7 @@ namespace DesktopApp1
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Location = new System.Drawing.Point(5, 627);
+            this.button1.Location = new System.Drawing.Point(5, 673);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(10, 11);
             this.button1.TabIndex = 1;
@@ -1956,64 +2026,122 @@ namespace DesktopApp1
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label33
+            // strSavingProf
             // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(15, 22);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(71, 13);
-            this.label33.TabIndex = 16;
-            this.label33.Text = "Casting ability";
+            this.strSavingProf.AutoSize = true;
+            this.strSavingProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.strSavingProf.Location = new System.Drawing.Point(6, 484);
+            this.strSavingProf.Name = "strSavingProf";
+            this.strSavingProf.Size = new System.Drawing.Size(40, 14);
+            this.strSavingProf.TabIndex = 82;
+            this.strSavingProf.Text = "STR";
+            this.strSavingProf.UseVisualStyleBackColor = true;
             // 
-            // label34
+            // STRSaving
             // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(104, 11);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(63, 13);
-            this.label34.TabIndex = 104;
-            this.label34.Text = "int, wis, cha";
+            this.STRSaving.Location = new System.Drawing.Point(51, 479);
+            this.STRSaving.Name = "STRSaving";
+            this.STRSaving.Size = new System.Drawing.Size(25, 20);
+            this.STRSaving.TabIndex = 81;
             // 
-            // CastingInt
+            // conSavingProf
             // 
-            this.CastingInt.AutoSize = true;
-            this.CastingInt.Location = new System.Drawing.Point(107, 28);
-            this.CastingInt.Name = "CastingInt";
-            this.CastingInt.Size = new System.Drawing.Size(14, 13);
-            this.CastingInt.TabIndex = 105;
-            this.CastingInt.TabStop = true;
-            this.CastingInt.UseVisualStyleBackColor = true;
+            this.conSavingProf.AutoSize = true;
+            this.conSavingProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conSavingProf.Location = new System.Drawing.Point(86, 484);
+            this.conSavingProf.Name = "conSavingProf";
+            this.conSavingProf.Size = new System.Drawing.Size(42, 14);
+            this.conSavingProf.TabIndex = 84;
+            this.conSavingProf.Text = "CON";
+            this.conSavingProf.UseVisualStyleBackColor = true;
             // 
-            // CastingWis
+            // CONSaving
             // 
-            this.CastingWis.AutoSize = true;
-            this.CastingWis.Location = new System.Drawing.Point(127, 28);
-            this.CastingWis.Name = "CastingWis";
-            this.CastingWis.Size = new System.Drawing.Size(14, 13);
-            this.CastingWis.TabIndex = 106;
-            this.CastingWis.TabStop = true;
-            this.CastingWis.UseVisualStyleBackColor = true;
+            this.CONSaving.Location = new System.Drawing.Point(134, 478);
+            this.CONSaving.Name = "CONSaving";
+            this.CONSaving.Size = new System.Drawing.Size(25, 20);
+            this.CONSaving.TabIndex = 83;
             // 
-            // CastingCha
+            // dexSavingProf
             // 
-            this.CastingCha.AutoSize = true;
-            this.CastingCha.Location = new System.Drawing.Point(147, 28);
-            this.CastingCha.Name = "CastingCha";
-            this.CastingCha.Size = new System.Drawing.Size(14, 13);
-            this.CastingCha.TabIndex = 106;
-            this.CastingCha.TabStop = true;
-            this.CastingCha.UseVisualStyleBackColor = true;
+            this.dexSavingProf.AutoSize = true;
+            this.dexSavingProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dexSavingProf.Location = new System.Drawing.Point(6, 507);
+            this.dexSavingProf.Name = "dexSavingProf";
+            this.dexSavingProf.Size = new System.Drawing.Size(40, 14);
+            this.dexSavingProf.TabIndex = 86;
+            this.dexSavingProf.Text = "DEX";
+            this.dexSavingProf.UseVisualStyleBackColor = true;
             // 
-            // Weapons
+            // DEXSaving
             // 
-            this.Weapons.Location = new System.Drawing.Point(476, 391);
-            this.Weapons.Name = "Weapons";
-            this.Weapons.Size = new System.Drawing.Size(200, 100);
-            this.Weapons.TabIndex = 101;
-            this.Weapons.TabStop = false;
-            this.Weapons.Text = "Weapons/attacks";
+            this.DEXSaving.Location = new System.Drawing.Point(51, 502);
+            this.DEXSaving.Name = "DEXSaving";
+            this.DEXSaving.Size = new System.Drawing.Size(25, 20);
+            this.DEXSaving.TabIndex = 85;
+            // 
+            // intSavingProf
+            // 
+            this.intSavingProf.AutoSize = true;
+            this.intSavingProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.intSavingProf.Location = new System.Drawing.Point(86, 506);
+            this.intSavingProf.Name = "intSavingProf";
+            this.intSavingProf.Size = new System.Drawing.Size(37, 14);
+            this.intSavingProf.TabIndex = 88;
+            this.intSavingProf.Text = "INT";
+            this.intSavingProf.UseVisualStyleBackColor = true;
+            // 
+            // INTSaving
+            // 
+            this.INTSaving.Location = new System.Drawing.Point(134, 500);
+            this.INTSaving.Name = "INTSaving";
+            this.INTSaving.Size = new System.Drawing.Size(25, 20);
+            this.INTSaving.TabIndex = 87;
+            // 
+            // chaSavingProf
+            // 
+            this.chaSavingProf.AutoSize = true;
+            this.chaSavingProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chaSavingProf.Location = new System.Drawing.Point(166, 506);
+            this.chaSavingProf.Name = "chaSavingProf";
+            this.chaSavingProf.Size = new System.Drawing.Size(41, 14);
+            this.chaSavingProf.TabIndex = 92;
+            this.chaSavingProf.Text = "CHA";
+            this.chaSavingProf.UseVisualStyleBackColor = true;
+            // 
+            // CHASaving
+            // 
+            this.CHASaving.Location = new System.Drawing.Point(212, 501);
+            this.CHASaving.Name = "CHASaving";
+            this.CHASaving.Size = new System.Drawing.Size(25, 20);
+            this.CHASaving.TabIndex = 91;
+            // 
+            // wisSavingProf
+            // 
+            this.wisSavingProf.AutoSize = true;
+            this.wisSavingProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wisSavingProf.Location = new System.Drawing.Point(166, 484);
+            this.wisSavingProf.Name = "wisSavingProf";
+            this.wisSavingProf.Size = new System.Drawing.Size(39, 14);
+            this.wisSavingProf.TabIndex = 90;
+            this.wisSavingProf.Text = "WIS";
+            this.wisSavingProf.UseVisualStyleBackColor = true;
+            // 
+            // WISSaving
+            // 
+            this.WISSaving.Location = new System.Drawing.Point(212, 479);
+            this.WISSaving.Name = "WISSaving";
+            this.WISSaving.Size = new System.Drawing.Size(25, 20);
+            this.WISSaving.TabIndex = 89;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(6, 461);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(78, 13);
+            this.label35.TabIndex = 111;
+            this.label35.Text = "Saving Throws";
             // 
             // Form1
             // 
@@ -2021,7 +2149,7 @@ namespace DesktopApp1
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(818, 653);
+            this.ClientSize = new System.Drawing.Size(824, 699);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tabControl1);
             this.KeyPreview = true;
@@ -2131,7 +2259,6 @@ namespace DesktopApp1
         private System.Windows.Forms.TextBox PassiveWiz;
         private System.Windows.Forms.TextBox profBonus;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox33;
         private System.Windows.Forms.TextBox textBox34;
         private System.Windows.Forms.TextBox textBox35;
         private System.Windows.Forms.TextBox textBox25;
@@ -2151,7 +2278,6 @@ namespace DesktopApp1
         private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.CheckBox charInspiration;
-        private System.Windows.Forms.CheckBox checkBox19;
         private System.Windows.Forms.CheckBox checkBox18;
         private System.Windows.Forms.CheckBox checkBox17;
         private System.Windows.Forms.CheckBox checkBox16;
@@ -2242,6 +2368,19 @@ namespace DesktopApp1
         private System.Windows.Forms.RadioButton CastingWis;
         private System.Windows.Forms.RadioButton CastingInt;
         private System.Windows.Forms.GroupBox Weapons;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.CheckBox chaSavingProf;
+        private System.Windows.Forms.TextBox CHASaving;
+        private System.Windows.Forms.CheckBox wisSavingProf;
+        private System.Windows.Forms.TextBox WISSaving;
+        private System.Windows.Forms.CheckBox intSavingProf;
+        private System.Windows.Forms.TextBox INTSaving;
+        private System.Windows.Forms.CheckBox dexSavingProf;
+        private System.Windows.Forms.TextBox DEXSaving;
+        private System.Windows.Forms.CheckBox conSavingProf;
+        private System.Windows.Forms.TextBox CONSaving;
+        private System.Windows.Forms.CheckBox strSavingProf;
+        private System.Windows.Forms.TextBox STRSaving;
     }
 }
 

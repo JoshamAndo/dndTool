@@ -14,7 +14,14 @@ Human
 16
 12
 10
-160
-12
+197
+20
 0
 INT
+3d10
+False
+True
+False
+True
+False
+False

@@ -29,3 +29,13 @@ Human
 10
 ; spell casting ability
 INT
+; hit Dice
+2d10
+; saving throw proficiency
+; STR,DEX,CON,INT,WIZ,CHA
+False
+True
+False
+True
+False
+False

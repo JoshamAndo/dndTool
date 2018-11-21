@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{44E7E2E2-9465-4474-BB2D-D24A7045E59B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>DesktopApp1</RootNamespace>
-    <AssemblyName>DesktopApp1</AssemblyName>
+    <RootNamespace>DNDTools</RootNamespace>
+    <AssemblyName>DNDTools</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -73,6 +73,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

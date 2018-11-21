@@ -28,6 +28,7 @@ namespace DesktopApp1
         static int copper;
         static int silver;
         static int gold;
+        static string hitDie;
 
         // statMods
         static int strMod;
@@ -44,6 +45,13 @@ namespace DesktopApp1
 
         //skills
 
+        // saving throws
+        static bool strSavingthrow;
+        static bool dexSavingthrow;
+        static bool conSavingthrow;
+        static bool intSavingthrow;
+        static bool wisSavingthrow;
+        static bool chaSavingthrow;
 
         void getDataFromFile()
         {
@@ -82,6 +90,13 @@ namespace DesktopApp1
             silver = Int32.Parse(charVars[17]);
             copper = Int32.Parse(charVars[18]);
             spellAbility = charVars[19];
+            hitDie = charVars[20];
+            strSavingthrow = bool.Parse(charVars[21]);
+            dexSavingthrow = bool.Parse(charVars[22]);
+            conSavingthrow = bool.Parse(charVars[23]);
+            intSavingthrow = bool.Parse(charVars[24]);
+            wisSavingthrow = bool.Parse(charVars[25]);
+            chaSavingthrow = bool.Parse(charVars[26]);
         }
 
         // updates dependant variables not stored in file
@@ -116,7 +131,7 @@ namespace DesktopApp1
             wizMod = (int)Math.Floor((decimal)(WIZ - 10) / 2);
             chaMod = (int)Math.Floor((decimal)(CHA - 10) / 2);
 
-            passiveWisdom = 10 + conMod;
+            passiveWisdom = 10 + wizMod;
 
             int spellMod = 0;
             if (spellAbility == "INT")
@@ -136,9 +151,17 @@ namespace DesktopApp1
             spellAttack = proficentBonus + spellMod;
         }
 
+        // turns an int to a string +/-int for display on form
         string signedIntToString(int integer)
         {
             return (integer <= 0) ? integer.ToString() : "+" + integer.ToString();
+        }
+
+        // calculates a skill/saving throw mod and converts to signedint
+        string skillMod(bool prof, int mod)
+        {
+            int modifier = (prof) ? mod + proficentBonus : mod;
+            return signedIntToString(modifier);
         }
 
         // sets forms data to character infomation (updates dependant vars)
@@ -165,6 +188,7 @@ namespace DesktopApp1
             goldCount.Value = gold;
             silverCount.Value = silver;
             copperCount.Value = copper;
+            HitDice.Text = hitDie;
             
             StrModifier.Text = signedIntToString(strMod);
             DexModifier.Text = signedIntToString(dexMod);
@@ -172,7 +196,7 @@ namespace DesktopApp1
             IntModifier.Text = signedIntToString(intMod);
             WizModifier.Text = signedIntToString(wizMod);
             ChaModifier.Text = signedIntToString(chaMod);
-            PassiveWiz.Text = signedIntToString(passiveWisdom);
+            
 
             if (spellAbility == "INT")
             {
@@ -189,6 +213,22 @@ namespace DesktopApp1
 
             SpellAttack.Text = signedIntToString(spellAttack);
             spellSave.Text = signedIntToString(spellSaveDC);
+            
+            strSavingProf.Checked = strSavingthrow;
+            dexSavingProf.Checked = dexSavingthrow;
+            conSavingProf.Checked = conSavingthrow;
+            intSavingProf.Checked = intSavingthrow;
+            wisSavingProf.Checked = wisSavingthrow;
+            chaSavingProf.Checked = chaSavingthrow;
+
+            STRSaving.Text = skillMod(strSavingthrow, strMod);
+            DEXSaving.Text = skillMod(dexSavingthrow, dexMod);
+            CONSaving.Text = skillMod(conSavingthrow, conMod);
+            INTSaving.Text = skillMod(intSavingthrow, intMod);
+            WISSaving.Text = skillMod(wisSavingthrow, wizMod);
+            CHASaving.Text = skillMod(chaSavingthrow, chaMod);
+            PassiveWiz.Text = signedIntToString(passiveWisdom);
+            //PassiveWiz.Text = skillMod(perceptionMod,10);
         }
 
         // gets the form data and sets the character infomation to form data
@@ -213,6 +253,7 @@ namespace DesktopApp1
             gold = (int)goldCount.Value;
             silver = (int)silverCount.Value;
             copper = (int)copperCount.Value;
+            hitDie = HitDice.Text;
 
             if (CastingInt.Checked == true)
             {
@@ -226,6 +267,14 @@ namespace DesktopApp1
             {
                 spellAbility = "CHA";
             }
+
+            strSavingthrow = strSavingProf.Checked;
+            dexSavingthrow = dexSavingProf.Checked;
+            conSavingthrow = conSavingProf.Checked;
+            intSavingthrow = intSavingProf.Checked;
+            wisSavingthrow = wisSavingProf.Checked;
+            chaSavingthrow = chaSavingProf.Checked;
+
         }
 
         // sets the file to the data
@@ -256,6 +305,13 @@ namespace DesktopApp1
                 file.WriteLine(silver);
                 file.WriteLine(copper);
                 file.WriteLine(spellAbility);
+                file.WriteLine(hitDie);
+                file.WriteLine(strSavingthrow);
+                file.WriteLine(dexSavingthrow);
+                file.WriteLine(conSavingthrow);
+                file.WriteLine(intSavingthrow);
+                file.WriteLine(wisSavingthrow);
+                file.WriteLine(chaSavingthrow);
             }
 
         }
@@ -332,10 +388,10 @@ namespace DesktopApp1
                     silverCount.Value = 0;
                 }
             }
-            else if (silverCount.Value == 100)
+            else if (silverCount.Value >= 100)
             {
-                silverCount.Value = 0;
-                goldCount.Value++;
+                goldCount.Value += (int)(silverCount.Value/100);
+                silverCount.Value = (int)(silverCount.Value%100);
             }
         }
 
@@ -353,11 +409,10 @@ namespace DesktopApp1
                     copperCount.Value = 0;
                 }
             }
-            else if (copperCount.Value == 10)
+            else if (copperCount.Value >= 10)
             {
-                copperCount.Value = 0;
-                silverCount.Value++;
-
+                silverCount.Value += (int)(copperCount.Value/10);
+                copperCount.Value = (int)(copperCount.Value%10);
             }
         }
 
@@ -646,8 +701,9 @@ namespace DesktopApp1
             diceRoll_results.AppendText(Environment.NewLine);
         }
 
-        
+        private void checkBox14_CheckedChanged(object sender, EventArgs e)
+        {
 
-     
+        }
     }
 }
