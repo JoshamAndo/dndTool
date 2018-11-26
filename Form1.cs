@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using System.IO;
+using System.Text;
 
 namespace DesktopApp1
 {
@@ -29,6 +30,10 @@ namespace DesktopApp1
         static int silver;
         static int gold;
         static string hitDie;
+        static string speed;
+        static string AC;
+        static int deathFails;
+        static int deathsucesses;
 
         // statMods
         static int strMod;
@@ -63,7 +68,6 @@ namespace DesktopApp1
                 getDataFromFile();
                 setFormData();
             }
-                
         }
 
         void saveAsFile()
@@ -76,12 +80,27 @@ namespace DesktopApp1
                 setDataToFile();
                 setFormData();
             }
+        }
 
+        // converts text in textboxes to a line for saving in character file
+        string convertTextTofileLine(RichTextBox richTextBox)
+        {
+            StringBuilder Text = new StringBuilder(richTextBox.Text);
+            Text.Replace('\n', '†');
+            return Text.ToString();
+        }
+
+        // converts text in a string to a multiline input for textboxes
+        string convertFileLineToMultiLine(string Text)
+        {
+            StringBuilder newText = new StringBuilder(Text);
+            newText.Replace('†', '\n');
+            return newText.ToString();
         }
 
         void getDataFromFile()
         {
-            // read from (currently) sample file
+            // read from chosen file (sample.txt by default)
             System.IO.StreamReader file = new System.IO.StreamReader(filepath);
             string line;
             List<string> charVars = new List<string>();
@@ -123,6 +142,10 @@ namespace DesktopApp1
             intSavingthrow = bool.Parse(charVars[24]);
             wisSavingthrow = bool.Parse(charVars[25]);
             chaSavingthrow = bool.Parse(charVars[26]);
+            speed = charVars[27];
+            AC = charVars[28];
+            deathFails = Int32.Parse(charVars[29]);
+            deathsucesses = Int32.Parse(charVars[30]);
         }
 
         // updates dependant variables not stored in file
@@ -215,7 +238,12 @@ namespace DesktopApp1
             silverCount.Value = silver;
             copperCount.Value = copper;
             HitDice.Text = hitDie;
-            
+            charSpeed.Text = speed;
+            characterAC.Text = AC;
+            DeathSaveFails.Value = deathFails;
+            deathSuccess.Value = deathsucesses;
+
+
             StrModifier.Text = signedIntToString(strMod);
             DexModifier.Text = signedIntToString(dexMod);
             ConModifier.Text = signedIntToString(conMod);
@@ -255,6 +283,7 @@ namespace DesktopApp1
             CHASaving.Text = skillMod(chaSavingthrow, chaMod);
             PassiveWiz.Text = signedIntToString(passiveWisdom);
             //PassiveWiz.Text = skillMod(perceptionMod,10);
+            CharIniative.Text = signedIntToString(dexMod);
         }
 
         // gets the form data and sets the character infomation to form data
@@ -280,6 +309,10 @@ namespace DesktopApp1
             silver = (int)silverCount.Value;
             copper = (int)copperCount.Value;
             hitDie = HitDice.Text;
+            speed = charSpeed.Text;
+            AC = characterAC.Text;
+            deathFails = (int)DeathSaveFails.Value;
+            deathsucesses = (int)deathSuccess.Value;
 
             if (CastingInt.Checked == true)
             {
@@ -338,6 +371,10 @@ namespace DesktopApp1
                 file.WriteLine(intSavingthrow);
                 file.WriteLine(wisSavingthrow);
                 file.WriteLine(chaSavingthrow);
+                file.WriteLine(speed);
+                file.WriteLine(AC);
+                file.WriteLine(deathFails);
+                file.WriteLine(deathsucesses);
             }
 
         }
@@ -460,7 +497,7 @@ namespace DesktopApp1
                 Form2 deathMessage = new Form2();
                 deathMessage.Show();
                 DeathSaveFails.Value = 0;
-                numericUpDown1.Value = 0;
+                deathSuccess.Value = 0;
             }
 
         }
@@ -468,10 +505,10 @@ namespace DesktopApp1
         // stabilisation (3 success death saves)
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            if (numericUpDown1.Value == 3)
+            if (deathSuccess.Value == 3)
             {
                 DeathSaveFails.Value = 0;
-                numericUpDown1.Value = 0;
+                deathSuccess.Value = 0;
             }
         }
 
@@ -489,6 +526,40 @@ namespace DesktopApp1
             diceRoll_results.AppendText(result.ToString() + " (d"+n.ToString()+")");
             diceRoll_results.AppendText(Environment.NewLine);
         }
+        // code for custom roll wont bother
+        /*void customUserRoll()
+        {
+            //StringBuilder roll = new StringBuilder(customRoll.Text);
+            string roll = customRoll.Text;
+            int modify = 0;
+            if (roll.Contains("+"))
+            {
+                modify = 1;
+            }
+            else if (roll.Contains("-"))
+            {
+                modify = 2;
+            }
+            int die = 0, n = 0;
+            if (int.TryParse(roll[0]+"",out die) && int.TryParse(r)
+            {
+
+            }
+
+            int result = rand.Next(1, n + 1);
+
+
+            if (modify != 0) // normal dice result, return result;
+            {
+
+            }
+            else // with modifer
+            {
+
+            }
+            
+
+        }*/
 
         // basic roll buttons
         private void d4_Click(object sender, EventArgs e)
@@ -732,5 +803,14 @@ namespace DesktopApp1
         {
             saveAsFile();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string test = convertTextTofileLine(WeaponsAndEquipment);
+            System.Console.WriteLine(test);
+            System.Console.WriteLine(convertFileLineToMultiLine(test));
+        }
+
+        
     }
 }

@@ -30,7 +30,15 @@ namespace DesktopApp1
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.FeaturesAndTraits = new System.Windows.Forms.RichTextBox();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.AttacksAndSpells = new System.Windows.Forms.RichTextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.SaveAs = new System.Windows.Forms.Button();
+            this.Load = new System.Windows.Forms.Button();
             this.Weapons = new System.Windows.Forms.GroupBox();
+            this.WeaponsAndEquipment = new System.Windows.Forms.RichTextBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.CastingCha = new System.Windows.Forms.RadioButton();
             this.CastingWis = new System.Windows.Forms.RadioButton();
@@ -68,13 +76,13 @@ namespace DesktopApp1
             this.DeathSaveFails = new System.Windows.Forms.NumericUpDown();
             this.label19 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.deathSuccess = new System.Windows.Forms.NumericUpDown();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox38 = new System.Windows.Forms.TextBox();
+            this.charSpeed = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.CharIniative = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -165,7 +173,7 @@ namespace DesktopApp1
             this.CharacterNameLabel = new System.Windows.Forms.Label();
             this.CharacterName = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.extraNotes = new System.Windows.Forms.RichTextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.d20inc = new System.Windows.Forms.NumericUpDown();
@@ -203,11 +211,14 @@ namespace DesktopApp1
             this.label21 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.Load = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.SaveAs = new System.Windows.Forms.Button();
+            this.customRoll = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            this.groupBox11.SuspendLayout();
+            this.Weapons.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.transCopper)).BeginInit();
@@ -224,7 +235,7 @@ namespace DesktopApp1
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DeathSaveFails)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deathSuccess)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -252,14 +263,17 @@ namespace DesktopApp1
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Location = new System.Drawing.Point(1, 1);
+            this.tabControl1.Location = new System.Drawing.Point(2, 1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(824, 676);
+            this.tabControl1.Size = new System.Drawing.Size(903, 676);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.groupBox12);
+            this.tabPage1.Controls.Add(this.groupBox11);
+            this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.SaveAs);
             this.tabPage1.Controls.Add(this.Load);
             this.tabPage1.Controls.Add(this.Weapons);
@@ -272,19 +286,109 @@ namespace DesktopApp1
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(816, 650);
+            this.tabPage1.Size = new System.Drawing.Size(895, 650);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "MainStats";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.FeaturesAndTraits);
+            this.groupBox12.Location = new System.Drawing.Point(687, 17);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(200, 601);
+            this.groupBox12.TabIndex = 103;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Features/Traits";
+            // 
+            // FeaturesAndTraits
+            // 
+            this.FeaturesAndTraits.AcceptsTab = true;
+            this.FeaturesAndTraits.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.FeaturesAndTraits.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.FeaturesAndTraits.Location = new System.Drawing.Point(8, 19);
+            this.FeaturesAndTraits.Name = "FeaturesAndTraits";
+            this.FeaturesAndTraits.Size = new System.Drawing.Size(188, 573);
+            this.FeaturesAndTraits.TabIndex = 0;
+            this.FeaturesAndTraits.Text = "test";
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.AttacksAndSpells);
+            this.groupBox11.Location = new System.Drawing.Point(471, 150);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(200, 229);
+            this.groupBox11.TabIndex = 102;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Attacks/spells";
+            // 
+            // AttacksAndSpells
+            // 
+            this.AttacksAndSpells.AcceptsTab = true;
+            this.AttacksAndSpells.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.AttacksAndSpells.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AttacksAndSpells.Location = new System.Drawing.Point(8, 19);
+            this.AttacksAndSpells.Name = "AttacksAndSpells";
+            this.AttacksAndSpells.Size = new System.Drawing.Size(188, 201);
+            this.AttacksAndSpells.TabIndex = 0;
+            this.AttacksAndSpells.Text = "test";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(471, 621);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 104;
+            this.button2.Text = "test";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // SaveAs
+            // 
+            this.SaveAs.Location = new System.Drawing.Point(812, 624);
+            this.SaveAs.Name = "SaveAs";
+            this.SaveAs.Size = new System.Drawing.Size(75, 23);
+            this.SaveAs.TabIndex = 103;
+            this.SaveAs.Text = "Save As";
+            this.SaveAs.UseVisualStyleBackColor = true;
+            this.SaveAs.Click += new System.EventHandler(this.SaveAs_Click);
+            // 
+            // Load
+            // 
+            this.Load.Location = new System.Drawing.Point(731, 624);
+            this.Load.Name = "Load";
+            this.Load.Size = new System.Drawing.Size(75, 23);
+            this.Load.TabIndex = 102;
+            this.Load.Text = "Load";
+            this.Load.UseVisualStyleBackColor = true;
+            this.Load.Click += new System.EventHandler(this.Load_Click);
+            // 
             // Weapons
             // 
+            this.Weapons.Controls.Add(this.WeaponsAndEquipment);
             this.Weapons.Location = new System.Drawing.Point(471, 389);
             this.Weapons.Name = "Weapons";
-            this.Weapons.Size = new System.Drawing.Size(200, 100);
+            this.Weapons.Size = new System.Drawing.Size(200, 229);
             this.Weapons.TabIndex = 101;
             this.Weapons.TabStop = false;
             this.Weapons.Text = "Weapons/equipment";
+            // 
+            // WeaponsAndEquipment
+            // 
+            this.WeaponsAndEquipment.AcceptsTab = true;
+            this.WeaponsAndEquipment.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.WeaponsAndEquipment.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.WeaponsAndEquipment.Location = new System.Drawing.Point(8, 19);
+            this.WeaponsAndEquipment.Name = "WeaponsAndEquipment";
+            this.WeaponsAndEquipment.Size = new System.Drawing.Size(188, 201);
+            this.WeaponsAndEquipment.TabIndex = 0;
+            this.WeaponsAndEquipment.Text = "test";
             // 
             // groupBox10
             // 
@@ -299,7 +403,7 @@ namespace DesktopApp1
             this.groupBox10.Controls.Add(this.spellSave);
             this.groupBox10.Location = new System.Drawing.Point(471, 17);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(200, 366);
+            this.groupBox10.Size = new System.Drawing.Size(200, 129);
             this.groupBox10.TabIndex = 100;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Spellcasting";
@@ -317,7 +421,7 @@ namespace DesktopApp1
             // CastingWis
             // 
             this.CastingWis.AutoSize = true;
-            this.CastingWis.Location = new System.Drawing.Point(127, 28);
+            this.CastingWis.Location = new System.Drawing.Point(128, 28);
             this.CastingWis.Name = "CastingWis";
             this.CastingWis.Size = new System.Drawing.Size(14, 13);
             this.CastingWis.TabIndex = 106;
@@ -327,7 +431,7 @@ namespace DesktopApp1
             // CastingInt
             // 
             this.CastingInt.AutoSize = true;
-            this.CastingInt.Location = new System.Drawing.Point(107, 28);
+            this.CastingInt.Location = new System.Drawing.Point(106, 28);
             this.CastingInt.Name = "CastingInt";
             this.CastingInt.Size = new System.Drawing.Size(14, 13);
             this.CastingInt.TabIndex = 105;
@@ -367,7 +471,7 @@ namespace DesktopApp1
             // SpellAttack
             // 
             this.SpellAttack.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SpellAttack.Location = new System.Drawing.Point(107, 87);
+            this.SpellAttack.Location = new System.Drawing.Point(106, 87);
             this.SpellAttack.Name = "SpellAttack";
             this.SpellAttack.Size = new System.Drawing.Size(42, 29);
             this.SpellAttack.TabIndex = 14;
@@ -386,7 +490,7 @@ namespace DesktopApp1
             // spellSave
             // 
             this.spellSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.spellSave.Location = new System.Drawing.Point(107, 48);
+            this.spellSave.Location = new System.Drawing.Point(106, 48);
             this.spellSave.Name = "spellSave";
             this.spellSave.Size = new System.Drawing.Size(42, 29);
             this.spellSave.TabIndex = 12;
@@ -418,7 +522,7 @@ namespace DesktopApp1
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(125, 127);
+            this.label30.Location = new System.Drawing.Point(124, 127);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(14, 13);
             this.label30.TabIndex = 110;
@@ -427,7 +531,7 @@ namespace DesktopApp1
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(77, 127);
+            this.label29.Location = new System.Drawing.Point(76, 127);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(14, 13);
             this.label29.TabIndex = 110;
@@ -436,7 +540,7 @@ namespace DesktopApp1
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(29, 127);
+            this.label28.Location = new System.Drawing.Point(28, 127);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(15, 13);
             this.label28.TabIndex = 109;
@@ -444,7 +548,7 @@ namespace DesktopApp1
             // 
             // moneyTransaction
             // 
-            this.moneyTransaction.Location = new System.Drawing.Point(17, 169);
+            this.moneyTransaction.Location = new System.Drawing.Point(16, 169);
             this.moneyTransaction.Name = "moneyTransaction";
             this.moneyTransaction.Size = new System.Drawing.Size(56, 23);
             this.moneyTransaction.TabIndex = 106;
@@ -454,7 +558,7 @@ namespace DesktopApp1
             // 
             // transCopper
             // 
-            this.transCopper.Location = new System.Drawing.Point(113, 143);
+            this.transCopper.Location = new System.Drawing.Point(112, 143);
             this.transCopper.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -466,7 +570,7 @@ namespace DesktopApp1
             0,
             -2147483648});
             this.transCopper.Name = "transCopper";
-            this.transCopper.Size = new System.Drawing.Size(43, 20);
+            this.transCopper.Size = new System.Drawing.Size(44, 20);
             this.transCopper.TabIndex = 107;
             // 
             // transSilver
@@ -483,12 +587,12 @@ namespace DesktopApp1
             0,
             -2147483648});
             this.transSilver.Name = "transSilver";
-            this.transSilver.Size = new System.Drawing.Size(43, 20);
+            this.transSilver.Size = new System.Drawing.Size(44, 20);
             this.transSilver.TabIndex = 106;
             // 
             // transGold
             // 
-            this.transGold.Location = new System.Drawing.Point(17, 143);
+            this.transGold.Location = new System.Drawing.Point(16, 143);
             this.transGold.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -500,7 +604,7 @@ namespace DesktopApp1
             0,
             -2147483648});
             this.transGold.Name = "transGold";
-            this.transGold.Size = new System.Drawing.Size(43, 20);
+            this.transGold.Size = new System.Drawing.Size(44, 20);
             this.transGold.TabIndex = 104;
             // 
             // label26
@@ -526,14 +630,14 @@ namespace DesktopApp1
             0,
             -2147483648});
             this.copperCount.Name = "copperCount";
-            this.copperCount.Size = new System.Drawing.Size(41, 20);
+            this.copperCount.Size = new System.Drawing.Size(40, 20);
             this.copperCount.TabIndex = 101;
             this.copperCount.ValueChanged += new System.EventHandler(this.copperCount_ValueChanged);
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(7, 73);
+            this.label25.Location = new System.Drawing.Point(8, 73);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(41, 13);
             this.label25.TabIndex = 100;
@@ -566,7 +670,7 @@ namespace DesktopApp1
             0,
             0});
             this.goldCount.Name = "goldCount";
-            this.goldCount.Size = new System.Drawing.Size(97, 20);
+            this.goldCount.Size = new System.Drawing.Size(98, 20);
             this.goldCount.TabIndex = 101;
             this.goldCount.ValueChanged += new System.EventHandler(this.goldCount_ValueChanged);
             // 
@@ -590,9 +694,9 @@ namespace DesktopApp1
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(562, 621);
+            this.saveButton.Location = new System.Drawing.Point(642, 624);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(83, 23);
+            this.saveButton.Size = new System.Drawing.Size(82, 23);
             this.saveButton.TabIndex = 98;
             this.saveButton.Text = "Save/Update";
             this.saveButton.UseVisualStyleBackColor = true;
@@ -610,7 +714,7 @@ namespace DesktopApp1
             this.groupBox7.Controls.Add(this.label16);
             this.groupBox7.Controls.Add(this.label15);
             this.groupBox7.Controls.Add(this.label14);
-            this.groupBox7.Controls.Add(this.textBox38);
+            this.groupBox7.Controls.Add(this.charSpeed);
             this.groupBox7.Controls.Add(this.label13);
             this.groupBox7.Controls.Add(this.CharIniative);
             this.groupBox7.Controls.Add(this.label12);
@@ -626,13 +730,13 @@ namespace DesktopApp1
             // 
             this.HitDice.Location = new System.Drawing.Point(81, 168);
             this.HitDice.Name = "HitDice";
-            this.HitDice.Size = new System.Drawing.Size(63, 20);
+            this.HitDice.Size = new System.Drawing.Size(62, 20);
             this.HitDice.TabIndex = 81;
             // 
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(25, 172);
+            this.label32.Location = new System.Drawing.Point(26, 172);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(45, 13);
             this.label32.TabIndex = 101;
@@ -680,7 +784,7 @@ namespace DesktopApp1
             this.groupBox6.Controls.Add(this.groupBox4);
             this.groupBox6.Location = new System.Drawing.Point(12, 206);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(149, 89);
+            this.groupBox6.Size = new System.Drawing.Size(148, 89);
             this.groupBox6.TabIndex = 96;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Death Saves";
@@ -719,7 +823,7 @@ namespace DesktopApp1
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.numericUpDown1);
+            this.groupBox4.Controls.Add(this.deathSuccess);
             this.groupBox4.Controls.Add(this.label18);
             this.groupBox4.Location = new System.Drawing.Point(6, 12);
             this.groupBox4.Name = "groupBox4";
@@ -727,18 +831,18 @@ namespace DesktopApp1
             this.groupBox4.TabIndex = 94;
             this.groupBox4.TabStop = false;
             // 
-            // numericUpDown1
+            // deathSuccess
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(82, 10);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.deathSuccess.Location = new System.Drawing.Point(82, 10);
+            this.deathSuccess.Maximum = new decimal(new int[] {
             3,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(48, 20);
-            this.numericUpDown1.TabIndex = 85;
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            this.deathSuccess.Name = "deathSuccess";
+            this.deathSuccess.Size = new System.Drawing.Size(48, 20);
+            this.deathSuccess.TabIndex = 85;
+            this.deathSuccess.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // label18
             // 
@@ -785,13 +889,13 @@ namespace DesktopApp1
             this.label14.TabIndex = 77;
             this.label14.Text = "Speed";
             // 
-            // textBox38
+            // charSpeed
             // 
-            this.textBox38.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.textBox38.Location = new System.Drawing.Point(103, 35);
-            this.textBox38.Name = "textBox38";
-            this.textBox38.Size = new System.Drawing.Size(27, 23);
-            this.textBox38.TabIndex = 76;
+            this.charSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.charSpeed.Location = new System.Drawing.Point(104, 35);
+            this.charSpeed.Name = "charSpeed";
+            this.charSpeed.Size = new System.Drawing.Size(36, 23);
+            this.charSpeed.TabIndex = 76;
             // 
             // label13
             // 
@@ -805,15 +909,15 @@ namespace DesktopApp1
             // CharIniative
             // 
             this.CharIniative.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.CharIniative.Location = new System.Drawing.Point(68, 35);
+            this.CharIniative.Location = new System.Drawing.Point(62, 35);
             this.CharIniative.Name = "CharIniative";
-            this.CharIniative.Size = new System.Drawing.Size(27, 23);
+            this.CharIniative.Size = new System.Drawing.Size(34, 23);
             this.CharIniative.TabIndex = 74;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(25, 19);
+            this.label12.Location = new System.Drawing.Point(26, 19);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(21, 13);
             this.label12.TabIndex = 73;
@@ -822,9 +926,9 @@ namespace DesktopApp1
             // characterAC
             // 
             this.characterAC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.characterAC.Location = new System.Drawing.Point(28, 35);
+            this.characterAC.Location = new System.Drawing.Point(20, 35);
             this.characterAC.Name = "characterAC";
-            this.characterAC.Size = new System.Drawing.Size(27, 23);
+            this.characterAC.Size = new System.Drawing.Size(36, 23);
             this.characterAC.TabIndex = 72;
             // 
             // groupBox2
@@ -903,7 +1007,7 @@ namespace DesktopApp1
             this.groupBox2.Controls.Add(this.strStat);
             this.groupBox2.Location = new System.Drawing.Point(12, 107);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(247, 538);
+            this.groupBox2.Size = new System.Drawing.Size(248, 538);
             this.groupBox2.TabIndex = 71;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ability Scores / Skills";
@@ -1346,7 +1450,7 @@ namespace DesktopApp1
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label11.Location = new System.Drawing.Point(1, 395);
+            this.label11.Location = new System.Drawing.Point(2, 395);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(68, 13);
             this.label11.TabIndex = 32;
@@ -1358,14 +1462,14 @@ namespace DesktopApp1
             this.PassiveWiz.Location = new System.Drawing.Point(75, 390);
             this.PassiveWiz.Name = "PassiveWiz";
             this.PassiveWiz.ReadOnly = true;
-            this.PassiveWiz.Size = new System.Drawing.Size(27, 23);
+            this.PassiveWiz.Size = new System.Drawing.Size(26, 23);
             this.PassiveWiz.TabIndex = 31;
             this.PassiveWiz.Text = "12";
             // 
             // profBonus
             // 
             this.profBonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.profBonus.Location = new System.Drawing.Point(77, 16);
+            this.profBonus.Location = new System.Drawing.Point(76, 16);
             this.profBonus.Name = "profBonus";
             this.profBonus.Size = new System.Drawing.Size(25, 23);
             this.profBonus.TabIndex = 30;
@@ -1375,7 +1479,7 @@ namespace DesktopApp1
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label10.Location = new System.Drawing.Point(1, 19);
+            this.label10.Location = new System.Drawing.Point(2, 19);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(77, 13);
             this.label10.TabIndex = 29;
@@ -1405,7 +1509,7 @@ namespace DesktopApp1
             this.chaStat.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.chaStat.Location = new System.Drawing.Point(57, 327);
             this.chaStat.Name = "chaStat";
-            this.chaStat.Size = new System.Drawing.Size(45, 38);
+            this.chaStat.Size = new System.Drawing.Size(44, 38);
             this.chaStat.TabIndex = 25;
             this.chaStat.Text = "12";
             this.chaStat.Leave += new System.EventHandler(this.update);
@@ -1434,7 +1538,7 @@ namespace DesktopApp1
             this.wisStat.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.wisStat.Location = new System.Drawing.Point(57, 270);
             this.wisStat.Name = "wisStat";
-            this.wisStat.Size = new System.Drawing.Size(45, 38);
+            this.wisStat.Size = new System.Drawing.Size(44, 38);
             this.wisStat.TabIndex = 22;
             this.wisStat.Text = "12";
             this.wisStat.Leave += new System.EventHandler(this.update);
@@ -1463,7 +1567,7 @@ namespace DesktopApp1
             this.intStat.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.intStat.Location = new System.Drawing.Point(57, 214);
             this.intStat.Name = "intStat";
-            this.intStat.Size = new System.Drawing.Size(45, 38);
+            this.intStat.Size = new System.Drawing.Size(44, 38);
             this.intStat.TabIndex = 19;
             this.intStat.Text = "12";
             this.intStat.Leave += new System.EventHandler(this.update);
@@ -1492,7 +1596,7 @@ namespace DesktopApp1
             this.conStat.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.conStat.Location = new System.Drawing.Point(57, 156);
             this.conStat.Name = "conStat";
-            this.conStat.Size = new System.Drawing.Size(45, 38);
+            this.conStat.Size = new System.Drawing.Size(44, 38);
             this.conStat.TabIndex = 16;
             this.conStat.Text = "12";
             this.conStat.Leave += new System.EventHandler(this.update);
@@ -1521,7 +1625,7 @@ namespace DesktopApp1
             this.dexStat.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.dexStat.Location = new System.Drawing.Point(57, 99);
             this.dexStat.Name = "dexStat";
-            this.dexStat.Size = new System.Drawing.Size(45, 38);
+            this.dexStat.Size = new System.Drawing.Size(44, 38);
             this.dexStat.TabIndex = 13;
             this.dexStat.Text = "12";
             this.dexStat.Leave += new System.EventHandler(this.update);
@@ -1550,7 +1654,7 @@ namespace DesktopApp1
             this.strStat.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.strStat.Location = new System.Drawing.Point(57, 43);
             this.strStat.Name = "strStat";
-            this.strStat.Size = new System.Drawing.Size(45, 38);
+            this.strStat.Size = new System.Drawing.Size(44, 38);
             this.strStat.TabIndex = 10;
             this.strStat.Text = "12";
             this.strStat.Leave += new System.EventHandler(this.update);
@@ -1568,7 +1672,7 @@ namespace DesktopApp1
             this.groupBox1.Controls.Add(this.CharacterClass);
             this.groupBox1.Controls.Add(this.CharacterNameLabel);
             this.groupBox1.Controls.Add(this.CharacterName);
-            this.groupBox1.Location = new System.Drawing.Point(7, 17);
+            this.groupBox1.Location = new System.Drawing.Point(8, 17);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(447, 77);
             this.groupBox1.TabIndex = 9;
@@ -1602,7 +1706,7 @@ namespace DesktopApp1
             // 
             // characterEXP
             // 
-            this.characterEXP.Location = new System.Drawing.Point(337, 44);
+            this.characterEXP.Location = new System.Drawing.Point(338, 44);
             this.characterEXP.Name = "characterEXP";
             this.characterEXP.Size = new System.Drawing.Size(100, 20);
             this.characterEXP.TabIndex = 7;
@@ -1618,7 +1722,7 @@ namespace DesktopApp1
             // 
             // characterAlignment
             // 
-            this.characterAlignment.Location = new System.Drawing.Point(337, 15);
+            this.characterAlignment.Location = new System.Drawing.Point(338, 15);
             this.characterAlignment.Name = "characterAlignment";
             this.characterAlignment.Size = new System.Drawing.Size(100, 20);
             this.characterAlignment.TabIndex = 5;
@@ -1627,7 +1731,7 @@ namespace DesktopApp1
             // 
             this.CharacterLevel.Location = new System.Drawing.Point(162, 44);
             this.CharacterLevel.Name = "CharacterLevel";
-            this.CharacterLevel.Size = new System.Drawing.Size(27, 20);
+            this.CharacterLevel.Size = new System.Drawing.Size(26, 20);
             this.CharacterLevel.TabIndex = 4;
             this.CharacterLevel.Leave += new System.EventHandler(this.update);
             // 
@@ -1665,22 +1769,27 @@ namespace DesktopApp1
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.richTextBox1);
+            this.tabPage2.Controls.Add(this.extraNotes);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(816, 650);
+            this.tabPage2.Size = new System.Drawing.Size(895, 650);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Extra Notes";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // richTextBox1
+            // extraNotes
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(7, 6);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(788, 626);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.extraNotes.AcceptsTab = true;
+            this.extraNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.extraNotes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.extraNotes.Location = new System.Drawing.Point(8, 6);
+            this.extraNotes.Name = "extraNotes";
+            this.extraNotes.Size = new System.Drawing.Size(879, 638);
+            this.extraNotes.TabIndex = 1;
+            this.extraNotes.Text = "test";
             // 
             // tabPage3
             // 
@@ -1693,13 +1802,15 @@ namespace DesktopApp1
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(816, 650);
+            this.tabPage3.Size = new System.Drawing.Size(895, 650);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "DiceRolls";
+            this.tabPage3.Text = "Dice";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // groupBox8
             // 
+            this.groupBox8.Controls.Add(this.label36);
+            this.groupBox8.Controls.Add(this.customRoll);
             this.groupBox8.Controls.Add(this.d20inc);
             this.groupBox8.Controls.Add(this.d8inc);
             this.groupBox8.Controls.Add(this.d12inc);
@@ -1716,9 +1827,9 @@ namespace DesktopApp1
             this.groupBox8.Controls.Add(this.nd8);
             this.groupBox8.Controls.Add(this.nd6);
             this.groupBox8.Controls.Add(this.nd4);
-            this.groupBox8.Location = new System.Drawing.Point(25, 376);
+            this.groupBox8.Location = new System.Drawing.Point(26, 376);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(421, 224);
+            this.groupBox8.Size = new System.Drawing.Size(422, 224);
             this.groupBox8.TabIndex = 13;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Rolls ++";
@@ -1769,7 +1880,7 @@ namespace DesktopApp1
             // 
             // d12inc
             // 
-            this.d12inc.Location = new System.Drawing.Point(143, 105);
+            this.d12inc.Location = new System.Drawing.Point(142, 105);
             this.d12inc.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -1791,7 +1902,7 @@ namespace DesktopApp1
             // 
             // d6inc
             // 
-            this.d6inc.Location = new System.Drawing.Point(143, 35);
+            this.d6inc.Location = new System.Drawing.Point(142, 35);
             this.d6inc.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -1813,7 +1924,7 @@ namespace DesktopApp1
             // 
             // d10inc
             // 
-            this.d10inc.Location = new System.Drawing.Point(53, 105);
+            this.d10inc.Location = new System.Drawing.Point(52, 105);
             this.d10inc.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -1835,7 +1946,7 @@ namespace DesktopApp1
             // 
             // d4inc
             // 
-            this.d4inc.Location = new System.Drawing.Point(53, 35);
+            this.d4inc.Location = new System.Drawing.Point(52, 35);
             this.d4inc.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -1858,7 +1969,7 @@ namespace DesktopApp1
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(197, 169);
+            this.label20.Location = new System.Drawing.Point(196, 169);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(55, 13);
             this.label20.TabIndex = 10;
@@ -1866,7 +1977,7 @@ namespace DesktopApp1
             // 
             // rollModifier
             // 
-            this.rollModifier.Location = new System.Drawing.Point(197, 188);
+            this.rollModifier.Location = new System.Drawing.Point(196, 188);
             this.rollModifier.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -1893,7 +2004,7 @@ namespace DesktopApp1
             // 
             // advantMod
             // 
-            this.advantMod.Location = new System.Drawing.Point(11, 155);
+            this.advantMod.Location = new System.Drawing.Point(10, 155);
             this.advantMod.Name = "advantMod";
             this.advantMod.Size = new System.Drawing.Size(75, 53);
             this.advantMod.TabIndex = 7;
@@ -1915,7 +2026,7 @@ namespace DesktopApp1
             // 
             this.nd12.Location = new System.Drawing.Point(92, 87);
             this.nd12.Name = "nd12";
-            this.nd12.Size = new System.Drawing.Size(47, 53);
+            this.nd12.Size = new System.Drawing.Size(46, 53);
             this.nd12.TabIndex = 5;
             this.nd12.Text = "nd12";
             this.nd12.UseVisualStyleBackColor = true;
@@ -1925,7 +2036,7 @@ namespace DesktopApp1
             // 
             this.nd10.Location = new System.Drawing.Point(6, 87);
             this.nd10.Name = "nd10";
-            this.nd10.Size = new System.Drawing.Size(41, 53);
+            this.nd10.Size = new System.Drawing.Size(40, 53);
             this.nd10.TabIndex = 4;
             this.nd10.Text = "nd10";
             this.nd10.UseVisualStyleBackColor = true;
@@ -1945,7 +2056,7 @@ namespace DesktopApp1
             // 
             this.nd6.Location = new System.Drawing.Point(92, 17);
             this.nd6.Name = "nd6";
-            this.nd6.Size = new System.Drawing.Size(47, 53);
+            this.nd6.Size = new System.Drawing.Size(46, 53);
             this.nd6.TabIndex = 2;
             this.nd6.Text = "nd6";
             this.nd6.UseVisualStyleBackColor = true;
@@ -1955,7 +2066,7 @@ namespace DesktopApp1
             // 
             this.nd4.Location = new System.Drawing.Point(6, 19);
             this.nd4.Name = "nd4";
-            this.nd4.Size = new System.Drawing.Size(41, 51);
+            this.nd4.Size = new System.Drawing.Size(40, 51);
             this.nd4.TabIndex = 1;
             this.nd4.Text = "nd4";
             this.nd4.UseVisualStyleBackColor = true;
@@ -1971,9 +2082,9 @@ namespace DesktopApp1
             this.groupBox3.Controls.Add(this.d8);
             this.groupBox3.Controls.Add(this.d6);
             this.groupBox3.Controls.Add(this.d4);
-            this.groupBox3.Location = new System.Drawing.Point(25, 90);
+            this.groupBox3.Location = new System.Drawing.Point(26, 90);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(263, 224);
+            this.groupBox3.Size = new System.Drawing.Size(262, 224);
             this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Basic Rolls";
@@ -1990,7 +2101,7 @@ namespace DesktopApp1
             // 
             // advant
             // 
-            this.advant.Location = new System.Drawing.Point(11, 155);
+            this.advant.Location = new System.Drawing.Point(10, 155);
             this.advant.Name = "advant";
             this.advant.Size = new System.Drawing.Size(75, 53);
             this.advant.TabIndex = 7;
@@ -2000,7 +2111,7 @@ namespace DesktopApp1
             // 
             // d20
             // 
-            this.d20.Location = new System.Drawing.Point(173, 87);
+            this.d20.Location = new System.Drawing.Point(172, 87);
             this.d20.Name = "d20";
             this.d20.Size = new System.Drawing.Size(75, 53);
             this.d20.TabIndex = 6;
@@ -2020,7 +2131,7 @@ namespace DesktopApp1
             // 
             // d10
             // 
-            this.d10.Location = new System.Drawing.Point(11, 87);
+            this.d10.Location = new System.Drawing.Point(10, 87);
             this.d10.Name = "d10";
             this.d10.Size = new System.Drawing.Size(75, 53);
             this.d10.TabIndex = 4;
@@ -2030,7 +2141,7 @@ namespace DesktopApp1
             // 
             // d8
             // 
-            this.d8.Location = new System.Drawing.Point(173, 17);
+            this.d8.Location = new System.Drawing.Point(172, 17);
             this.d8.Name = "d8";
             this.d8.Size = new System.Drawing.Size(75, 53);
             this.d8.TabIndex = 3;
@@ -2050,7 +2161,7 @@ namespace DesktopApp1
             // 
             // d4
             // 
-            this.d4.Location = new System.Drawing.Point(11, 17);
+            this.d4.Location = new System.Drawing.Point(10, 17);
             this.d4.Name = "d4";
             this.d4.Size = new System.Drawing.Size(75, 53);
             this.d4.TabIndex = 1;
@@ -2061,7 +2172,7 @@ namespace DesktopApp1
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(500, 90);
+            this.label1.Location = new System.Drawing.Point(572, 91);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 11;
@@ -2070,7 +2181,7 @@ namespace DesktopApp1
             // diceRoll_results
             // 
             this.diceRoll_results.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.diceRoll_results.Location = new System.Drawing.Point(503, 106);
+            this.diceRoll_results.Location = new System.Drawing.Point(574, 107);
             this.diceRoll_results.Name = "diceRoll_results";
             this.diceRoll_results.Size = new System.Drawing.Size(298, 494);
             this.diceRoll_results.TabIndex = 10;
@@ -2078,7 +2189,7 @@ namespace DesktopApp1
             // 
             // resetResults
             // 
-            this.resetResults.Location = new System.Drawing.Point(685, 606);
+            this.resetResults.Location = new System.Drawing.Point(758, 607);
             this.resetResults.Name = "resetResults";
             this.resetResults.Size = new System.Drawing.Size(116, 32);
             this.resetResults.TabIndex = 9;
@@ -2089,10 +2200,10 @@ namespace DesktopApp1
             // DiceBox
             // 
             this.DiceBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.DiceBox.Location = new System.Drawing.Point(25, 31);
+            this.DiceBox.Location = new System.Drawing.Point(26, 31);
             this.DiceBox.Name = "DiceBox";
             this.DiceBox.ReadOnly = true;
-            this.DiceBox.Size = new System.Drawing.Size(628, 38);
+            this.DiceBox.Size = new System.Drawing.Size(716, 38);
             this.DiceBox.TabIndex = 0;
             // 
             // tabPage4
@@ -2101,7 +2212,7 @@ namespace DesktopApp1
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(816, 650);
+            this.tabPage4.Size = new System.Drawing.Size(895, 650);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "GrimoreSite";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -2113,7 +2224,7 @@ namespace DesktopApp1
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.ScriptErrorsSuppressed = true;
-            this.webBrowser1.Size = new System.Drawing.Size(810, 644);
+            this.webBrowser1.Size = new System.Drawing.Size(889, 644);
             this.webBrowser1.TabIndex = 0;
             this.webBrowser1.Url = new System.Uri("https://thebombzen.com/grimoire/", System.UriKind.Absolute);
             // 
@@ -2123,7 +2234,7 @@ namespace DesktopApp1
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(816, 650);
+            this.tabPage5.Size = new System.Drawing.Size(895, 650);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Matts mechanics™";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -2132,7 +2243,7 @@ namespace DesktopApp1
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 50.25F);
-            this.label21.Location = new System.Drawing.Point(320, 252);
+            this.label21.Location = new System.Drawing.Point(352, 239);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(164, 76);
             this.label21.TabIndex = 0;
@@ -2141,7 +2252,7 @@ namespace DesktopApp1
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Location = new System.Drawing.Point(5, 673);
+            this.button1.Location = new System.Drawing.Point(4, 673);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(10, 11);
             this.button1.TabIndex = 1;
@@ -2154,30 +2265,28 @@ namespace DesktopApp1
             this.openFileDialog1.FileName = "sample.txt";
             this.openFileDialog1.Filter = "Text files|*.txt";
             // 
-            // Load
-            // 
-            this.Load.Location = new System.Drawing.Point(651, 621);
-            this.Load.Name = "Load";
-            this.Load.Size = new System.Drawing.Size(75, 23);
-            this.Load.TabIndex = 102;
-            this.Load.Text = "Load";
-            this.Load.UseVisualStyleBackColor = true;
-            this.Load.Click += new System.EventHandler(this.Load_Click);
-            // 
             // saveFileDialog1
             // 
             this.saveFileDialog1.FileName = "character.txt";
             this.saveFileDialog1.Filter = "Text files|*.txt";
             // 
-            // SaveAs
+            // customRoll
             // 
-            this.SaveAs.Location = new System.Drawing.Point(732, 621);
-            this.SaveAs.Name = "SaveAs";
-            this.SaveAs.Size = new System.Drawing.Size(75, 23);
-            this.SaveAs.TabIndex = 103;
-            this.SaveAs.Text = "Save As";
-            this.SaveAs.UseVisualStyleBackColor = true;
-            this.SaveAs.Click += new System.EventHandler(this.SaveAs_Click);
+            this.customRoll.Location = new System.Drawing.Point(300, 87);
+            this.customRoll.Name = "customRoll";
+            this.customRoll.Size = new System.Drawing.Size(100, 20);
+            this.customRoll.TabIndex = 16;
+            this.customRoll.Visible = false;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(300, 68);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(63, 13);
+            this.label36.TabIndex = 17;
+            this.label36.Text = "Custom Roll";
+            this.label36.Visible = false;
             // 
             // Form1
             // 
@@ -2185,16 +2294,20 @@ namespace DesktopApp1
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(824, 699);
+            this.ClientSize = new System.Drawing.Size(903, 699);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tabControl1);
             this.KeyPreview = true;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.ShowIcon = false;
             this.Text = "D&D 5e Tools";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox11.ResumeLayout(false);
+            this.Weapons.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
             this.groupBox9.ResumeLayout(false);
@@ -2216,7 +2329,7 @@ namespace DesktopApp1
             ((System.ComponentModel.ISupportInitialize)(this.DeathSaveFails)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deathSuccess)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -2344,7 +2457,7 @@ namespace DesktopApp1
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox38;
+        private System.Windows.Forms.TextBox charSpeed;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox CharIniative;
         private System.Windows.Forms.Label label12;
@@ -2372,9 +2485,8 @@ namespace DesktopApp1
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox characterRace;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.NumericUpDown DeathSaveFails;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown deathSuccess;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.NumericUpDown copperCount;
@@ -2421,6 +2533,15 @@ namespace DesktopApp1
         private System.Windows.Forms.Button Load;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Button SaveAs;
+        private System.Windows.Forms.RichTextBox WeaponsAndEquipment;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.RichTextBox extraNotes;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.RichTextBox FeaturesAndTraits;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.RichTextBox AttacksAndSpells;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.TextBox customRoll;
     }
 }
 

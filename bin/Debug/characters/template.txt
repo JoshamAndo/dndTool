@@ -39,3 +39,10 @@ False
 True
 False
 False
+; speed
+30
+; AC
+10
+; Death saves (fails, successes)
+0
+0

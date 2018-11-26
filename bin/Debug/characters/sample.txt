@@ -8,7 +8,7 @@ LN
 0
 False
 Human
-10
+50
 16
 14
 16
@@ -25,3 +25,7 @@ False
 True
 False
 False
+30
+10
+0
+1
