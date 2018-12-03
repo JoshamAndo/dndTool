@@ -79,6 +79,7 @@ namespace DesktopApp1
             this.Weapons = new System.Windows.Forms.GroupBox();
             this.WeaponsAndEquipment = new System.Windows.Forms.RichTextBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.SpellAttackMod = new System.Windows.Forms.TextBox();
             this.CastingCha = new System.Windows.Forms.RadioButton();
             this.CastingWis = new System.Windows.Forms.RadioButton();
             this.CastingInt = new System.Windows.Forms.RadioButton();
@@ -158,24 +159,24 @@ namespace DesktopApp1
             this.sAcana = new System.Windows.Forms.CheckBox();
             this.sAnimalHandling = new System.Windows.Forms.CheckBox();
             this.sAcrobatics = new System.Windows.Forms.CheckBox();
-            this.textBox34 = new System.Windows.Forms.TextBox();
-            this.textBox35 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.textBox30 = new System.Windows.Forms.TextBox();
-            this.textBox31 = new System.Windows.Forms.TextBox();
-            this.textBox32 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.sur = new System.Windows.Forms.TextBox();
+            this.ste = new System.Windows.Forms.TextBox();
+            this.sli = new System.Windows.Forms.TextBox();
+            this.rel = new System.Windows.Forms.TextBox();
+            this.persu = new System.Windows.Forms.TextBox();
+            this.perfor = new System.Windows.Forms.TextBox();
+            this.percep = new System.Windows.Forms.TextBox();
+            this.nat = new System.Windows.Forms.TextBox();
+            this.med = new System.Windows.Forms.TextBox();
+            this.inves = new System.Windows.Forms.TextBox();
+            this.inti = new System.Windows.Forms.TextBox();
+            this.ins = new System.Windows.Forms.TextBox();
+            this.his = new System.Windows.Forms.TextBox();
+            this.dec = new System.Windows.Forms.TextBox();
+            this.ath = new System.Windows.Forms.TextBox();
+            this.arc = new System.Windows.Forms.TextBox();
+            this.ani = new System.Windows.Forms.TextBox();
+            this.acro = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.PassiveWiz = new System.Windows.Forms.TextBox();
             this.profBonus = new System.Windows.Forms.TextBox();
@@ -211,7 +212,6 @@ namespace DesktopApp1
             this.CharacterNameLabel = new System.Windows.Forms.Label();
             this.CharacterName = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.SpellAttackMod = new System.Windows.Forms.TextBox();
             this.tabPage4.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -826,6 +826,7 @@ namespace DesktopApp1
             this.button2.TabIndex = 104;
             this.button2.Text = "test";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // SaveAs
@@ -888,6 +889,15 @@ namespace DesktopApp1
             this.groupBox10.TabIndex = 100;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Spellcasting";
+            // 
+            // SpellAttackMod
+            // 
+            this.SpellAttackMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SpellAttackMod.Location = new System.Drawing.Point(106, 83);
+            this.SpellAttackMod.Name = "SpellAttackMod";
+            this.SpellAttackMod.Size = new System.Drawing.Size(42, 29);
+            this.SpellAttackMod.TabIndex = 107;
+            this.SpellAttackMod.Text = "12";
             // 
             // CastingCha
             // 
@@ -1437,24 +1447,24 @@ namespace DesktopApp1
             this.groupBox2.Controls.Add(this.sAcana);
             this.groupBox2.Controls.Add(this.sAnimalHandling);
             this.groupBox2.Controls.Add(this.sAcrobatics);
-            this.groupBox2.Controls.Add(this.textBox34);
-            this.groupBox2.Controls.Add(this.textBox35);
-            this.groupBox2.Controls.Add(this.textBox25);
-            this.groupBox2.Controls.Add(this.textBox26);
-            this.groupBox2.Controls.Add(this.textBox27);
-            this.groupBox2.Controls.Add(this.textBox28);
-            this.groupBox2.Controls.Add(this.textBox29);
-            this.groupBox2.Controls.Add(this.textBox30);
-            this.groupBox2.Controls.Add(this.textBox31);
-            this.groupBox2.Controls.Add(this.textBox32);
-            this.groupBox2.Controls.Add(this.textBox21);
-            this.groupBox2.Controls.Add(this.textBox22);
-            this.groupBox2.Controls.Add(this.textBox23);
-            this.groupBox2.Controls.Add(this.textBox24);
-            this.groupBox2.Controls.Add(this.textBox19);
-            this.groupBox2.Controls.Add(this.textBox20);
-            this.groupBox2.Controls.Add(this.textBox18);
-            this.groupBox2.Controls.Add(this.textBox17);
+            this.groupBox2.Controls.Add(this.sur);
+            this.groupBox2.Controls.Add(this.ste);
+            this.groupBox2.Controls.Add(this.sli);
+            this.groupBox2.Controls.Add(this.rel);
+            this.groupBox2.Controls.Add(this.persu);
+            this.groupBox2.Controls.Add(this.perfor);
+            this.groupBox2.Controls.Add(this.percep);
+            this.groupBox2.Controls.Add(this.nat);
+            this.groupBox2.Controls.Add(this.med);
+            this.groupBox2.Controls.Add(this.inves);
+            this.groupBox2.Controls.Add(this.inti);
+            this.groupBox2.Controls.Add(this.ins);
+            this.groupBox2.Controls.Add(this.his);
+            this.groupBox2.Controls.Add(this.dec);
+            this.groupBox2.Controls.Add(this.ath);
+            this.groupBox2.Controls.Add(this.arc);
+            this.groupBox2.Controls.Add(this.ani);
+            this.groupBox2.Controls.Add(this.acro);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.PassiveWiz);
             this.groupBox2.Controls.Add(this.profBonus);
@@ -1620,6 +1630,7 @@ namespace DesktopApp1
             this.sSurvival.TabIndex = 80;
             this.sSurvival.Text = "Survival";
             this.sSurvival.UseVisualStyleBackColor = true;
+            this.sSurvival.Leave += new System.EventHandler(this.update);
             // 
             // sStealth
             // 
@@ -1630,6 +1641,7 @@ namespace DesktopApp1
             this.sStealth.TabIndex = 79;
             this.sStealth.Text = "Stealth";
             this.sStealth.UseVisualStyleBackColor = true;
+            this.sStealth.Leave += new System.EventHandler(this.update);
             // 
             // sSlightOfHand
             // 
@@ -1640,6 +1652,7 @@ namespace DesktopApp1
             this.sSlightOfHand.TabIndex = 78;
             this.sSlightOfHand.Text = "Slight of Hand";
             this.sSlightOfHand.UseVisualStyleBackColor = true;
+            this.sSlightOfHand.Leave += new System.EventHandler(this.update);
             // 
             // sReligion
             // 
@@ -1650,6 +1663,7 @@ namespace DesktopApp1
             this.sReligion.TabIndex = 72;
             this.sReligion.Text = "Religion";
             this.sReligion.UseVisualStyleBackColor = true;
+            this.sReligion.Leave += new System.EventHandler(this.update);
             // 
             // sPersuasion
             // 
@@ -1661,6 +1675,7 @@ namespace DesktopApp1
             this.sPersuasion.Text = "Persuasion";
             this.sPersuasion.UseVisualStyleBackColor = true;
             this.sPersuasion.CheckedChanged += new System.EventHandler(this.checkBox14_CheckedChanged);
+            this.sPersuasion.Leave += new System.EventHandler(this.update);
             // 
             // sPerformance
             // 
@@ -1671,6 +1686,7 @@ namespace DesktopApp1
             this.sPerformance.TabIndex = 72;
             this.sPerformance.Text = "Performance";
             this.sPerformance.UseVisualStyleBackColor = true;
+            this.sPerformance.Leave += new System.EventHandler(this.update);
             // 
             // sPerception
             // 
@@ -1681,6 +1697,7 @@ namespace DesktopApp1
             this.sPerception.TabIndex = 76;
             this.sPerception.Text = "Perception";
             this.sPerception.UseVisualStyleBackColor = true;
+            this.sPerception.Leave += new System.EventHandler(this.update);
             // 
             // sNature
             // 
@@ -1691,6 +1708,7 @@ namespace DesktopApp1
             this.sNature.TabIndex = 75;
             this.sNature.Text = "Nature";
             this.sNature.UseVisualStyleBackColor = true;
+            this.sNature.Leave += new System.EventHandler(this.update);
             // 
             // sMedicine
             // 
@@ -1701,6 +1719,7 @@ namespace DesktopApp1
             this.sMedicine.TabIndex = 72;
             this.sMedicine.Text = "Medicine";
             this.sMedicine.UseVisualStyleBackColor = true;
+            this.sMedicine.Leave += new System.EventHandler(this.update);
             // 
             // sInvestigation
             // 
@@ -1711,6 +1730,7 @@ namespace DesktopApp1
             this.sInvestigation.TabIndex = 72;
             this.sInvestigation.Text = "Investigation";
             this.sInvestigation.UseVisualStyleBackColor = true;
+            this.sInvestigation.Leave += new System.EventHandler(this.update);
             // 
             // sIntimidation
             // 
@@ -1721,6 +1741,7 @@ namespace DesktopApp1
             this.sIntimidation.TabIndex = 72;
             this.sIntimidation.Text = "Intimidation";
             this.sIntimidation.UseVisualStyleBackColor = true;
+            this.sIntimidation.Leave += new System.EventHandler(this.update);
             // 
             // sInsight
             // 
@@ -1731,6 +1752,7 @@ namespace DesktopApp1
             this.sInsight.TabIndex = 72;
             this.sInsight.Text = "Insight";
             this.sInsight.UseVisualStyleBackColor = true;
+            this.sInsight.Leave += new System.EventHandler(this.update);
             // 
             // sHistory
             // 
@@ -1741,6 +1763,7 @@ namespace DesktopApp1
             this.sHistory.TabIndex = 74;
             this.sHistory.Text = "History";
             this.sHistory.UseVisualStyleBackColor = true;
+            this.sHistory.Leave += new System.EventHandler(this.update);
             // 
             // sDeception
             // 
@@ -1751,6 +1774,7 @@ namespace DesktopApp1
             this.sDeception.TabIndex = 72;
             this.sDeception.Text = "Deception";
             this.sDeception.UseVisualStyleBackColor = true;
+            this.sDeception.Leave += new System.EventHandler(this.update);
             // 
             // sAthletics
             // 
@@ -1761,6 +1785,7 @@ namespace DesktopApp1
             this.sAthletics.TabIndex = 73;
             this.sAthletics.Text = "Athletics";
             this.sAthletics.UseVisualStyleBackColor = true;
+            this.sAthletics.Leave += new System.EventHandler(this.update);
             // 
             // sAcana
             // 
@@ -1771,6 +1796,7 @@ namespace DesktopApp1
             this.sAcana.TabIndex = 72;
             this.sAcana.Text = "Arcana";
             this.sAcana.UseVisualStyleBackColor = true;
+            this.sAcana.Leave += new System.EventHandler(this.update);
             // 
             // sAnimalHandling
             // 
@@ -1781,6 +1807,7 @@ namespace DesktopApp1
             this.sAnimalHandling.TabIndex = 72;
             this.sAnimalHandling.Text = "Animal handling";
             this.sAnimalHandling.UseVisualStyleBackColor = true;
+            this.sAnimalHandling.Leave += new System.EventHandler(this.update);
             // 
             // sAcrobatics
             // 
@@ -1791,132 +1818,133 @@ namespace DesktopApp1
             this.sAcrobatics.TabIndex = 71;
             this.sAcrobatics.Text = "Acrobatics";
             this.sAcrobatics.UseVisualStyleBackColor = true;
+            this.sAcrobatics.Leave += new System.EventHandler(this.update);
             // 
-            // textBox34
+            // sur
             // 
-            this.textBox34.Location = new System.Drawing.Point(212, 432);
-            this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new System.Drawing.Size(25, 20);
-            this.textBox34.TabIndex = 68;
+            this.sur.Location = new System.Drawing.Point(212, 432);
+            this.sur.Name = "sur";
+            this.sur.Size = new System.Drawing.Size(25, 20);
+            this.sur.TabIndex = 68;
             // 
-            // textBox35
+            // ste
             // 
-            this.textBox35.Location = new System.Drawing.Point(212, 408);
-            this.textBox35.Name = "textBox35";
-            this.textBox35.Size = new System.Drawing.Size(25, 20);
-            this.textBox35.TabIndex = 66;
+            this.ste.Location = new System.Drawing.Point(212, 408);
+            this.ste.Name = "ste";
+            this.ste.Size = new System.Drawing.Size(25, 20);
+            this.ste.TabIndex = 66;
             // 
-            // textBox25
+            // sli
             // 
-            this.textBox25.Location = new System.Drawing.Point(212, 382);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(25, 20);
-            this.textBox25.TabIndex = 64;
+            this.sli.Location = new System.Drawing.Point(212, 382);
+            this.sli.Name = "sli";
+            this.sli.Size = new System.Drawing.Size(25, 20);
+            this.sli.TabIndex = 64;
             // 
-            // textBox26
+            // rel
             // 
-            this.textBox26.Location = new System.Drawing.Point(212, 358);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(25, 20);
-            this.textBox26.TabIndex = 62;
+            this.rel.Location = new System.Drawing.Point(212, 358);
+            this.rel.Name = "rel";
+            this.rel.Size = new System.Drawing.Size(25, 20);
+            this.rel.TabIndex = 62;
             // 
-            // textBox27
+            // persu
             // 
-            this.textBox27.Location = new System.Drawing.Point(212, 334);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(25, 20);
-            this.textBox27.TabIndex = 60;
+            this.persu.Location = new System.Drawing.Point(212, 334);
+            this.persu.Name = "persu";
+            this.persu.Size = new System.Drawing.Size(25, 20);
+            this.persu.TabIndex = 60;
             // 
-            // textBox28
+            // perfor
             // 
-            this.textBox28.Location = new System.Drawing.Point(212, 310);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(25, 20);
-            this.textBox28.TabIndex = 58;
+            this.perfor.Location = new System.Drawing.Point(212, 310);
+            this.perfor.Name = "perfor";
+            this.perfor.Size = new System.Drawing.Size(25, 20);
+            this.perfor.TabIndex = 58;
             // 
-            // textBox29
+            // percep
             // 
-            this.textBox29.Location = new System.Drawing.Point(212, 284);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(25, 20);
-            this.textBox29.TabIndex = 56;
+            this.percep.Location = new System.Drawing.Point(212, 284);
+            this.percep.Name = "percep";
+            this.percep.Size = new System.Drawing.Size(25, 20);
+            this.percep.TabIndex = 56;
             // 
-            // textBox30
+            // nat
             // 
-            this.textBox30.Location = new System.Drawing.Point(212, 260);
-            this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(25, 20);
-            this.textBox30.TabIndex = 54;
+            this.nat.Location = new System.Drawing.Point(212, 260);
+            this.nat.Name = "nat";
+            this.nat.Size = new System.Drawing.Size(25, 20);
+            this.nat.TabIndex = 54;
             // 
-            // textBox31
+            // med
             // 
-            this.textBox31.Location = new System.Drawing.Point(212, 236);
-            this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(25, 20);
-            this.textBox31.TabIndex = 52;
+            this.med.Location = new System.Drawing.Point(212, 236);
+            this.med.Name = "med";
+            this.med.Size = new System.Drawing.Size(25, 20);
+            this.med.TabIndex = 52;
             // 
-            // textBox32
+            // inves
             // 
-            this.textBox32.Location = new System.Drawing.Point(212, 212);
-            this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new System.Drawing.Size(25, 20);
-            this.textBox32.TabIndex = 50;
+            this.inves.Location = new System.Drawing.Point(212, 212);
+            this.inves.Name = "inves";
+            this.inves.Size = new System.Drawing.Size(25, 20);
+            this.inves.TabIndex = 50;
             // 
-            // textBox21
+            // inti
             // 
-            this.textBox21.Location = new System.Drawing.Point(212, 180);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(25, 20);
-            this.textBox21.TabIndex = 48;
+            this.inti.Location = new System.Drawing.Point(212, 180);
+            this.inti.Name = "inti";
+            this.inti.Size = new System.Drawing.Size(25, 20);
+            this.inti.TabIndex = 48;
             // 
-            // textBox22
+            // ins
             // 
-            this.textBox22.Location = new System.Drawing.Point(212, 156);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(25, 20);
-            this.textBox22.TabIndex = 46;
+            this.ins.Location = new System.Drawing.Point(212, 156);
+            this.ins.Name = "ins";
+            this.ins.Size = new System.Drawing.Size(25, 20);
+            this.ins.TabIndex = 46;
             // 
-            // textBox23
+            // his
             // 
-            this.textBox23.Location = new System.Drawing.Point(212, 132);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(25, 20);
-            this.textBox23.TabIndex = 44;
+            this.his.Location = new System.Drawing.Point(212, 132);
+            this.his.Name = "his";
+            this.his.Size = new System.Drawing.Size(25, 20);
+            this.his.TabIndex = 44;
             // 
-            // textBox24
+            // dec
             // 
-            this.textBox24.Location = new System.Drawing.Point(212, 108);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(25, 20);
-            this.textBox24.TabIndex = 42;
+            this.dec.Location = new System.Drawing.Point(212, 108);
+            this.dec.Name = "dec";
+            this.dec.Size = new System.Drawing.Size(25, 20);
+            this.dec.TabIndex = 42;
             // 
-            // textBox19
+            // ath
             // 
-            this.textBox19.Location = new System.Drawing.Point(212, 82);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(25, 20);
-            this.textBox19.TabIndex = 40;
+            this.ath.Location = new System.Drawing.Point(212, 82);
+            this.ath.Name = "ath";
+            this.ath.Size = new System.Drawing.Size(25, 20);
+            this.ath.TabIndex = 40;
             // 
-            // textBox20
+            // arc
             // 
-            this.textBox20.Location = new System.Drawing.Point(212, 58);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(25, 20);
-            this.textBox20.TabIndex = 38;
+            this.arc.Location = new System.Drawing.Point(212, 58);
+            this.arc.Name = "arc";
+            this.arc.Size = new System.Drawing.Size(25, 20);
+            this.arc.TabIndex = 38;
             // 
-            // textBox18
+            // ani
             // 
-            this.textBox18.Location = new System.Drawing.Point(212, 34);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(25, 20);
-            this.textBox18.TabIndex = 36;
+            this.ani.Location = new System.Drawing.Point(212, 34);
+            this.ani.Name = "ani";
+            this.ani.Size = new System.Drawing.Size(25, 20);
+            this.ani.TabIndex = 36;
             // 
-            // textBox17
+            // acro
             // 
-            this.textBox17.Location = new System.Drawing.Point(212, 10);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(25, 20);
-            this.textBox17.TabIndex = 34;
+            this.acro.Location = new System.Drawing.Point(212, 10);
+            this.acro.Name = "acro";
+            this.acro.Size = new System.Drawing.Size(25, 20);
+            this.acro.TabIndex = 34;
             // 
             // label11
             // 
@@ -2254,15 +2282,6 @@ namespace DesktopApp1
             this.tabControl1.Size = new System.Drawing.Size(903, 676);
             this.tabControl1.TabIndex = 0;
             // 
-            // SpellAttackMod
-            // 
-            this.SpellAttackMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SpellAttackMod.Location = new System.Drawing.Point(106, 83);
-            this.SpellAttackMod.Name = "SpellAttackMod";
-            this.SpellAttackMod.Size = new System.Drawing.Size(42, 29);
-            this.SpellAttackMod.TabIndex = 107;
-            this.SpellAttackMod.Text = "12";
-            // 
             // Form1
             // 
             this.AcceptButton = this.saveButton;
@@ -2458,24 +2477,24 @@ namespace DesktopApp1
         private System.Windows.Forms.CheckBox sAcana;
         private System.Windows.Forms.CheckBox sAnimalHandling;
         private System.Windows.Forms.CheckBox sAcrobatics;
-        private System.Windows.Forms.TextBox textBox34;
-        private System.Windows.Forms.TextBox textBox35;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.TextBox textBox28;
-        private System.Windows.Forms.TextBox textBox29;
-        private System.Windows.Forms.TextBox textBox30;
-        private System.Windows.Forms.TextBox textBox31;
-        private System.Windows.Forms.TextBox textBox32;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox sur;
+        private System.Windows.Forms.TextBox ste;
+        private System.Windows.Forms.TextBox sli;
+        private System.Windows.Forms.TextBox rel;
+        private System.Windows.Forms.TextBox persu;
+        private System.Windows.Forms.TextBox perfor;
+        private System.Windows.Forms.TextBox percep;
+        private System.Windows.Forms.TextBox nat;
+        private System.Windows.Forms.TextBox med;
+        private System.Windows.Forms.TextBox inves;
+        private System.Windows.Forms.TextBox inti;
+        private System.Windows.Forms.TextBox ins;
+        private System.Windows.Forms.TextBox his;
+        private System.Windows.Forms.TextBox dec;
+        private System.Windows.Forms.TextBox ath;
+        private System.Windows.Forms.TextBox arc;
+        private System.Windows.Forms.TextBox ani;
+        private System.Windows.Forms.TextBox acro;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox PassiveWiz;
         private System.Windows.Forms.TextBox profBonus;

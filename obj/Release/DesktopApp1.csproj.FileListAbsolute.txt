@@ -1,0 +1,12 @@
+C:\Users\josh_\Documents\GitHub\dndTool\bin\Release\DNDTools.exe.config
+C:\Users\josh_\Documents\GitHub\dndTool\bin\Release\DNDTools.exe
+C:\Users\josh_\Documents\GitHub\dndTool\bin\Release\DNDTools.pdb
+C:\Users\josh_\Documents\GitHub\dndTool\obj\Release\DesktopApp1.Form1.resources
+C:\Users\josh_\Documents\GitHub\dndTool\obj\Release\DesktopApp1.Form2.resources
+C:\Users\josh_\Documents\GitHub\dndTool\obj\Release\DNDTools.Properties.Resources.resources
+C:\Users\josh_\Documents\GitHub\dndTool\obj\Release\DesktopApp1.csproj.GenerateResource.cache
+C:\Users\josh_\Documents\GitHub\dndTool\obj\Release\DesktopApp1.csproj.CoreCompileInputs.cache
+C:\Users\josh_\Documents\GitHub\dndTool\obj\Release\DNDTools.exe
+C:\Users\josh_\Documents\GitHub\dndTool\obj\Release\DNDTools.pdb
+C:\Users\josh_\Documents\GitHub\dndTool\bin\Release\DNDTools.exe.CodeAnalysisLog.xml
+C:\Users\josh_\Documents\GitHub\dndTool\bin\Release\DNDTools.exe.lastcodeanalysissucceeded

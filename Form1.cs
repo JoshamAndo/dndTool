@@ -49,7 +49,24 @@ namespace DesktopApp1
         static int spellAttack;
 
         //skills
-       // static int 
+        static bool acrobatics;
+        static bool animalHandling;
+        static bool arcana;
+        static bool athletics;
+        static bool deception;
+        static bool history;
+        static bool insight;
+        static bool intimidation;
+        static bool investigation;
+        static bool medicine;
+        static bool nature;
+        static bool perception;
+        static bool performance;
+        static bool persuasion;
+        static bool religion;
+        static bool sleightOfHand;
+        static bool stealth;
+        static bool survival;
 
         // saving throws
         static bool strSavingthrow;
@@ -159,6 +176,24 @@ namespace DesktopApp1
             weaponsEquipment = charVars[32];
             featuresTraits = charVars[33];
             extraNotesSection = charVars[34];
+            acrobatics = bool.Parse(charVars[35]);
+            animalHandling = bool.Parse(charVars[36]);
+            arcana = bool.Parse(charVars[37]);
+            athletics = bool.Parse(charVars[38]);
+            deception = bool.Parse(charVars[39]);
+            history = bool.Parse(charVars[40]);
+            insight = bool.Parse(charVars[41]);
+            intimidation = bool.Parse(charVars[42]);
+            investigation = bool.Parse(charVars[43]);
+            medicine = bool.Parse(charVars[44]);
+            nature = bool.Parse(charVars[45]);
+            perception = bool.Parse(charVars[46]);
+            performance = bool.Parse(charVars[47]);
+            persuasion = bool.Parse(charVars[48]);
+            religion = bool.Parse(charVars[49]);
+            sleightOfHand = bool.Parse(charVars[50]);
+            stealth = bool.Parse(charVars[51]);
+            survival = bool.Parse(charVars[52]);
         }
 
         // updates dependant variables not stored in file
@@ -280,7 +315,48 @@ namespace DesktopApp1
 
             SpellAttackMod.Text = signedIntToString(spellAttack);
             spellSave.Text = signedIntToString(spellSaveDC);
-            
+
+            //skill prof
+            sAcrobatics.Checked = acrobatics; 
+            sAnimalHandling.Checked = animalHandling;
+            sAcana.Checked = arcana;
+            sAthletics.Checked = athletics;
+            sDeception.Checked = deception;
+            sHistory.Checked = history;
+            sInsight.Checked = insight;
+            sIntimidation.Checked = intimidation;
+            sInvestigation.Checked = investigation;
+            sMedicine.Checked = medicine;
+            sNature.Checked = nature;
+            sPerception.Checked = perception;
+            sPerformance.Checked = performance;
+            sPersuasion.Checked = persuasion;
+            sReligion.Checked = religion;
+            sSlightOfHand.Checked = sleightOfHand;
+            sStealth.Checked = stealth;
+            sSurvival.Checked = survival;
+
+            // skill mods
+            acro.Text = skillMod(acrobatics,dexMod);
+            ani.Text = skillMod(animalHandling,wizMod);
+            arc.Text = skillMod(arcana, intMod);
+            ath.Text = skillMod(athletics, strMod);
+            dec.Text = skillMod(deception, chaMod);
+            his.Text = skillMod(history, intMod);
+            ins.Text = skillMod(insight, intMod);
+            inti.Text = skillMod(intimidation, chaMod);
+            inves.Text = skillMod(investigation, intMod);
+            med.Text = skillMod(medicine, wizMod);
+            nat.Text = skillMod(nature, wizMod);
+            percep.Text = skillMod(perception, wizMod);
+            perfor.Text = skillMod(performance, chaMod);
+            persu.Text = skillMod(persuasion, chaMod);
+            rel.Text = skillMod(religion, intMod);
+            sli.Text = skillMod(sleightOfHand, dexMod);
+            ste.Text = skillMod(stealth, dexMod);
+            sur.Text = skillMod(survival, wizMod);
+
+            // saving throws
             strSavingProf.Checked = strSavingthrow;
             dexSavingProf.Checked = dexSavingthrow;
             conSavingProf.Checked = conSavingthrow;
@@ -294,8 +370,8 @@ namespace DesktopApp1
             INTSaving.Text = skillMod(intSavingthrow, intMod);
             WISSaving.Text = skillMod(wisSavingthrow, wizMod);
             CHASaving.Text = skillMod(chaSavingthrow, chaMod);
-            PassiveWiz.Text = signedIntToString(passiveWisdom);
-            //PassiveWiz.Text = skillMod(perceptionMod,10);
+            //PassiveWiz.Text = signedIntToString(passiveWisdom);
+            PassiveWiz.Text = signedIntToString(10+int.Parse(percep.Text));
             CharIniative.Text = signedIntToString(dexMod);
 
             // textbox sections
@@ -346,6 +422,7 @@ namespace DesktopApp1
                 spellAbility = "CHA";
             }
 
+            // saving throws
             strSavingthrow = strSavingProf.Checked;
             dexSavingthrow = dexSavingProf.Checked;
             conSavingthrow = conSavingProf.Checked;
@@ -353,6 +430,27 @@ namespace DesktopApp1
             wisSavingthrow = wisSavingProf.Checked;
             chaSavingthrow = chaSavingProf.Checked;
 
+            // skills
+            acrobatics = sAcrobatics.Checked;
+            animalHandling = sAnimalHandling.Checked;
+            arcana = sAcana.Checked;
+            athletics = sAthletics.Checked;
+            deception = sDeception.Checked;
+            history = sHistory.Checked;
+            insight = sInsight.Checked;
+            intimidation = sIntimidation.Checked;
+            investigation = sInvestigation.Checked;
+            medicine = sMedicine.Checked;
+            nature = sNature.Checked;
+            perception = sPerception.Checked;
+            performance = sPerformance.Checked;
+            persuasion = sPersuasion.Checked;
+            religion = sReligion.Checked;
+            sleightOfHand = sSlightOfHand.Checked;
+            stealth= sStealth.Checked;
+            survival = sSurvival.Checked;
+
+            // text boxes
             attackSpells = convertTextTofileLine(AttacksAndSpells);
             weaponsEquipment = convertTextTofileLine(WeaponsAndEquipment);
             featuresTraits = convertTextTofileLine(FeaturesAndTraits);
@@ -402,6 +500,24 @@ namespace DesktopApp1
                 file.WriteLine(weaponsEquipment);
                 file.WriteLine(featuresTraits);
                 file.WriteLine(extraNotesSection);
+                file.WriteLine(acrobatics);
+                file.WriteLine(animalHandling);
+                file.WriteLine(arcana);
+                file.WriteLine(athletics);
+                file.WriteLine(deception);
+                file.WriteLine(history);
+                file.WriteLine(insight);
+                file.WriteLine(intimidation);
+                file.WriteLine(investigation);
+                file.WriteLine(medicine);
+                file.WriteLine(nature);
+                file.WriteLine(perception);
+                file.WriteLine(performance);
+                file.WriteLine(persuasion);
+                file.WriteLine(religion);
+                file.WriteLine(sleightOfHand);
+                file.WriteLine(stealth);
+                file.WriteLine(survival);
             }
 
         }
