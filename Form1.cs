@@ -343,7 +343,7 @@ namespace DesktopApp1
             ath.Text = skillMod(athletics, strMod);
             dec.Text = skillMod(deception, chaMod);
             his.Text = skillMod(history, intMod);
-            ins.Text = skillMod(insight, intMod);
+            ins.Text = skillMod(insight, wizMod);
             inti.Text = skillMod(intimidation, chaMod);
             inves.Text = skillMod(investigation, intMod);
             med.Text = skillMod(medicine, wizMod);

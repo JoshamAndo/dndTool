@@ -8,5 +8,4 @@ C:\Users\josh_\Documents\GitHub\dndTool\obj\Release\DesktopApp1.csproj.GenerateR
 C:\Users\josh_\Documents\GitHub\dndTool\obj\Release\DesktopApp1.csproj.CoreCompileInputs.cache
 C:\Users\josh_\Documents\GitHub\dndTool\obj\Release\DNDTools.exe
 C:\Users\josh_\Documents\GitHub\dndTool\obj\Release\DNDTools.pdb
-C:\Users\josh_\Documents\GitHub\dndTool\bin\Release\DNDTools.exe.CodeAnalysisLog.xml
-C:\Users\josh_\Documents\GitHub\dndTool\bin\Release\DNDTools.exe.lastcodeanalysissucceeded
+C:\Users\josh_\Documents\GitHub\dndTool\obj\Release\DesktopApp1.csprojAssemblyReference.cache
