@@ -28,7 +28,46 @@ namespace DesktopApp1
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.button1 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.customRoll = new System.Windows.Forms.TextBox();
+            this.d20inc = new System.Windows.Forms.NumericUpDown();
+            this.d8inc = new System.Windows.Forms.NumericUpDown();
+            this.d12inc = new System.Windows.Forms.NumericUpDown();
+            this.d6inc = new System.Windows.Forms.NumericUpDown();
+            this.d10inc = new System.Windows.Forms.NumericUpDown();
+            this.d4inc = new System.Windows.Forms.NumericUpDown();
+            this.label20 = new System.Windows.Forms.Label();
+            this.rollModifier = new System.Windows.Forms.NumericUpDown();
+            this.disvantMod = new System.Windows.Forms.Button();
+            this.advantMod = new System.Windows.Forms.Button();
+            this.nd20 = new System.Windows.Forms.Button();
+            this.nd12 = new System.Windows.Forms.Button();
+            this.nd10 = new System.Windows.Forms.Button();
+            this.nd8 = new System.Windows.Forms.Button();
+            this.nd6 = new System.Windows.Forms.Button();
+            this.nd4 = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.disvant = new System.Windows.Forms.Button();
+            this.advant = new System.Windows.Forms.Button();
+            this.d20 = new System.Windows.Forms.Button();
+            this.d12 = new System.Windows.Forms.Button();
+            this.d10 = new System.Windows.Forms.Button();
+            this.d8 = new System.Windows.Forms.Button();
+            this.d6 = new System.Windows.Forms.Button();
+            this.d4 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.diceRoll_results = new System.Windows.Forms.RichTextBox();
+            this.DiceBox = new System.Windows.Forms.TextBox();
+            this.resetResults = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.extraNotes = new System.Windows.Forms.RichTextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.FeaturesAndTraits = new System.Windows.Forms.RichTextBox();
@@ -46,7 +85,6 @@ namespace DesktopApp1
             this.label34 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.SpellAttack = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.spellSave = new System.Windows.Forms.TextBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
@@ -102,24 +140,24 @@ namespace DesktopApp1
             this.strSavingProf = new System.Windows.Forms.CheckBox();
             this.STRSaving = new System.Windows.Forms.TextBox();
             this.charInspiration = new System.Windows.Forms.CheckBox();
-            this.checkBox18 = new System.Windows.Forms.CheckBox();
-            this.checkBox17 = new System.Windows.Forms.CheckBox();
-            this.checkBox16 = new System.Windows.Forms.CheckBox();
-            this.checkBox15 = new System.Windows.Forms.CheckBox();
-            this.checkBox14 = new System.Windows.Forms.CheckBox();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.sSurvival = new System.Windows.Forms.CheckBox();
+            this.sStealth = new System.Windows.Forms.CheckBox();
+            this.sSlightOfHand = new System.Windows.Forms.CheckBox();
+            this.sReligion = new System.Windows.Forms.CheckBox();
+            this.sPersuasion = new System.Windows.Forms.CheckBox();
+            this.sPerformance = new System.Windows.Forms.CheckBox();
+            this.sPerception = new System.Windows.Forms.CheckBox();
+            this.sNature = new System.Windows.Forms.CheckBox();
+            this.sMedicine = new System.Windows.Forms.CheckBox();
+            this.sInvestigation = new System.Windows.Forms.CheckBox();
+            this.sIntimidation = new System.Windows.Forms.CheckBox();
+            this.sInsight = new System.Windows.Forms.CheckBox();
+            this.sHistory = new System.Windows.Forms.CheckBox();
+            this.sDeception = new System.Windows.Forms.CheckBox();
+            this.sAthletics = new System.Windows.Forms.CheckBox();
+            this.sAcana = new System.Windows.Forms.CheckBox();
+            this.sAnimalHandling = new System.Windows.Forms.CheckBox();
+            this.sAcrobatics = new System.Windows.Forms.CheckBox();
             this.textBox34 = new System.Windows.Forms.TextBox();
             this.textBox35 = new System.Windows.Forms.TextBox();
             this.textBox25 = new System.Windows.Forms.TextBox();
@@ -172,49 +210,20 @@ namespace DesktopApp1
             this.CharacterClass = new System.Windows.Forms.TextBox();
             this.CharacterNameLabel = new System.Windows.Forms.Label();
             this.CharacterName = new System.Windows.Forms.TextBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.extraNotes = new System.Windows.Forms.RichTextBox();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.d20inc = new System.Windows.Forms.NumericUpDown();
-            this.d8inc = new System.Windows.Forms.NumericUpDown();
-            this.d12inc = new System.Windows.Forms.NumericUpDown();
-            this.d6inc = new System.Windows.Forms.NumericUpDown();
-            this.d10inc = new System.Windows.Forms.NumericUpDown();
-            this.d4inc = new System.Windows.Forms.NumericUpDown();
-            this.label20 = new System.Windows.Forms.Label();
-            this.rollModifier = new System.Windows.Forms.NumericUpDown();
-            this.disvantMod = new System.Windows.Forms.Button();
-            this.advantMod = new System.Windows.Forms.Button();
-            this.nd20 = new System.Windows.Forms.Button();
-            this.nd12 = new System.Windows.Forms.Button();
-            this.nd10 = new System.Windows.Forms.Button();
-            this.nd8 = new System.Windows.Forms.Button();
-            this.nd6 = new System.Windows.Forms.Button();
-            this.nd4 = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.disvant = new System.Windows.Forms.Button();
-            this.advant = new System.Windows.Forms.Button();
-            this.d20 = new System.Windows.Forms.Button();
-            this.d12 = new System.Windows.Forms.Button();
-            this.d10 = new System.Windows.Forms.Button();
-            this.d8 = new System.Windows.Forms.Button();
-            this.d6 = new System.Windows.Forms.Button();
-            this.d4 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.diceRoll_results = new System.Windows.Forms.RichTextBox();
-            this.resetResults = new System.Windows.Forms.Button();
-            this.DiceBox = new System.Windows.Forms.TextBox();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.label21 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.customRoll = new System.Windows.Forms.TextBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.tabControl1.SuspendLayout();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.SpellAttackMod = new System.Windows.Forms.TextBox();
+            this.tabPage4.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.d20inc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d8inc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d12inc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d6inc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d10inc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d4inc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rollModifier)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox11.SuspendLayout();
@@ -238,36 +247,508 @@ namespace DesktopApp1
             ((System.ComponentModel.ISupportInitialize)(this.deathSuccess)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.groupBox8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.d20inc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.d8inc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.d12inc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.d6inc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.d10inc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.d4inc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rollModifier)).BeginInit();
-            this.groupBox3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.tabPage5.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // button1
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button1.Location = new System.Drawing.Point(4, 673);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(10, 11);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "sample.txt";
+            this.openFileDialog1.Filter = "Text files|*.txt";
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.FileName = "character.txt";
+            this.saveFileDialog1.Filter = "Text files|*.txt";
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.webBrowser1);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(895, 650);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "GrimoreSite";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(3, 3);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.ScriptErrorsSuppressed = true;
+            this.webBrowser1.Size = new System.Drawing.Size(889, 644);
+            this.webBrowser1.TabIndex = 0;
+            this.webBrowser1.Url = new System.Uri("https://thebombzen.com/grimoire/", System.UriKind.Absolute);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.groupBox8);
+            this.tabPage3.Controls.Add(this.groupBox3);
+            this.tabPage3.Controls.Add(this.label1);
+            this.tabPage3.Controls.Add(this.diceRoll_results);
+            this.tabPage3.Controls.Add(this.DiceBox);
+            this.tabPage3.Controls.Add(this.resetResults);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(895, 650);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Dice";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.label36);
+            this.groupBox8.Controls.Add(this.customRoll);
+            this.groupBox8.Controls.Add(this.d20inc);
+            this.groupBox8.Controls.Add(this.d8inc);
+            this.groupBox8.Controls.Add(this.d12inc);
+            this.groupBox8.Controls.Add(this.d6inc);
+            this.groupBox8.Controls.Add(this.d10inc);
+            this.groupBox8.Controls.Add(this.d4inc);
+            this.groupBox8.Controls.Add(this.label20);
+            this.groupBox8.Controls.Add(this.rollModifier);
+            this.groupBox8.Controls.Add(this.disvantMod);
+            this.groupBox8.Controls.Add(this.advantMod);
+            this.groupBox8.Controls.Add(this.nd20);
+            this.groupBox8.Controls.Add(this.nd12);
+            this.groupBox8.Controls.Add(this.nd10);
+            this.groupBox8.Controls.Add(this.nd8);
+            this.groupBox8.Controls.Add(this.nd6);
+            this.groupBox8.Controls.Add(this.nd4);
+            this.groupBox8.Location = new System.Drawing.Point(26, 376);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(422, 224);
+            this.groupBox8.TabIndex = 13;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Rolls ++";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(300, 68);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(63, 13);
+            this.label36.TabIndex = 17;
+            this.label36.Text = "Custom Roll";
+            this.label36.Visible = false;
+            // 
+            // customRoll
+            // 
+            this.customRoll.Location = new System.Drawing.Point(300, 87);
+            this.customRoll.Name = "customRoll";
+            this.customRoll.Size = new System.Drawing.Size(100, 20);
+            this.customRoll.TabIndex = 16;
+            this.customRoll.Visible = false;
+            // 
+            // d20inc
+            // 
+            this.d20inc.Location = new System.Drawing.Point(230, 105);
+            this.d20inc.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.d20inc.Minimum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            -2147483648});
+            this.d20inc.Name = "d20inc";
+            this.d20inc.Size = new System.Drawing.Size(33, 20);
+            this.d20inc.TabIndex = 14;
+            this.d20inc.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // d8inc
+            // 
+            this.d8inc.Location = new System.Drawing.Point(230, 35);
+            this.d8inc.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.d8inc.Minimum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            -2147483648});
+            this.d8inc.Name = "d8inc";
+            this.d8inc.Size = new System.Drawing.Size(33, 20);
+            this.d8inc.TabIndex = 15;
+            this.d8inc.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // d12inc
+            // 
+            this.d12inc.Location = new System.Drawing.Point(142, 105);
+            this.d12inc.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.d12inc.Minimum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            -2147483648});
+            this.d12inc.Name = "d12inc";
+            this.d12inc.Size = new System.Drawing.Size(33, 20);
+            this.d12inc.TabIndex = 14;
+            this.d12inc.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // d6inc
+            // 
+            this.d6inc.Location = new System.Drawing.Point(142, 35);
+            this.d6inc.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.d6inc.Minimum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            -2147483648});
+            this.d6inc.Name = "d6inc";
+            this.d6inc.Size = new System.Drawing.Size(33, 20);
+            this.d6inc.TabIndex = 13;
+            this.d6inc.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // d10inc
+            // 
+            this.d10inc.Location = new System.Drawing.Point(52, 105);
+            this.d10inc.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.d10inc.Minimum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            -2147483648});
+            this.d10inc.Name = "d10inc";
+            this.d10inc.Size = new System.Drawing.Size(33, 20);
+            this.d10inc.TabIndex = 12;
+            this.d10inc.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // d4inc
+            // 
+            this.d4inc.Location = new System.Drawing.Point(52, 35);
+            this.d4inc.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.d4inc.Minimum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            -2147483648});
+            this.d4inc.Name = "d4inc";
+            this.d4inc.Size = new System.Drawing.Size(33, 20);
+            this.d4inc.TabIndex = 11;
+            this.d4inc.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(196, 169);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(55, 13);
+            this.label20.TabIndex = 10;
+            this.label20.Text = "+ / - to roll";
+            // 
+            // rollModifier
+            // 
+            this.rollModifier.Location = new System.Drawing.Point(196, 188);
+            this.rollModifier.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.rollModifier.Minimum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            -2147483648});
+            this.rollModifier.Name = "rollModifier";
+            this.rollModifier.Size = new System.Drawing.Size(51, 20);
+            this.rollModifier.TabIndex = 9;
+            // 
+            // disvantMod
+            // 
+            this.disvantMod.Location = new System.Drawing.Point(92, 155);
+            this.disvantMod.Name = "disvantMod";
+            this.disvantMod.Size = new System.Drawing.Size(75, 53);
+            this.disvantMod.TabIndex = 8;
+            this.disvantMod.Text = "disvantage (2d20)";
+            this.disvantMod.UseVisualStyleBackColor = true;
+            this.disvantMod.Click += new System.EventHandler(this.disvantMod_Click);
+            // 
+            // advantMod
+            // 
+            this.advantMod.Location = new System.Drawing.Point(10, 155);
+            this.advantMod.Name = "advantMod";
+            this.advantMod.Size = new System.Drawing.Size(75, 53);
+            this.advantMod.TabIndex = 7;
+            this.advantMod.Text = "advantage (2d20)";
+            this.advantMod.UseVisualStyleBackColor = true;
+            this.advantMod.Click += new System.EventHandler(this.advantMod_Click);
+            // 
+            // nd20
+            // 
+            this.nd20.Location = new System.Drawing.Point(182, 87);
+            this.nd20.Name = "nd20";
+            this.nd20.Size = new System.Drawing.Size(45, 53);
+            this.nd20.TabIndex = 6;
+            this.nd20.Text = "nd20";
+            this.nd20.UseVisualStyleBackColor = true;
+            this.nd20.Click += new System.EventHandler(this.nd20_Click);
+            // 
+            // nd12
+            // 
+            this.nd12.Location = new System.Drawing.Point(92, 87);
+            this.nd12.Name = "nd12";
+            this.nd12.Size = new System.Drawing.Size(46, 53);
+            this.nd12.TabIndex = 5;
+            this.nd12.Text = "nd12";
+            this.nd12.UseVisualStyleBackColor = true;
+            this.nd12.Click += new System.EventHandler(this.nd12_Click);
+            // 
+            // nd10
+            // 
+            this.nd10.Location = new System.Drawing.Point(6, 87);
+            this.nd10.Name = "nd10";
+            this.nd10.Size = new System.Drawing.Size(40, 53);
+            this.nd10.TabIndex = 4;
+            this.nd10.Text = "nd10";
+            this.nd10.UseVisualStyleBackColor = true;
+            this.nd10.Click += new System.EventHandler(this.nd10_Click);
+            // 
+            // nd8
+            // 
+            this.nd8.Location = new System.Drawing.Point(182, 17);
+            this.nd8.Name = "nd8";
+            this.nd8.Size = new System.Drawing.Size(45, 53);
+            this.nd8.TabIndex = 3;
+            this.nd8.Text = "nd8";
+            this.nd8.UseVisualStyleBackColor = true;
+            this.nd8.Click += new System.EventHandler(this.nd8_Click);
+            // 
+            // nd6
+            // 
+            this.nd6.Location = new System.Drawing.Point(92, 17);
+            this.nd6.Name = "nd6";
+            this.nd6.Size = new System.Drawing.Size(46, 53);
+            this.nd6.TabIndex = 2;
+            this.nd6.Text = "nd6";
+            this.nd6.UseVisualStyleBackColor = true;
+            this.nd6.Click += new System.EventHandler(this.nd6_Click);
+            // 
+            // nd4
+            // 
+            this.nd4.Location = new System.Drawing.Point(6, 19);
+            this.nd4.Name = "nd4";
+            this.nd4.Size = new System.Drawing.Size(40, 51);
+            this.nd4.TabIndex = 1;
+            this.nd4.Text = "nd4";
+            this.nd4.UseVisualStyleBackColor = true;
+            this.nd4.Click += new System.EventHandler(this.nd4_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.disvant);
+            this.groupBox3.Controls.Add(this.advant);
+            this.groupBox3.Controls.Add(this.d20);
+            this.groupBox3.Controls.Add(this.d12);
+            this.groupBox3.Controls.Add(this.d10);
+            this.groupBox3.Controls.Add(this.d8);
+            this.groupBox3.Controls.Add(this.d6);
+            this.groupBox3.Controls.Add(this.d4);
+            this.groupBox3.Location = new System.Drawing.Point(26, 90);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(262, 224);
+            this.groupBox3.TabIndex = 12;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Basic Rolls";
+            // 
+            // disvant
+            // 
+            this.disvant.Location = new System.Drawing.Point(92, 155);
+            this.disvant.Name = "disvant";
+            this.disvant.Size = new System.Drawing.Size(75, 53);
+            this.disvant.TabIndex = 8;
+            this.disvant.Text = "disvantage (2d20)";
+            this.disvant.UseVisualStyleBackColor = true;
+            this.disvant.Click += new System.EventHandler(this.disvant_Click);
+            // 
+            // advant
+            // 
+            this.advant.Location = new System.Drawing.Point(10, 155);
+            this.advant.Name = "advant";
+            this.advant.Size = new System.Drawing.Size(75, 53);
+            this.advant.TabIndex = 7;
+            this.advant.Text = "advantage (2d20)";
+            this.advant.UseVisualStyleBackColor = true;
+            this.advant.Click += new System.EventHandler(this.advant_Click);
+            // 
+            // d20
+            // 
+            this.d20.Location = new System.Drawing.Point(172, 87);
+            this.d20.Name = "d20";
+            this.d20.Size = new System.Drawing.Size(75, 53);
+            this.d20.TabIndex = 6;
+            this.d20.Text = "1d20";
+            this.d20.UseVisualStyleBackColor = true;
+            this.d20.Click += new System.EventHandler(this.d20_Click);
+            // 
+            // d12
+            // 
+            this.d12.Location = new System.Drawing.Point(92, 87);
+            this.d12.Name = "d12";
+            this.d12.Size = new System.Drawing.Size(75, 53);
+            this.d12.TabIndex = 5;
+            this.d12.Text = "1d12";
+            this.d12.UseVisualStyleBackColor = true;
+            this.d12.Click += new System.EventHandler(this.d12_Click);
+            // 
+            // d10
+            // 
+            this.d10.Location = new System.Drawing.Point(10, 87);
+            this.d10.Name = "d10";
+            this.d10.Size = new System.Drawing.Size(75, 53);
+            this.d10.TabIndex = 4;
+            this.d10.Text = "1d10";
+            this.d10.UseVisualStyleBackColor = true;
+            this.d10.Click += new System.EventHandler(this.d10_Click);
+            // 
+            // d8
+            // 
+            this.d8.Location = new System.Drawing.Point(172, 17);
+            this.d8.Name = "d8";
+            this.d8.Size = new System.Drawing.Size(75, 53);
+            this.d8.TabIndex = 3;
+            this.d8.Text = "1d8";
+            this.d8.UseVisualStyleBackColor = true;
+            this.d8.Click += new System.EventHandler(this.d8_Click);
+            // 
+            // d6
+            // 
+            this.d6.Location = new System.Drawing.Point(92, 17);
+            this.d6.Name = "d6";
+            this.d6.Size = new System.Drawing.Size(75, 53);
+            this.d6.TabIndex = 2;
+            this.d6.Text = "1d6";
+            this.d6.UseVisualStyleBackColor = true;
+            this.d6.Click += new System.EventHandler(this.d6_Click);
+            // 
+            // d4
+            // 
+            this.d4.Location = new System.Drawing.Point(10, 17);
+            this.d4.Name = "d4";
+            this.d4.Size = new System.Drawing.Size(75, 53);
+            this.d4.TabIndex = 1;
+            this.d4.Text = "1d4";
+            this.d4.UseVisualStyleBackColor = true;
+            this.d4.Click += new System.EventHandler(this.d4_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(572, 91);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Results";
+            // 
+            // diceRoll_results
+            // 
+            this.diceRoll_results.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.diceRoll_results.Location = new System.Drawing.Point(574, 107);
+            this.diceRoll_results.Name = "diceRoll_results";
+            this.diceRoll_results.Size = new System.Drawing.Size(298, 494);
+            this.diceRoll_results.TabIndex = 10;
+            this.diceRoll_results.Text = "";
+            // 
+            // DiceBox
+            // 
+            this.DiceBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.DiceBox.Location = new System.Drawing.Point(26, 31);
+            this.DiceBox.Name = "DiceBox";
+            this.DiceBox.ReadOnly = true;
+            this.DiceBox.Size = new System.Drawing.Size(716, 38);
+            this.DiceBox.TabIndex = 0;
+            // 
+            // resetResults
+            // 
+            this.resetResults.Location = new System.Drawing.Point(758, 607);
+            this.resetResults.Name = "resetResults";
+            this.resetResults.Size = new System.Drawing.Size(116, 32);
+            this.resetResults.TabIndex = 9;
+            this.resetResults.Text = "Reset";
+            this.resetResults.UseVisualStyleBackColor = true;
+            this.resetResults.Click += new System.EventHandler(this.resetResults_Click);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.extraNotes);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(895, 650);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Extra Notes";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // extraNotes
+            // 
+            this.extraNotes.AcceptsTab = true;
+            this.extraNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Location = new System.Drawing.Point(2, 1);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(903, 676);
-            this.tabControl1.TabIndex = 0;
+            this.extraNotes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.extraNotes.Location = new System.Drawing.Point(8, 6);
+            this.extraNotes.Name = "extraNotes";
+            this.extraNotes.Size = new System.Drawing.Size(879, 638);
+            this.extraNotes.TabIndex = 1;
+            this.extraNotes.Text = "test";
             // 
             // tabPage1
             // 
@@ -392,13 +873,13 @@ namespace DesktopApp1
             // 
             // groupBox10
             // 
+            this.groupBox10.Controls.Add(this.SpellAttackMod);
             this.groupBox10.Controls.Add(this.CastingCha);
             this.groupBox10.Controls.Add(this.CastingWis);
             this.groupBox10.Controls.Add(this.CastingInt);
             this.groupBox10.Controls.Add(this.label34);
             this.groupBox10.Controls.Add(this.label33);
             this.groupBox10.Controls.Add(this.label31);
-            this.groupBox10.Controls.Add(this.SpellAttack);
             this.groupBox10.Controls.Add(this.label27);
             this.groupBox10.Controls.Add(this.spellSave);
             this.groupBox10.Location = new System.Drawing.Point(471, 17);
@@ -467,15 +948,6 @@ namespace DesktopApp1
             this.label31.Size = new System.Drawing.Size(88, 13);
             this.label31.TabIndex = 15;
             this.label31.Text = "Spell Attack Mod";
-            // 
-            // SpellAttack
-            // 
-            this.SpellAttack.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SpellAttack.Location = new System.Drawing.Point(106, 87);
-            this.SpellAttack.Name = "SpellAttack";
-            this.SpellAttack.Size = new System.Drawing.Size(42, 29);
-            this.SpellAttack.TabIndex = 14;
-            this.SpellAttack.Text = "12";
             // 
             // label27
             // 
@@ -947,24 +1419,24 @@ namespace DesktopApp1
             this.groupBox2.Controls.Add(this.strSavingProf);
             this.groupBox2.Controls.Add(this.STRSaving);
             this.groupBox2.Controls.Add(this.charInspiration);
-            this.groupBox2.Controls.Add(this.checkBox18);
-            this.groupBox2.Controls.Add(this.checkBox17);
-            this.groupBox2.Controls.Add(this.checkBox16);
-            this.groupBox2.Controls.Add(this.checkBox15);
-            this.groupBox2.Controls.Add(this.checkBox14);
-            this.groupBox2.Controls.Add(this.checkBox13);
-            this.groupBox2.Controls.Add(this.checkBox12);
-            this.groupBox2.Controls.Add(this.checkBox11);
-            this.groupBox2.Controls.Add(this.checkBox10);
-            this.groupBox2.Controls.Add(this.checkBox9);
-            this.groupBox2.Controls.Add(this.checkBox8);
-            this.groupBox2.Controls.Add(this.checkBox7);
-            this.groupBox2.Controls.Add(this.checkBox6);
-            this.groupBox2.Controls.Add(this.checkBox5);
-            this.groupBox2.Controls.Add(this.checkBox4);
-            this.groupBox2.Controls.Add(this.checkBox3);
-            this.groupBox2.Controls.Add(this.checkBox2);
-            this.groupBox2.Controls.Add(this.checkBox1);
+            this.groupBox2.Controls.Add(this.sSurvival);
+            this.groupBox2.Controls.Add(this.sStealth);
+            this.groupBox2.Controls.Add(this.sSlightOfHand);
+            this.groupBox2.Controls.Add(this.sReligion);
+            this.groupBox2.Controls.Add(this.sPersuasion);
+            this.groupBox2.Controls.Add(this.sPerformance);
+            this.groupBox2.Controls.Add(this.sPerception);
+            this.groupBox2.Controls.Add(this.sNature);
+            this.groupBox2.Controls.Add(this.sMedicine);
+            this.groupBox2.Controls.Add(this.sInvestigation);
+            this.groupBox2.Controls.Add(this.sIntimidation);
+            this.groupBox2.Controls.Add(this.sInsight);
+            this.groupBox2.Controls.Add(this.sHistory);
+            this.groupBox2.Controls.Add(this.sDeception);
+            this.groupBox2.Controls.Add(this.sAthletics);
+            this.groupBox2.Controls.Add(this.sAcana);
+            this.groupBox2.Controls.Add(this.sAnimalHandling);
+            this.groupBox2.Controls.Add(this.sAcrobatics);
             this.groupBox2.Controls.Add(this.textBox34);
             this.groupBox2.Controls.Add(this.textBox35);
             this.groupBox2.Controls.Add(this.textBox25);
@@ -1139,186 +1611,186 @@ namespace DesktopApp1
             this.charInspiration.Text = "Inspiration";
             this.charInspiration.UseVisualStyleBackColor = true;
             // 
-            // checkBox18
+            // sSurvival
             // 
-            this.checkBox18.AutoSize = true;
-            this.checkBox18.Location = new System.Drawing.Point(111, 433);
-            this.checkBox18.Name = "checkBox18";
-            this.checkBox18.Size = new System.Drawing.Size(64, 17);
-            this.checkBox18.TabIndex = 80;
-            this.checkBox18.Text = "Survival";
-            this.checkBox18.UseVisualStyleBackColor = true;
+            this.sSurvival.AutoSize = true;
+            this.sSurvival.Location = new System.Drawing.Point(111, 433);
+            this.sSurvival.Name = "sSurvival";
+            this.sSurvival.Size = new System.Drawing.Size(64, 17);
+            this.sSurvival.TabIndex = 80;
+            this.sSurvival.Text = "Survival";
+            this.sSurvival.UseVisualStyleBackColor = true;
             // 
-            // checkBox17
+            // sStealth
             // 
-            this.checkBox17.AutoSize = true;
-            this.checkBox17.Location = new System.Drawing.Point(111, 410);
-            this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(59, 17);
-            this.checkBox17.TabIndex = 79;
-            this.checkBox17.Text = "Stealth";
-            this.checkBox17.UseVisualStyleBackColor = true;
+            this.sStealth.AutoSize = true;
+            this.sStealth.Location = new System.Drawing.Point(111, 410);
+            this.sStealth.Name = "sStealth";
+            this.sStealth.Size = new System.Drawing.Size(59, 17);
+            this.sStealth.TabIndex = 79;
+            this.sStealth.Text = "Stealth";
+            this.sStealth.UseVisualStyleBackColor = true;
             // 
-            // checkBox16
+            // sSlightOfHand
             // 
-            this.checkBox16.AutoSize = true;
-            this.checkBox16.Location = new System.Drawing.Point(111, 385);
-            this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(93, 17);
-            this.checkBox16.TabIndex = 78;
-            this.checkBox16.Text = "Slight of Hand";
-            this.checkBox16.UseVisualStyleBackColor = true;
+            this.sSlightOfHand.AutoSize = true;
+            this.sSlightOfHand.Location = new System.Drawing.Point(111, 385);
+            this.sSlightOfHand.Name = "sSlightOfHand";
+            this.sSlightOfHand.Size = new System.Drawing.Size(93, 17);
+            this.sSlightOfHand.TabIndex = 78;
+            this.sSlightOfHand.Text = "Slight of Hand";
+            this.sSlightOfHand.UseVisualStyleBackColor = true;
             // 
-            // checkBox15
+            // sReligion
             // 
-            this.checkBox15.AutoSize = true;
-            this.checkBox15.Location = new System.Drawing.Point(111, 361);
-            this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(64, 17);
-            this.checkBox15.TabIndex = 72;
-            this.checkBox15.Text = "Religion";
-            this.checkBox15.UseVisualStyleBackColor = true;
+            this.sReligion.AutoSize = true;
+            this.sReligion.Location = new System.Drawing.Point(111, 361);
+            this.sReligion.Name = "sReligion";
+            this.sReligion.Size = new System.Drawing.Size(64, 17);
+            this.sReligion.TabIndex = 72;
+            this.sReligion.Text = "Religion";
+            this.sReligion.UseVisualStyleBackColor = true;
             // 
-            // checkBox14
+            // sPersuasion
             // 
-            this.checkBox14.AutoSize = true;
-            this.checkBox14.Location = new System.Drawing.Point(111, 335);
-            this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(78, 17);
-            this.checkBox14.TabIndex = 77;
-            this.checkBox14.Text = "Persuasion";
-            this.checkBox14.UseVisualStyleBackColor = true;
-            this.checkBox14.CheckedChanged += new System.EventHandler(this.checkBox14_CheckedChanged);
+            this.sPersuasion.AutoSize = true;
+            this.sPersuasion.Location = new System.Drawing.Point(111, 335);
+            this.sPersuasion.Name = "sPersuasion";
+            this.sPersuasion.Size = new System.Drawing.Size(78, 17);
+            this.sPersuasion.TabIndex = 77;
+            this.sPersuasion.Text = "Persuasion";
+            this.sPersuasion.UseVisualStyleBackColor = true;
+            this.sPersuasion.CheckedChanged += new System.EventHandler(this.checkBox14_CheckedChanged);
             // 
-            // checkBox13
+            // sPerformance
             // 
-            this.checkBox13.AutoSize = true;
-            this.checkBox13.Location = new System.Drawing.Point(111, 312);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(86, 17);
-            this.checkBox13.TabIndex = 72;
-            this.checkBox13.Text = "Performance";
-            this.checkBox13.UseVisualStyleBackColor = true;
+            this.sPerformance.AutoSize = true;
+            this.sPerformance.Location = new System.Drawing.Point(111, 312);
+            this.sPerformance.Name = "sPerformance";
+            this.sPerformance.Size = new System.Drawing.Size(86, 17);
+            this.sPerformance.TabIndex = 72;
+            this.sPerformance.Text = "Performance";
+            this.sPerformance.UseVisualStyleBackColor = true;
             // 
-            // checkBox12
+            // sPerception
             // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.Location = new System.Drawing.Point(111, 284);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(77, 17);
-            this.checkBox12.TabIndex = 76;
-            this.checkBox12.Text = "Perception";
-            this.checkBox12.UseVisualStyleBackColor = true;
+            this.sPerception.AutoSize = true;
+            this.sPerception.Location = new System.Drawing.Point(111, 284);
+            this.sPerception.Name = "sPerception";
+            this.sPerception.Size = new System.Drawing.Size(77, 17);
+            this.sPerception.TabIndex = 76;
+            this.sPerception.Text = "Perception";
+            this.sPerception.UseVisualStyleBackColor = true;
             // 
-            // checkBox11
+            // sNature
             // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.Location = new System.Drawing.Point(111, 262);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(58, 17);
-            this.checkBox11.TabIndex = 75;
-            this.checkBox11.Text = "Nature";
-            this.checkBox11.UseVisualStyleBackColor = true;
+            this.sNature.AutoSize = true;
+            this.sNature.Location = new System.Drawing.Point(111, 262);
+            this.sNature.Name = "sNature";
+            this.sNature.Size = new System.Drawing.Size(58, 17);
+            this.sNature.TabIndex = 75;
+            this.sNature.Text = "Nature";
+            this.sNature.UseVisualStyleBackColor = true;
             // 
-            // checkBox10
+            // sMedicine
             // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(111, 239);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(69, 17);
-            this.checkBox10.TabIndex = 72;
-            this.checkBox10.Text = "Medicine";
-            this.checkBox10.UseVisualStyleBackColor = true;
+            this.sMedicine.AutoSize = true;
+            this.sMedicine.Location = new System.Drawing.Point(111, 239);
+            this.sMedicine.Name = "sMedicine";
+            this.sMedicine.Size = new System.Drawing.Size(69, 17);
+            this.sMedicine.TabIndex = 72;
+            this.sMedicine.Text = "Medicine";
+            this.sMedicine.UseVisualStyleBackColor = true;
             // 
-            // checkBox9
+            // sInvestigation
             // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(111, 214);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(86, 17);
-            this.checkBox9.TabIndex = 72;
-            this.checkBox9.Text = "Investigation";
-            this.checkBox9.UseVisualStyleBackColor = true;
+            this.sInvestigation.AutoSize = true;
+            this.sInvestigation.Location = new System.Drawing.Point(111, 214);
+            this.sInvestigation.Name = "sInvestigation";
+            this.sInvestigation.Size = new System.Drawing.Size(86, 17);
+            this.sInvestigation.TabIndex = 72;
+            this.sInvestigation.Text = "Investigation";
+            this.sInvestigation.UseVisualStyleBackColor = true;
             // 
-            // checkBox8
+            // sIntimidation
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(111, 181);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(79, 17);
-            this.checkBox8.TabIndex = 72;
-            this.checkBox8.Text = "Intimidation";
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.sIntimidation.AutoSize = true;
+            this.sIntimidation.Location = new System.Drawing.Point(111, 181);
+            this.sIntimidation.Name = "sIntimidation";
+            this.sIntimidation.Size = new System.Drawing.Size(79, 17);
+            this.sIntimidation.TabIndex = 72;
+            this.sIntimidation.Text = "Intimidation";
+            this.sIntimidation.UseVisualStyleBackColor = true;
             // 
-            // checkBox7
+            // sInsight
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(111, 158);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(57, 17);
-            this.checkBox7.TabIndex = 72;
-            this.checkBox7.Text = "Insight";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.sInsight.AutoSize = true;
+            this.sInsight.Location = new System.Drawing.Point(111, 158);
+            this.sInsight.Name = "sInsight";
+            this.sInsight.Size = new System.Drawing.Size(57, 17);
+            this.sInsight.TabIndex = 72;
+            this.sInsight.Text = "Insight";
+            this.sInsight.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // sHistory
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(111, 134);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(58, 17);
-            this.checkBox6.TabIndex = 74;
-            this.checkBox6.Text = "History";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.sHistory.AutoSize = true;
+            this.sHistory.Location = new System.Drawing.Point(111, 134);
+            this.sHistory.Name = "sHistory";
+            this.sHistory.Size = new System.Drawing.Size(58, 17);
+            this.sHistory.TabIndex = 74;
+            this.sHistory.Text = "History";
+            this.sHistory.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // sDeception
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(111, 107);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(75, 17);
-            this.checkBox5.TabIndex = 72;
-            this.checkBox5.Text = "Deception";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.sDeception.AutoSize = true;
+            this.sDeception.Location = new System.Drawing.Point(111, 107);
+            this.sDeception.Name = "sDeception";
+            this.sDeception.Size = new System.Drawing.Size(75, 17);
+            this.sDeception.TabIndex = 72;
+            this.sDeception.Text = "Deception";
+            this.sDeception.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // sAthletics
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(111, 84);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(66, 17);
-            this.checkBox4.TabIndex = 73;
-            this.checkBox4.Text = "Athletics";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.sAthletics.AutoSize = true;
+            this.sAthletics.Location = new System.Drawing.Point(111, 84);
+            this.sAthletics.Name = "sAthletics";
+            this.sAthletics.Size = new System.Drawing.Size(66, 17);
+            this.sAthletics.TabIndex = 73;
+            this.sAthletics.Text = "Athletics";
+            this.sAthletics.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // sAcana
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(111, 57);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(60, 17);
-            this.checkBox3.TabIndex = 72;
-            this.checkBox3.Text = "Arcana";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.sAcana.AutoSize = true;
+            this.sAcana.Location = new System.Drawing.Point(111, 57);
+            this.sAcana.Name = "sAcana";
+            this.sAcana.Size = new System.Drawing.Size(60, 17);
+            this.sAcana.TabIndex = 72;
+            this.sAcana.Text = "Arcana";
+            this.sAcana.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // sAnimalHandling
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(111, 34);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(100, 17);
-            this.checkBox2.TabIndex = 72;
-            this.checkBox2.Text = "Animal handling";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.sAnimalHandling.AutoSize = true;
+            this.sAnimalHandling.Location = new System.Drawing.Point(111, 34);
+            this.sAnimalHandling.Name = "sAnimalHandling";
+            this.sAnimalHandling.Size = new System.Drawing.Size(100, 17);
+            this.sAnimalHandling.TabIndex = 72;
+            this.sAnimalHandling.Text = "Animal handling";
+            this.sAnimalHandling.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // sAcrobatics
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(111, 12);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(76, 17);
-            this.checkBox1.TabIndex = 71;
-            this.checkBox1.Text = "Acrobatics";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.sAcrobatics.AutoSize = true;
+            this.sAcrobatics.Location = new System.Drawing.Point(111, 12);
+            this.sAcrobatics.Name = "sAcrobatics";
+            this.sAcrobatics.Size = new System.Drawing.Size(76, 17);
+            this.sAcrobatics.TabIndex = 71;
+            this.sAcrobatics.Text = "Acrobatics";
+            this.sAcrobatics.UseVisualStyleBackColor = true;
             // 
             // textBox34
             // 
@@ -1767,526 +2239,29 @@ namespace DesktopApp1
             this.CharacterName.Size = new System.Drawing.Size(100, 20);
             this.CharacterName.TabIndex = 0;
             // 
-            // tabPage2
+            // tabControl1
             // 
-            this.tabPage2.Controls.Add(this.extraNotes);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(895, 650);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Extra Notes";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // extraNotes
-            // 
-            this.extraNotes.AcceptsTab = true;
-            this.extraNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.extraNotes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.extraNotes.Location = new System.Drawing.Point(8, 6);
-            this.extraNotes.Name = "extraNotes";
-            this.extraNotes.Size = new System.Drawing.Size(879, 638);
-            this.extraNotes.TabIndex = 1;
-            this.extraNotes.Text = "test";
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.groupBox8);
-            this.tabPage3.Controls.Add(this.groupBox3);
-            this.tabPage3.Controls.Add(this.label1);
-            this.tabPage3.Controls.Add(this.diceRoll_results);
-            this.tabPage3.Controls.Add(this.resetResults);
-            this.tabPage3.Controls.Add(this.DiceBox);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(895, 650);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Dice";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.label36);
-            this.groupBox8.Controls.Add(this.customRoll);
-            this.groupBox8.Controls.Add(this.d20inc);
-            this.groupBox8.Controls.Add(this.d8inc);
-            this.groupBox8.Controls.Add(this.d12inc);
-            this.groupBox8.Controls.Add(this.d6inc);
-            this.groupBox8.Controls.Add(this.d10inc);
-            this.groupBox8.Controls.Add(this.d4inc);
-            this.groupBox8.Controls.Add(this.label20);
-            this.groupBox8.Controls.Add(this.rollModifier);
-            this.groupBox8.Controls.Add(this.disvantMod);
-            this.groupBox8.Controls.Add(this.advantMod);
-            this.groupBox8.Controls.Add(this.nd20);
-            this.groupBox8.Controls.Add(this.nd12);
-            this.groupBox8.Controls.Add(this.nd10);
-            this.groupBox8.Controls.Add(this.nd8);
-            this.groupBox8.Controls.Add(this.nd6);
-            this.groupBox8.Controls.Add(this.nd4);
-            this.groupBox8.Location = new System.Drawing.Point(26, 376);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(422, 224);
-            this.groupBox8.TabIndex = 13;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Rolls ++";
-            // 
-            // d20inc
-            // 
-            this.d20inc.Location = new System.Drawing.Point(230, 105);
-            this.d20inc.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.d20inc.Minimum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            -2147483648});
-            this.d20inc.Name = "d20inc";
-            this.d20inc.Size = new System.Drawing.Size(33, 20);
-            this.d20inc.TabIndex = 14;
-            this.d20inc.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // d8inc
-            // 
-            this.d8inc.Location = new System.Drawing.Point(230, 35);
-            this.d8inc.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.d8inc.Minimum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            -2147483648});
-            this.d8inc.Name = "d8inc";
-            this.d8inc.Size = new System.Drawing.Size(33, 20);
-            this.d8inc.TabIndex = 15;
-            this.d8inc.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // d12inc
-            // 
-            this.d12inc.Location = new System.Drawing.Point(142, 105);
-            this.d12inc.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.d12inc.Minimum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            -2147483648});
-            this.d12inc.Name = "d12inc";
-            this.d12inc.Size = new System.Drawing.Size(33, 20);
-            this.d12inc.TabIndex = 14;
-            this.d12inc.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // d6inc
-            // 
-            this.d6inc.Location = new System.Drawing.Point(142, 35);
-            this.d6inc.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.d6inc.Minimum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            -2147483648});
-            this.d6inc.Name = "d6inc";
-            this.d6inc.Size = new System.Drawing.Size(33, 20);
-            this.d6inc.TabIndex = 13;
-            this.d6inc.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // d10inc
-            // 
-            this.d10inc.Location = new System.Drawing.Point(52, 105);
-            this.d10inc.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.d10inc.Minimum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            -2147483648});
-            this.d10inc.Name = "d10inc";
-            this.d10inc.Size = new System.Drawing.Size(33, 20);
-            this.d10inc.TabIndex = 12;
-            this.d10inc.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // d4inc
-            // 
-            this.d4inc.Location = new System.Drawing.Point(52, 35);
-            this.d4inc.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.d4inc.Minimum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            -2147483648});
-            this.d4inc.Name = "d4inc";
-            this.d4inc.Size = new System.Drawing.Size(33, 20);
-            this.d4inc.TabIndex = 11;
-            this.d4inc.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(196, 169);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(55, 13);
-            this.label20.TabIndex = 10;
-            this.label20.Text = "+ / - to roll";
-            // 
-            // rollModifier
-            // 
-            this.rollModifier.Location = new System.Drawing.Point(196, 188);
-            this.rollModifier.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.rollModifier.Minimum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            -2147483648});
-            this.rollModifier.Name = "rollModifier";
-            this.rollModifier.Size = new System.Drawing.Size(51, 20);
-            this.rollModifier.TabIndex = 9;
-            // 
-            // disvantMod
-            // 
-            this.disvantMod.Location = new System.Drawing.Point(92, 155);
-            this.disvantMod.Name = "disvantMod";
-            this.disvantMod.Size = new System.Drawing.Size(75, 53);
-            this.disvantMod.TabIndex = 8;
-            this.disvantMod.Text = "disvantage (2d20)";
-            this.disvantMod.UseVisualStyleBackColor = true;
-            this.disvantMod.Click += new System.EventHandler(this.disvantMod_Click);
-            // 
-            // advantMod
-            // 
-            this.advantMod.Location = new System.Drawing.Point(10, 155);
-            this.advantMod.Name = "advantMod";
-            this.advantMod.Size = new System.Drawing.Size(75, 53);
-            this.advantMod.TabIndex = 7;
-            this.advantMod.Text = "advantage (2d20)";
-            this.advantMod.UseVisualStyleBackColor = true;
-            this.advantMod.Click += new System.EventHandler(this.advantMod_Click);
-            // 
-            // nd20
-            // 
-            this.nd20.Location = new System.Drawing.Point(182, 87);
-            this.nd20.Name = "nd20";
-            this.nd20.Size = new System.Drawing.Size(45, 53);
-            this.nd20.TabIndex = 6;
-            this.nd20.Text = "nd20";
-            this.nd20.UseVisualStyleBackColor = true;
-            this.nd20.Click += new System.EventHandler(this.nd20_Click);
-            // 
-            // nd12
-            // 
-            this.nd12.Location = new System.Drawing.Point(92, 87);
-            this.nd12.Name = "nd12";
-            this.nd12.Size = new System.Drawing.Size(46, 53);
-            this.nd12.TabIndex = 5;
-            this.nd12.Text = "nd12";
-            this.nd12.UseVisualStyleBackColor = true;
-            this.nd12.Click += new System.EventHandler(this.nd12_Click);
-            // 
-            // nd10
-            // 
-            this.nd10.Location = new System.Drawing.Point(6, 87);
-            this.nd10.Name = "nd10";
-            this.nd10.Size = new System.Drawing.Size(40, 53);
-            this.nd10.TabIndex = 4;
-            this.nd10.Text = "nd10";
-            this.nd10.UseVisualStyleBackColor = true;
-            this.nd10.Click += new System.EventHandler(this.nd10_Click);
-            // 
-            // nd8
-            // 
-            this.nd8.Location = new System.Drawing.Point(182, 17);
-            this.nd8.Name = "nd8";
-            this.nd8.Size = new System.Drawing.Size(45, 53);
-            this.nd8.TabIndex = 3;
-            this.nd8.Text = "nd8";
-            this.nd8.UseVisualStyleBackColor = true;
-            this.nd8.Click += new System.EventHandler(this.nd8_Click);
-            // 
-            // nd6
-            // 
-            this.nd6.Location = new System.Drawing.Point(92, 17);
-            this.nd6.Name = "nd6";
-            this.nd6.Size = new System.Drawing.Size(46, 53);
-            this.nd6.TabIndex = 2;
-            this.nd6.Text = "nd6";
-            this.nd6.UseVisualStyleBackColor = true;
-            this.nd6.Click += new System.EventHandler(this.nd6_Click);
-            // 
-            // nd4
-            // 
-            this.nd4.Location = new System.Drawing.Point(6, 19);
-            this.nd4.Name = "nd4";
-            this.nd4.Size = new System.Drawing.Size(40, 51);
-            this.nd4.TabIndex = 1;
-            this.nd4.Text = "nd4";
-            this.nd4.UseVisualStyleBackColor = true;
-            this.nd4.Click += new System.EventHandler(this.nd4_Click);
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.disvant);
-            this.groupBox3.Controls.Add(this.advant);
-            this.groupBox3.Controls.Add(this.d20);
-            this.groupBox3.Controls.Add(this.d12);
-            this.groupBox3.Controls.Add(this.d10);
-            this.groupBox3.Controls.Add(this.d8);
-            this.groupBox3.Controls.Add(this.d6);
-            this.groupBox3.Controls.Add(this.d4);
-            this.groupBox3.Location = new System.Drawing.Point(26, 90);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(262, 224);
-            this.groupBox3.TabIndex = 12;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Basic Rolls";
-            // 
-            // disvant
-            // 
-            this.disvant.Location = new System.Drawing.Point(92, 155);
-            this.disvant.Name = "disvant";
-            this.disvant.Size = new System.Drawing.Size(75, 53);
-            this.disvant.TabIndex = 8;
-            this.disvant.Text = "disvantage (2d20)";
-            this.disvant.UseVisualStyleBackColor = true;
-            this.disvant.Click += new System.EventHandler(this.disvant_Click);
-            // 
-            // advant
-            // 
-            this.advant.Location = new System.Drawing.Point(10, 155);
-            this.advant.Name = "advant";
-            this.advant.Size = new System.Drawing.Size(75, 53);
-            this.advant.TabIndex = 7;
-            this.advant.Text = "advantage (2d20)";
-            this.advant.UseVisualStyleBackColor = true;
-            this.advant.Click += new System.EventHandler(this.advant_Click);
-            // 
-            // d20
-            // 
-            this.d20.Location = new System.Drawing.Point(172, 87);
-            this.d20.Name = "d20";
-            this.d20.Size = new System.Drawing.Size(75, 53);
-            this.d20.TabIndex = 6;
-            this.d20.Text = "1d20";
-            this.d20.UseVisualStyleBackColor = true;
-            this.d20.Click += new System.EventHandler(this.d20_Click);
-            // 
-            // d12
-            // 
-            this.d12.Location = new System.Drawing.Point(92, 87);
-            this.d12.Name = "d12";
-            this.d12.Size = new System.Drawing.Size(75, 53);
-            this.d12.TabIndex = 5;
-            this.d12.Text = "1d12";
-            this.d12.UseVisualStyleBackColor = true;
-            this.d12.Click += new System.EventHandler(this.d12_Click);
-            // 
-            // d10
-            // 
-            this.d10.Location = new System.Drawing.Point(10, 87);
-            this.d10.Name = "d10";
-            this.d10.Size = new System.Drawing.Size(75, 53);
-            this.d10.TabIndex = 4;
-            this.d10.Text = "1d10";
-            this.d10.UseVisualStyleBackColor = true;
-            this.d10.Click += new System.EventHandler(this.d10_Click);
-            // 
-            // d8
-            // 
-            this.d8.Location = new System.Drawing.Point(172, 17);
-            this.d8.Name = "d8";
-            this.d8.Size = new System.Drawing.Size(75, 53);
-            this.d8.TabIndex = 3;
-            this.d8.Text = "1d8";
-            this.d8.UseVisualStyleBackColor = true;
-            this.d8.Click += new System.EventHandler(this.d8_Click);
-            // 
-            // d6
-            // 
-            this.d6.Location = new System.Drawing.Point(92, 17);
-            this.d6.Name = "d6";
-            this.d6.Size = new System.Drawing.Size(75, 53);
-            this.d6.TabIndex = 2;
-            this.d6.Text = "1d6";
-            this.d6.UseVisualStyleBackColor = true;
-            this.d6.Click += new System.EventHandler(this.d6_Click);
-            // 
-            // d4
-            // 
-            this.d4.Location = new System.Drawing.Point(10, 17);
-            this.d4.Name = "d4";
-            this.d4.Size = new System.Drawing.Size(75, 53);
-            this.d4.TabIndex = 1;
-            this.d4.Text = "1d4";
-            this.d4.UseVisualStyleBackColor = true;
-            this.d4.Click += new System.EventHandler(this.d4_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(572, 91);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Results";
-            // 
-            // diceRoll_results
-            // 
-            this.diceRoll_results.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.diceRoll_results.Location = new System.Drawing.Point(574, 107);
-            this.diceRoll_results.Name = "diceRoll_results";
-            this.diceRoll_results.Size = new System.Drawing.Size(298, 494);
-            this.diceRoll_results.TabIndex = 10;
-            this.diceRoll_results.Text = "";
-            // 
-            // resetResults
-            // 
-            this.resetResults.Location = new System.Drawing.Point(758, 607);
-            this.resetResults.Name = "resetResults";
-            this.resetResults.Size = new System.Drawing.Size(116, 32);
-            this.resetResults.TabIndex = 9;
-            this.resetResults.Text = "Reset";
-            this.resetResults.UseVisualStyleBackColor = true;
-            this.resetResults.Click += new System.EventHandler(this.resetResults_Click);
-            // 
-            // DiceBox
-            // 
-            this.DiceBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.DiceBox.Location = new System.Drawing.Point(26, 31);
-            this.DiceBox.Name = "DiceBox";
-            this.DiceBox.ReadOnly = true;
-            this.DiceBox.Size = new System.Drawing.Size(716, 38);
-            this.DiceBox.TabIndex = 0;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.webBrowser1);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(895, 650);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "GrimoreSite";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(3, 3);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.ScriptErrorsSuppressed = true;
-            this.webBrowser1.Size = new System.Drawing.Size(889, 644);
-            this.webBrowser1.TabIndex = 0;
-            this.webBrowser1.Url = new System.Uri("https://thebombzen.com/grimoire/", System.UriKind.Absolute);
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.label21);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(895, 650);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Matts mechanics™";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 50.25F);
-            this.label21.Location = new System.Drawing.Point(352, 239);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(164, 76);
-            this.label21.TabIndex = 0;
-            this.label21.Text = "TBA";
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Location = new System.Drawing.Point(4, 673);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(10, 11);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "sample.txt";
-            this.openFileDialog1.Filter = "Text files|*.txt";
-            // 
-            // saveFileDialog1
-            // 
-            this.saveFileDialog1.FileName = "character.txt";
-            this.saveFileDialog1.Filter = "Text files|*.txt";
-            // 
-            // customRoll
-            // 
-            this.customRoll.Location = new System.Drawing.Point(300, 87);
-            this.customRoll.Name = "customRoll";
-            this.customRoll.Size = new System.Drawing.Size(100, 20);
-            this.customRoll.TabIndex = 16;
-            this.customRoll.Visible = false;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(300, 68);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(63, 13);
-            this.label36.TabIndex = 17;
-            this.label36.Text = "Custom Roll";
-            this.label36.Visible = false;
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Location = new System.Drawing.Point(2, 1);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(903, 676);
+            this.tabControl1.TabIndex = 0;
+            // 
+            // SpellAttackMod
+            // 
+            this.SpellAttackMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SpellAttackMod.Location = new System.Drawing.Point(106, 83);
+            this.SpellAttackMod.Name = "SpellAttackMod";
+            this.SpellAttackMod.Size = new System.Drawing.Size(42, 29);
+            this.SpellAttackMod.TabIndex = 107;
+            this.SpellAttackMod.Text = "12";
             // 
             // Form1
             // 
@@ -2303,7 +2278,20 @@ namespace DesktopApp1
             this.ShowIcon = false;
             this.Text = "D&D 5e Tools";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
-            this.tabControl1.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.d20inc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d8inc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d12inc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d6inc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d10inc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.d4inc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rollModifier)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox12.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
@@ -2334,40 +2322,38 @@ namespace DesktopApp1
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.d20inc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.d8inc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.d12inc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.d6inc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.d10inc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.d4inc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rollModifier)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage5.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.WebBrowser webBrowser1;
-        private System.Windows.Forms.Label CharacterNameLabel;
-        private System.Windows.Forms.TextBox CharacterName;
-        private System.Windows.Forms.Label CharacterClassLabel;
-        private System.Windows.Forms.TextBox CharacterClass;
-        private System.Windows.Forms.TextBox CharacterLevel;
-        private System.Windows.Forms.Button resetResults;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.TextBox customRoll;
+        private System.Windows.Forms.NumericUpDown d20inc;
+        private System.Windows.Forms.NumericUpDown d8inc;
+        private System.Windows.Forms.NumericUpDown d12inc;
+        private System.Windows.Forms.NumericUpDown d6inc;
+        private System.Windows.Forms.NumericUpDown d10inc;
+        private System.Windows.Forms.NumericUpDown d4inc;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.NumericUpDown rollModifier;
+        private System.Windows.Forms.Button disvantMod;
+        private System.Windows.Forms.Button advantMod;
+        private System.Windows.Forms.Button nd20;
+        private System.Windows.Forms.Button nd12;
+        private System.Windows.Forms.Button nd10;
+        private System.Windows.Forms.Button nd8;
+        private System.Windows.Forms.Button nd6;
+        private System.Windows.Forms.Button nd4;
+        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button disvant;
         private System.Windows.Forms.Button advant;
         private System.Windows.Forms.Button d20;
@@ -2376,38 +2362,102 @@ namespace DesktopApp1
         private System.Windows.Forms.Button d8;
         private System.Windows.Forms.Button d6;
         private System.Windows.Forms.Button d4;
-        private System.Windows.Forms.TextBox DiceBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox diceRoll_results;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox characterEXP;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox characterAlignment;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox StrModifier;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox strStat;
-        private System.Windows.Forms.TextBox ChaModifier;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox chaStat;
-        private System.Windows.Forms.TextBox WizModifier;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox wisStat;
-        private System.Windows.Forms.TextBox IntModifier;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox intStat;
-        private System.Windows.Forms.TextBox ConModifier;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox conStat;
-        private System.Windows.Forms.TextBox DexModifier;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox dexStat;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox PassiveWiz;
-        private System.Windows.Forms.TextBox profBonus;
+        private System.Windows.Forms.TextBox DiceBox;
+        private System.Windows.Forms.Button resetResults;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.RichTextBox extraNotes;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.RichTextBox FeaturesAndTraits;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.RichTextBox AttacksAndSpells;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button SaveAs;
+        private System.Windows.Forms.Button Load;
+        private System.Windows.Forms.GroupBox Weapons;
+        private System.Windows.Forms.RichTextBox WeaponsAndEquipment;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.RadioButton CastingCha;
+        private System.Windows.Forms.RadioButton CastingWis;
+        private System.Windows.Forms.RadioButton CastingInt;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox spellSave;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Button moneyTransaction;
+        private System.Windows.Forms.NumericUpDown transCopper;
+        private System.Windows.Forms.NumericUpDown transSilver;
+        private System.Windows.Forms.NumericUpDown transGold;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.NumericUpDown copperCount;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.NumericUpDown silverCount;
+        private System.Windows.Forms.NumericUpDown goldCount;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.TextBox HitDice;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.NumericUpDown characterHPTemp;
+        private System.Windows.Forms.NumericUpDown characterHPCurrent;
+        private System.Windows.Forms.NumericUpDown characterHPMax;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.NumericUpDown DeathSaveFails;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.NumericUpDown deathSuccess;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox charSpeed;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox CharIniative;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox characterAC;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.CheckBox chaSavingProf;
+        private System.Windows.Forms.TextBox CHASaving;
+        private System.Windows.Forms.CheckBox wisSavingProf;
+        private System.Windows.Forms.TextBox WISSaving;
+        private System.Windows.Forms.CheckBox intSavingProf;
+        private System.Windows.Forms.TextBox INTSaving;
+        private System.Windows.Forms.CheckBox dexSavingProf;
+        private System.Windows.Forms.TextBox DEXSaving;
+        private System.Windows.Forms.CheckBox conSavingProf;
+        private System.Windows.Forms.TextBox CONSaving;
+        private System.Windows.Forms.CheckBox strSavingProf;
+        private System.Windows.Forms.TextBox STRSaving;
+        private System.Windows.Forms.CheckBox charInspiration;
+        private System.Windows.Forms.CheckBox sSurvival;
+        private System.Windows.Forms.CheckBox sStealth;
+        private System.Windows.Forms.CheckBox sSlightOfHand;
+        private System.Windows.Forms.CheckBox sReligion;
+        private System.Windows.Forms.CheckBox sPersuasion;
+        private System.Windows.Forms.CheckBox sPerformance;
+        private System.Windows.Forms.CheckBox sPerception;
+        private System.Windows.Forms.CheckBox sNature;
+        private System.Windows.Forms.CheckBox sMedicine;
+        private System.Windows.Forms.CheckBox sInvestigation;
+        private System.Windows.Forms.CheckBox sIntimidation;
+        private System.Windows.Forms.CheckBox sInsight;
+        private System.Windows.Forms.CheckBox sHistory;
+        private System.Windows.Forms.CheckBox sDeception;
+        private System.Windows.Forms.CheckBox sAthletics;
+        private System.Windows.Forms.CheckBox sAcana;
+        private System.Windows.Forms.CheckBox sAnimalHandling;
+        private System.Windows.Forms.CheckBox sAcrobatics;
         private System.Windows.Forms.TextBox textBox34;
         private System.Windows.Forms.TextBox textBox35;
         private System.Windows.Forms.TextBox textBox25;
@@ -2426,122 +2476,42 @@ namespace DesktopApp1
         private System.Windows.Forms.TextBox textBox20;
         private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.CheckBox charInspiration;
-        private System.Windows.Forms.CheckBox checkBox18;
-        private System.Windows.Forms.CheckBox checkBox17;
-        private System.Windows.Forms.CheckBox checkBox16;
-        private System.Windows.Forms.CheckBox checkBox15;
-        private System.Windows.Forms.CheckBox checkBox14;
-        private System.Windows.Forms.CheckBox checkBox13;
-        private System.Windows.Forms.CheckBox checkBox12;
-        private System.Windows.Forms.CheckBox checkBox11;
-        private System.Windows.Forms.CheckBox checkBox10;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox charSpeed;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox CharIniative;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox characterAC;
-        private System.Windows.Forms.NumericUpDown characterHPMax;
-        private System.Windows.Forms.NumericUpDown characterHPTemp;
-        private System.Windows.Forms.NumericUpDown characterHPCurrent;
-        private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.NumericUpDown rollModifier;
-        private System.Windows.Forms.Button disvantMod;
-        private System.Windows.Forms.Button advantMod;
-        private System.Windows.Forms.Button nd20;
-        private System.Windows.Forms.Button nd12;
-        private System.Windows.Forms.Button nd10;
-        private System.Windows.Forms.Button nd8;
-        private System.Windows.Forms.Button nd6;
-        private System.Windows.Forms.Button nd4;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.NumericUpDown d20inc;
-        private System.Windows.Forms.NumericUpDown d8inc;
-        private System.Windows.Forms.NumericUpDown d12inc;
-        private System.Windows.Forms.NumericUpDown d6inc;
-        private System.Windows.Forms.NumericUpDown d10inc;
-        private System.Windows.Forms.NumericUpDown d4inc;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox PassiveWiz;
+        private System.Windows.Forms.TextBox profBonus;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox ChaModifier;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox chaStat;
+        private System.Windows.Forms.TextBox WizModifier;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox wisStat;
+        private System.Windows.Forms.TextBox IntModifier;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox intStat;
+        private System.Windows.Forms.TextBox ConModifier;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox conStat;
+        private System.Windows.Forms.TextBox DexModifier;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox dexStat;
+        private System.Windows.Forms.TextBox StrModifier;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox strStat;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox characterRace;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.NumericUpDown DeathSaveFails;
-        private System.Windows.Forms.NumericUpDown deathSuccess;
-        private System.Windows.Forms.Button saveButton;
-        private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.NumericUpDown copperCount;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.NumericUpDown silverCount;
-        private System.Windows.Forms.NumericUpDown goldCount;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Button moneyTransaction;
-        private System.Windows.Forms.NumericUpDown transCopper;
-        private System.Windows.Forms.NumericUpDown transSilver;
-        private System.Windows.Forms.NumericUpDown transGold;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox spellSave;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox SpellAttack;
-        private System.Windows.Forms.TextBox HitDice;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.RadioButton CastingCha;
-        private System.Windows.Forms.RadioButton CastingWis;
-        private System.Windows.Forms.RadioButton CastingInt;
-        private System.Windows.Forms.GroupBox Weapons;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.CheckBox chaSavingProf;
-        private System.Windows.Forms.TextBox CHASaving;
-        private System.Windows.Forms.CheckBox wisSavingProf;
-        private System.Windows.Forms.TextBox WISSaving;
-        private System.Windows.Forms.CheckBox intSavingProf;
-        private System.Windows.Forms.TextBox INTSaving;
-        private System.Windows.Forms.CheckBox dexSavingProf;
-        private System.Windows.Forms.TextBox DEXSaving;
-        private System.Windows.Forms.CheckBox conSavingProf;
-        private System.Windows.Forms.TextBox CONSaving;
-        private System.Windows.Forms.CheckBox strSavingProf;
-        private System.Windows.Forms.TextBox STRSaving;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button Load;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.Button SaveAs;
-        private System.Windows.Forms.RichTextBox WeaponsAndEquipment;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.RichTextBox extraNotes;
-        private System.Windows.Forms.GroupBox groupBox12;
-        private System.Windows.Forms.RichTextBox FeaturesAndTraits;
-        private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.RichTextBox AttacksAndSpells;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.TextBox customRoll;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox characterEXP;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox characterAlignment;
+        private System.Windows.Forms.TextBox CharacterLevel;
+        private System.Windows.Forms.Label CharacterClassLabel;
+        private System.Windows.Forms.TextBox CharacterClass;
+        private System.Windows.Forms.Label CharacterNameLabel;
+        private System.Windows.Forms.TextBox CharacterName;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TextBox SpellAttackMod;
     }
 }
 

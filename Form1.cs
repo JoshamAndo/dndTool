@@ -49,6 +49,7 @@ namespace DesktopApp1
         static int spellAttack;
 
         //skills
+       // static int 
 
         // saving throws
         static bool strSavingthrow;
@@ -57,6 +58,12 @@ namespace DesktopApp1
         static bool intSavingthrow;
         static bool wisSavingthrow;
         static bool chaSavingthrow;
+
+        // textbox fields
+        static string attackSpells;
+        static string weaponsEquipment;
+        static string featuresTraits;
+        static string extraNotesSection;
 
         static string filepath = @".\characters\sample.txt";
         void openFile()
@@ -97,6 +104,8 @@ namespace DesktopApp1
             newText.Replace('†', '\n');
             return newText.ToString();
         }
+
+        
 
         void getDataFromFile()
         {
@@ -146,6 +155,10 @@ namespace DesktopApp1
             AC = charVars[28];
             deathFails = Int32.Parse(charVars[29]);
             deathsucesses = Int32.Parse(charVars[30]);
+            attackSpells = charVars[31];
+            weaponsEquipment = charVars[32];
+            featuresTraits = charVars[33];
+            extraNotesSection = charVars[34];
         }
 
         // updates dependant variables not stored in file
@@ -265,7 +278,7 @@ namespace DesktopApp1
                 CastingCha.Checked = true;
             }
 
-            SpellAttack.Text = signedIntToString(spellAttack);
+            SpellAttackMod.Text = signedIntToString(spellAttack);
             spellSave.Text = signedIntToString(spellSaveDC);
             
             strSavingProf.Checked = strSavingthrow;
@@ -284,6 +297,12 @@ namespace DesktopApp1
             PassiveWiz.Text = signedIntToString(passiveWisdom);
             //PassiveWiz.Text = skillMod(perceptionMod,10);
             CharIniative.Text = signedIntToString(dexMod);
+
+            // textbox sections
+            AttacksAndSpells.Text = convertFileLineToMultiLine(attackSpells);
+            WeaponsAndEquipment.Text = convertFileLineToMultiLine(weaponsEquipment);
+            FeaturesAndTraits.Text = convertFileLineToMultiLine(featuresTraits);
+            extraNotes.Text = convertFileLineToMultiLine(extraNotesSection);
         }
 
         // gets the form data and sets the character infomation to form data
@@ -334,6 +353,10 @@ namespace DesktopApp1
             wisSavingthrow = wisSavingProf.Checked;
             chaSavingthrow = chaSavingProf.Checked;
 
+            attackSpells = convertTextTofileLine(AttacksAndSpells);
+            weaponsEquipment = convertTextTofileLine(WeaponsAndEquipment);
+            featuresTraits = convertTextTofileLine(FeaturesAndTraits);
+            extraNotesSection = convertTextTofileLine(extraNotes);
         }
 
         // sets the file to the data
@@ -375,6 +398,10 @@ namespace DesktopApp1
                 file.WriteLine(AC);
                 file.WriteLine(deathFails);
                 file.WriteLine(deathsucesses);
+                file.WriteLine(attackSpells);
+                file.WriteLine(weaponsEquipment);
+                file.WriteLine(featuresTraits);
+                file.WriteLine(extraNotesSection);
             }
 
         }

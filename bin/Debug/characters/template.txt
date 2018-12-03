@@ -46,3 +46,11 @@ False
 ; Death saves (fails, successes)
 0
 0
+; attacks/spells
+test†test
+; weapons/equipment
+test†test
+;Features/Traits
+test†test
+; Extra notes
+test†test
